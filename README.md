@@ -1,0 +1,43 @@
+# nai5-prompting
+
+教 AI 写 NovelAI Diffusion V5 提示词的方法包——**不是给人看的教程，是给
+LLM / agent 挂载的 skill**（[Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) 标准封装）。
+
+## 里面是什么
+
+两份互补的方法文件，合起来覆盖「从半句话到成品提示词」的全程：
+
+| 文件 | 管什么 |
+|---|---|
+| `references/通用构思.md` | **想画什么**：需求分档（用户给了多少 → 补到哪步）、把模糊想法展开成分镜的四道工序（编剧→监督→原画→摄影）、多方案硬约束、版权角色先查档案 |
+| `references/通用写法.md` | **怎么写**：NAI 语法与能力边界、字段分工与输出模板、内容顺序统计、哪些内容必须词组 / 必须句子（出图实测判据，附证据与边界）、多角色 `source#`/`target#`/`mutual#` 绑定、漫画分格、排查表 |
+| `NAI5_All_Prompting.md` | 上面两份的机器合订，内容一致——**只能传一个文件时用这份** |
+| `SKILL.md` | skill 入口（Agent Skills 标准） |
+
+## 数据背书
+
+结论不是经验之谈：来自一个 NAI 群的 **2226 张实测图 / 962 条真实提示词**
+（图片内嵌提示词解码所得），加上锁 seed 控制变量的出图对照实验
+（哪些内容写成词组稳定、哪些必须句子，逐条有实测记录和证据强度标注）。
+统计中的群成员网名已匿名化（作者A/B/…）。
+
+## 怎么用
+
+**方式一 · 当 skill 挂**（Claude Code 或任何支持 Agent Skills 的 agent）：
+把本仓库放进 skills 目录即可，入口是 `SKILL.md`。
+
+**方式二 · 直接发给聊天 AI**（DeepSeek / ChatGPT / Claude 网页版都行）：
+把 `references/` 里的两份 md 传进对话，然后说你想画什么——
+说得细它照写；只给半句话（「来点夏天的图」）它会按分档给你几条不同方向。
+
+**方式三 · 单文件**：只能传一个文件的场合，用根目录 `NAI5_All_Prompting.md`。
+
+## 相关项目
+
+- [nai-autocomplete](https://github.com/Miint-Sunny/nai-autocomplete)——配套的
+  NovelAI 浏览器扩展（写词面板 / skill 注入 / tag 查证）。本仓库是它的方法层，
+  也可以完全独立使用。
+
+## License
+
+[GPL-3.0](LICENSE)
