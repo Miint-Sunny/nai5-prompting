@@ -3,6 +3,11 @@ name: nai5-all-prompting
 description: 写 NovelAI Diffusion V5 提示词的完整方法（自包含合订版）。构思（分档、协调分镜、多方案检查）→ 写法（语法与能力边界、字段分工、顺序、词组/句子判据、多人 source#/target# 绑定、漫画分格与排查；附既有实测依据与边界）。参考收藏整理资料、真实提示词与对照实验。当用户要写 NAI V5 提示词、构思画面、做多角色交互或漫画分格、排查出图问题时使用。自包含，无需其他文件。
 ---
 
+> Copyright (C) 2026 Miint-Sunny
+> SPDX-License-Identifier: GPL-3.0-only
+> 项目与公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。
+> 许可全文：[GNU GPL version 3](https://www.gnu.org/licenses/gpl-3.0.html)；贡献范围与第三方材料说明见 [NOTICE](https://github.com/Miint-Sunny/nai5-prompting/blob/main/NOTICE)。
+
 # NovelAI Diffusion V5 提示词方法（合订版）
 
 > 版本：v1.1-20260914 · 依据：收藏整理资料、真实提示词与既有对照实验

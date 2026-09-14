@@ -3,6 +3,11 @@ name: nai5-prompting
 description: Use when 用户要写 NAI / NovelAI Diffusion V5 提示词、把模糊想法展开成画面、安排多角色交互或漫画分格、排查出图问题，即使没有明确说“提示词”也适用。
 ---
 
+> Copyright (C) 2026 Miint-Sunny
+> SPDX-License-Identifier: GPL-3.0-only
+> 项目与公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。
+> 许可全文：[GNU GPL version 3](https://www.gnu.org/licenses/gpl-3.0.html)；贡献范围与第三方材料说明见 [NOTICE](https://github.com/Miint-Sunny/nai5-prompting/blob/main/NOTICE)。
+
 # NAI5 Prompting
 
 写 NovelAI Diffusion V5 提示词时，按需读取两份参考：

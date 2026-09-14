@@ -47,6 +47,8 @@
 - [nai-autocomplete](https://github.com/Miint-Sunny/nai-autocomplete)：配套 NovelAI 浏览器扩展，
   提供写词面板、skill 注入与 tag 查证。本方法包也可独立使用。
 
-## License
+## 版权与许可
 
-[GPL-3.0](LICENSE)
+Copyright (C) 2026 [Miint-Sunny](https://github.com/Miint-Sunny)。项目公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。
+
+本项目的原创贡献、编排与修改依照 GNU GPL version 3（SPDX：GPL-3.0-only）许可。完整许可见 [LICENSE](LICENSE)，贡献范围、第三方材料及无担保说明见 [NOTICE](NOTICE)。
