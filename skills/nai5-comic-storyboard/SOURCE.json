@@ -1,0 +1,32 @@
+{
+  "version": "v1.2b",
+  "role": "ideation",
+  "skill": "nai5-comic-storyboard",
+  "requires": [],
+  "modules": {
+    "ideation-comic-story": {
+      "path": "方法/构思/comic-story.md",
+      "sha256": "5ba9344b63dfdc31ecdfd9bc08bd499a41d6e3091386f9fbadbde0f9977ceb14"
+    },
+    "ideation-comic-layout": {
+      "path": "方法/构思/comic-layout.md",
+      "sha256": "5422ba956611be15a90c12af6e8dcf0d1575c1461c5fa749484442dde2efaf37"
+    },
+    "ideation-comic-continuity": {
+      "path": "方法/构思/comic-continuity.md",
+      "sha256": "e369fbb0e4cb0634bafbdfa4a5837317bb6d7cae5f5c0fa85a376e962b8eb06e"
+    },
+    "ideation-composition": {
+      "path": "方法/构思/composition.md",
+      "sha256": "20b7ae6f7b065984a44458ca9a83933d31b2f60bbe774648571933cff38e552d"
+    },
+    "ideation-sources": {
+      "path": "方法/构思/sources.md",
+      "sha256": "e9c1955b6f35b8e60933b95ed3bb0e6b021ed4cf23dc6ed8206aa62ef31f77ba"
+    }
+  },
+  "entry": {
+    "path": "工具/职责拆分/入口/nai5-comic-storyboard.md",
+    "sha256": "619246cf3ed009eac3df5aee23ee7f34c5c10aa8833e0f2140f599e24738db40"
+  }
+}

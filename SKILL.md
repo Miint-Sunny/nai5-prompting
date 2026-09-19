@@ -1,42 +1,14 @@
 ---
 name: nai5-prompting
-description: Use when 用户要写 NAI / NovelAI Diffusion V5 提示词、把模糊想法展开成画面、安排多角色交互或漫画分格、排查出图问题，即使没有明确说“提示词”也适用。
+description: 用于 NovelAI Diffusion V5 的画面构思、插画、漫画、OC 与服装设计，以及将已有方案转换或修改为提示词。
 ---
 
-> Copyright (C) 2026 Miint-Sunny
-> SPDX-License-Identifier: GPL-3.0-only
-> 项目与公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。
-> 许可全文：[GNU GPL version 3](https://www.gnu.org/licenses/gpl-3.0.html)；贡献范围与第三方材料说明见 [NOTICE](https://github.com/Miint-Sunny/nai5-prompting/blob/main/NOTICE)。
+# NovelAI V5 完整方法
 
-# NAI5 Prompting
+方法全文见 [完整构思与写法](references/NAI5_All_Prompting.md)。根据当前任务读取所需部分；已有想法、方案或定稿直接接续对应阶段。只交付用户要求的内容。
 
-写 NovelAI Diffusion V5 提示词时，按需读取两份参考：
+读取资源时使用技能名 `nai5-prompting` 和路径 `references/NAI5_All_Prompting.md`，按实际读取工具提供的范围续读。技能资源工具的 `path` 相对技能目录，不加 `nai5-prompting/` 前缀或 Markdown `#锚点`。若使用通用文件读取工具，先按宿主提供的技能位置解析完整路径，不以图片输出目录为起点猜测相对路径。
 
-1. **`references/通用构思.md`**：用户只给主体、半句话或一个方向时先读。
-   按需求分档补足画面，检查编剧、监督、原画、摄影的职责；这些决定允许往返回调。
-   只给方向或完全空白时，按 C/D 档首答交付不同方向的成品方案；用户指定条数优先。
-2. **`references/通用写法.md`**：落笔时读。语法与能力边界在开篇，字段与模板在 §0，
-   词组和句子分工在 §2–§4，多人绑定在 §4.9，漫画分格在 §4.10，质量尾和 UC 在 §6。
-   交付前逐项检查 §9；实测依据及局限见 §10。
+本入口只提供文本方法，不表示已经写入工作台或生成图片。此包与两卷包内容同源、技能名相同，安装其中一种即可。
 
-用户需求已完整具体时可以只读写法；需求模糊时先构思，再按写法交付。
-两份正文均可独立使用，不预设额外资料已挂载。有运行环境 NOTE 时，语法与能力边界以它为准；
-**实际启用的补充说明只接管明确规定的部分**，其余按通用正文。
-
-## 输出约定
-
-- **直接给成品**：主串直接开写，不加 `Prompt:` 标头；保留 `Character 1:`、`Character 2:`、`UC:`。
-  多方案各给完整字段，不共用一个角色栏；附注按写法 §0 的适用条件给，不复述生成流程。
-- **用户明确细节逐项保留**：版权角色用规范名触发常规外观，不凭印象补默认设计；
-  用户指定的服装、饰品和外观改动逐项写入角色栏。原创角色的给定锚点同样完整保留。
-  主串不复制整套外观，交互句可复用辨认必需的简短外观锚点。
-- **画师串使用有据原文**：来源限用户提供的串，或实际启用资料【完全模仿】节明确提供的固定串。
-  无来源时省略，或单独留一行 `<画师串：自己贴>`。用户要求逐字保留的原串、空格、标点、年份和指定权重照原文保留。
-- **质量尾按实际预设处理**：预设关闭时，无字默认 `very aesthetic, masterpiece, no text`；
-  有字用 `very aesthetic, masterpiece`。质量词只在所有句子之后写一组；预设开启时按它实际附加的词去重，
-  有字时还要移除或关闭预设中的 `no text`。`complexity` 是按需功能开关，不是默认质量尾。
-- **UC 按画面排除冲突**：按写法 §6 的基础串与本图项组织，预设开启时只去掉实际重复项。
-  留白去掉 `negative space`；分格、漫画或多视图去掉 `multiple views`；漫画风再去掉 `screentone, halftone`；
-  多人不带 `extra characters`。不要用“默认预设”掩盖仍与画面冲突的预设内容。
-- **不确定就核对并标明**：tag 能查就查；版权角色的结构与职能拿不准时按构思查档案，
-  查不到按正文的保守规则交付，不把猜测当作已核实。能力和参数以所选模型的实际限制为准。
+Copyright (C) 2026 Miint-Sunny。许可见 [LICENSE](LICENSE)，贡献与第三方材料说明见 [NOTICE](NOTICE)。

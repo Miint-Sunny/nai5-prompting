@@ -1,0 +1,16 @@
+{
+  "version": "v1.2b",
+  "role": "ideation",
+  "skill": "oc-character-design",
+  "requires": [],
+  "modules": {
+    "ideation-character": {
+      "path": "方法/构思/character.md",
+      "sha256": "5019404d16b845bc1d3a57959506f6041446ee56099810634325233b309daab0"
+    }
+  },
+  "entry": {
+    "path": "工具/职责拆分/入口/oc-character-design.md",
+    "sha256": "eed95fe32639eff50bc215f8c81dce0fe6488920a40c765e7f8e0fb3780973d6"
+  }
+}

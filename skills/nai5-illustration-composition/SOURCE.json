@@ -1,0 +1,16 @@
+{
+  "version": "v1.2b",
+  "role": "ideation",
+  "skill": "nai5-illustration-composition",
+  "requires": [],
+  "modules": {
+    "ideation-composition": {
+      "path": "方法/构思/composition.md",
+      "sha256": "20b7ae6f7b065984a44458ca9a83933d31b2f60bbe774648571933cff38e552d"
+    }
+  },
+  "entry": {
+    "path": "工具/职责拆分/入口/nai5-illustration-composition.md",
+    "sha256": "01c117d2942e85ae7c1bfb2921fab4dc597b2694a5dcdf867aef2e12bf75c955"
+  }
+}

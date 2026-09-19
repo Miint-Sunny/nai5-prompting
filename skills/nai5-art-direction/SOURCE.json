@@ -1,0 +1,16 @@
+{
+  "version": "v1.2b",
+  "role": "ideation",
+  "skill": "nai5-art-direction",
+  "requires": [],
+  "modules": {
+    "ideation-art": {
+      "path": "方法/构思/art.md",
+      "sha256": "daa78b196176831f9606f988cb9d32daff9e2063753a9c892721fae602316ad6"
+    }
+  },
+  "entry": {
+    "path": "工具/职责拆分/入口/nai5-art-direction.md",
+    "sha256": "d74da890f0e5afa315a89740c45517e02d7bfc4da877c33f3c3cfd58561d3f0e"
+  }
+}

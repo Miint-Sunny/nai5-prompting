@@ -1,0 +1,16 @@
+{
+  "version": "v1.2b",
+  "role": "ideation",
+  "skill": "nai5-ideas",
+  "requires": [],
+  "modules": {
+    "ideation-ideas": {
+      "path": "方法/构思/ideas.md",
+      "sha256": "864df8c5407c771417c27a717da994e396f20036c745e5fe8faa47005be4184b"
+    }
+  },
+  "entry": {
+    "path": "工具/职责拆分/入口/nai5-ideas.md",
+    "sha256": "c16ac43f87183b1519da30dea63331ab2c1d5a2c757a64a4fc19a388db728a2b"
+  }
+}

@@ -1,58 +1,46 @@
-# nai5-prompting · v1.1
+# NovelAI V5 构思与写法 · v1.2b 预发布
 
-给 LLM / agent 使用的 NovelAI Diffusion V5 提示词方法包，覆盖从模糊想法到成品提示词。
-可以作为 Agent Skills 挂载，也可以直接把方法文件发给聊天 AI。
+**同一套方法，三种包装，选择一种即可。** 本次预发布接替旧 nightly 的当前下载入口，v1.1 的历史稳定发布与标签保留。内容覆盖整体想法、场景、艺术表达、OC、插画构图、漫画与服装设计，以及把已定方案写成 NovelAI Diffusion V5 提示词。已有想法或定稿就从当前阶段继续，不必从头走一遍。
 
-## 文件与使用方式
+| 下载 | 包里是什么 | 适合怎样用 |
+|---|---|---|
+| [单文件完整包](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2b/nai5-single-v1.2b.zip) | 一个薄入口＋完整合订稿 | 想保留一份完整方法，按章节阅读 |
+| [两卷完整包](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2b/nai5-paired-v1.2b.zip) | 一个薄入口＋构思卷、写法卷 | 想分开阅读构思与写法；写法卷已含专项补充 |
+| [拆分技能包](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2b/nai5-split-v1.2b.zip) | 十个平级的小技能 | 想按当前任务启用相应内容；需要支持多技能导入的客户端 |
 
-| 文件 | 用途 |
-|---|---|
-| `references/通用构思.md` | 把需求展开成具体画面，检查故事、镜头、动作和光色；各项决定允许往返回调 |
-| `references/通用写法.md` | NAI 语法、字段分工、词组与句子写法、多角色交互、漫画分格、排查与交付检查 |
-| `NAI5_All_Prompting.md` | 两份正文的机器合订，内容相同；只能传一个文件时使用 |
-| `SKILL.md` | 支持 Agent Skills 的 agent 使用的入口 |
+直接在客户端选择对应 ZIP 导入；不要导入整个仓库的源码 ZIP。单文件与两卷都安装为 `nai5-prompting`，导入另一种时选择替换同名技能。从完整包切换到拆分包时，停用旧的完整包，避免同一套方法叠加；反向切换时也停用原拆分技能。旧发布记录保留，当前下载入口使用上面三个 v1.2b 包。
 
-**作为 skill 使用**：把本仓库放进 agent 的 skills 目录，入口是 `SKILL.md`。
+只支持单技能导入的客户端，从下表分别下载所需小包。漫画／服装写法补充需同时启用本版 **通用 NAI5 写法**；安装先后不决定任务执行顺序。
 
-**直接发给聊天 AI**：在“两份参考文件”和“单文件合订”中二选一，不要重复挂载。
-附件连同任务一起发，例如：“附件是提示词方法，按它直接给我成品提示词。画面是……”
-说得完整就照要求写；只给方向时会给不同方案，用户指定条数优先。
+## 先看看 split 有什么
 
-两份正文均可独立使用，不需要额外偏好资料。实际启用的补充说明只在其明确规定的范围内生效，
-其余按通用正文；有运行环境 NOTE 时，语法与能力边界以它为准。
+**通用构思找想法 → 专项构思深入题材 → 通用写法表达定稿 → 按需要加专项写法补充。**
 
-## v1.1 的方法调整
+只要想法、角色、衣服或分镜，交到该阶段即可；已有定稿要词句则直接进入写法。下表名称可打开完整入口，方法链接可直接阅读正文。
 
-- 减少重复统计，保留必要的功能数字、逐字原串和有比较价值的简表；不为压短而删除用户细节。
-- 保留用户明确的画面、角色锚点、服装饰品、逐字原串与指定权重。版权角色的默认设计不凭印象补写，
-  用户明确细节仍逐项保留；动作句可用简短外观锚点指认人物。
-- 主串直接开写，保留 Character / UC 字段。质量尾按有字或无字选择，并与实际预设去重；
-  UC 按留白、漫画、多人等画面目标去除冲突项。
-- 构思允许人物、空间和光色互相回调，多方案保持明确差异；不从样本频次推断具体用户的固有偏好。
-- 能力说明区分模型变体与文档证据，运行时仍需查看所选模型的实际界面。
+| 技能与用途 | 方法全文 | 单独下载 |
+|---|---|---|
+| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-ideas-v1.2b.zip) |
+| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-scene-design-v1.2b.zip) |
+| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-art-direction-v1.2b.zip) |
+| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/oc-character-design-v1.2b.zip) |
+| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-illustration-composition-v1.2b.zip) |
+| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-comic-storyboard-v1.2b.zip) |
+| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/oc-costume-design-v1.2b.zip) |
+| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-writing-v1.2b.zip) |
+| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串、角色串与 UC | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-comic-writing-v1.2b.zip) |
+| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](https://raw.githubusercontent.com/Miint-Sunny/nai5-prompting/v1.2b/skills/nai5-costume-writing-v1.2b.zip) |
 
-## 来源与验证范围
+也可直接读 [完整合订稿](references/NAI5_All_Prompting.md)，或 [构思卷](paired/references/通用构思.md)＋[写法卷](paired/references/通用写法.md)。这三种包装共同使用同一批方法，资源按任务选读；无需重复挂载。
 
-方法依据收藏整理资料、图片内嵌的真实提示词、既有出图对照与用户反馈整理。
-频次描述材料中出现过什么，不证明用户内在动机，也不代表最优写法；正文保留必要的功能数字、
-逐字原串和有比较价值的简表。具体判据与实验局限见通用写法 §10。
+## 导入与读取说明
 
-本轮另用四个模型分别完成同一轮 50 题的文字交付复核，检查明确细节、字段、权重与原串保留等要求。
-各运行环境的系统封装不同；每个模型只跑一轮，没有新增生图、无 skill 对照或重复采样。
-复核发现的问题用于修补说明，不表示所有题目均通过，也不据此推导通用模型排名或出图成功率。
-既有出图对照只支持其覆盖的有限场景，不能替代本次改稿后的生成效果验证。
+ZIP 中保留合法技能目录，只写文件条目，各技能的 `SKILL.md` 在其资源前面。单文件／两卷包各有一个技能；拆分包包含十个平级技能目录，ZIP 根层不混入说明文件或其他 ZIP。
 
-## 相关项目
+使用技能资源工具时，路径相对当前技能目录，不再加技能名前缀或 Markdown 章节锚点。若使用通用文件读取工具，应从宿主提供的技能位置解析路径，不能用图片输出目录猜测。文件列表或 ZIP 的排列顺序不等于模型应逐个读取所有文件。
 
-- [nai-autocomplete](https://github.com/Miint-Sunny/nai-autocomplete)：配套 NovelAI 浏览器扩展，
-  提供写词面板、skill 注入与 tag 查证。本方法包也可独立使用。
+这些包提供内容方法与可填写的词句，适合能读取相应文件的 LLM 客户端。Harness 可复用内容方法，但本发布不包含工作台操作包；实际写入仍依赖相应适配工具，不因导入成功就具备工具能力或自动生图能力。
 
-## 版权与许可
+已知验证范围见 [发布说明](RELEASE_NOTES.md)。不承诺所有 agent、全部 Windows 界面或生图效果均已验证。来源与同源文件对应见 [SOURCE.json](SOURCE.json)，下载后可用 [SHA256SUMS.txt](SHA256SUMS.txt) 核对文件。
 
-Copyright (C) 2026 [Miint-Sunny](https://github.com/Miint-Sunny)。项目公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。
-
-本项目的原创贡献、编排与修改依照 GNU GPL version 3（SPDX：GPL-3.0-only）许可。完整许可见 [LICENSE](LICENSE)，贡献范围、第三方材料及无担保说明见 [NOTICE](NOTICE)。
-
-## 分支
-
-`main` 保持 v1.1 正式内容；开发稿、任务拆分及各应用适配见 [分支协作](BRANCHES.md)。既有版本标签与 Release 保持原样。
+Copyright (C) 2026 [Miint-Sunny](https://github.com/Miint-Sunny)。所有包装保留完整 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)，项目贡献按 GNU GPL version 3（GPL-3.0-only）提供。项目公开来源：[nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。
