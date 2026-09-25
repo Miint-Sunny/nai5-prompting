@@ -2,7 +2,7 @@
 
 # 已定分镜的漫画写法
 
-把现有架构和逐格稿转换为对应生成单元的字段。共同语法、用户原串、质量与 UC 依 “写法规范与交付边界”（`nai5-writing`：`references/conventions.md#writing-conventions`）。不重新安排剧情、镜头、格数或人物；按本次明确修改更新后直接转换。若内容仍缺关键创作决定，只指出具体缺口，可接 `nai5-comic-storyboard` 处理，不在包内重复维护导演方法。
+把现有架构和逐格稿转换为对应生成单元的字段。共同语法、用户原串、质量与 UC 依 “写法规范与交付边界”（`nai5-writing`：`references/conventions.md#writing-conventions`）。不重新安排剧情、镜头、格数或人物；按本次明确修改更新后直接转换。若内容仍缺关键创作决定，只指出具体缺口，可接 `nai5-comic-storyboard` 处理，不在包内重复维护导演方法。用户明确跳过分镜、手里又没有逐格稿时，同一轮先给 4–8 行逐格简稿并标明是本次补的，再转换；不把自己补的内容称作已定稿。
 
 <a id="writing-comic-state"></a>
 
@@ -36,7 +36,7 @@
 
 **主串的人数标签按实际生成单元中出现的不同角色去重。** 同一女性在三格和一个覆盖画面中重复出现仍是 `1girl`；两位女性轮流单独出镜是 `2girls`；一女一男用 `1girl, 1boy`。不按出场次数、格数、框数或单格最多人数计算，也不计只在其他生成单元出场的人物。整页就是本页身份；拆组后重新按该组出镜者去重，不能把原页其他人的人数标签一并带入。
 
-V5 支持自然语言组织整页，这里的位置/大小称呼是自然语言定位，不是硬分区接口。不要捏造前端框数上限、逐格坐标字段或 `source#` 格号语法。提示词长度看当前前端计数；先减少措辞冗余与重复背景描述；不得为省词删掉既定道具或人物出场，确需分组时提出具体方案，不删必要线索或可见辨识锚点。[官方 V5](https://novelai.net/v5)
+V5 支持自然语言组织整页，这里的位置/大小称呼是自然语言定位，不是硬分区接口。不要捏造前端框数上限、逐格坐标字段或 `source#` 格号语法；用角色位置功能指定分格时，位置不写进提示词正文，按“字段职责：先选画面类型”（`nai5-writing`：`references/conventions.md#field-contract`）在附注里逐框给。提示词长度看当前前端计数；先减少措辞冗余与重复背景描述；不得为省词删掉既定道具或人物出场，确需分组时提出具体方案，不删必要线索或可见辨识锚点。[官方 V5](https://novelai.net/v5)
 
 <a id="comic-adapter.s02"></a>
 
@@ -44,14 +44,15 @@ V5 支持自然语言组织整页，这里的位置/大小称呼是自然语言�
 
 面向用户复制的文本，**主串直接开写，不加 `Prompt:` 显示标头**，保留 `Character N:` 与 `UC:`。实际调用工具时，`prompt`、`negative_prompt` 或其他字段名及结构按当次真实接口填写；显示标头的省略不改变工具参数。
 
-完整导出按页或已定的实际生成单元分组：先给简短版式说明，再分别给可直接复制的主串、全部 `Character N:` 框和 `UC:`。每个字段用独立代码块，后页也写足，不以“同上”省略角色、状态或排除串；无需重复已经审阅的完整导演稿。主串与实际质量、UC 的处理仍按共同规范。只要局部替换时仅交指定框或词句，不套完整导出格式。
+完整导出按页或已定的实际生成单元分组：先给简短版式说明，再分别给可直接复制的主串、全部 `Character N:` 框和 `UC:`。每个字段用独立代码块，代码块只放最终内容（见“字段职责：先选画面类型”（`nai5-writing`：`references/conventions.md#field-contract`）），后页也写足，不以“同上”省略角色、状态或排除串；无需重复已经审阅的完整导演稿。主串与实际质量、UC 的处理仍按共同规范。只要局部替换时仅交指定框或词句，不套完整导出格式。
 
 默认全彩模板（尖括号填实后交付；其他模式按下文替换风格词并转换各框颜色）：
 
 ```text
-<本次生成单元去重人数标签>, manga. Read right to left, then top to bottom.
+<本次生成单元去重人数标签>, manga. Read left to right, then top to bottom.
 The page is divided into <本单元总格数> panels: <各行组的格数、位置与大小>.
 <按文字需求和实际预设去重后的质量尾>
+<本单元负权重排除（按需，没有就删掉这一行）>
 
 Character 1:
 In the <方位和大小> panel, <视图及镜头>: <仅可见的主体与外貌、新动作及持续状态、必要背景与文字>.
@@ -60,10 +61,10 @@ Character 2:
 In the <方位和大小> panel, <视图及镜头>: <该格可见内容>.
 
 UC:
-<按本单元目标去冲突、与实际预设去重后的排除串>
+<用户自己的 UC，没有就用基础串；删去漫画冲突项，与实际预设去重，不加本单元排除项>
 ```
 
-**主串内容部分写人数标签和简短版式，末尾按 “完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`） 处理质量词。** 阅读顺序默认右→左、上→下，本次另有明确约定时替换。可用 `The page is divided into four panels: three small panels across the top, one huge full-width panel across the bottom.`，角色框相应称呼 `the top right panel`、`the top middle panel`、`the top left panel`、`the huge bottom panel`。普通情况不描写分隔线，也不默认附加 `Black borders`；颜色仅在本次已有明确要求时简写并保持一致。具体格线、沟槽、比例与坐标交给模型，特殊构图或实图修正才补必要关系。
+**主串内容部分写人数标签和简短版式，末尾按 “完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`） 处理质量词。** 阅读顺序默认从左往右、上→下；右→左只在用户指定或改编原作时用，本次另有明确约定时替换。**四格默认 2×2**，读序左上 → 右上 → 左下 → 右下，主串写 `Read left to right, then top to bottom. The page is divided into four panels: two panels side by side across the top and two panels side by side across the bottom.`，四个框依次称呼 `the top left panel`、`the top right panel`、`the bottom left panel`、`the bottom right panel`；竖排等其他版式只在用户指定或已定分镜这样安排时用。普通情况不描写分隔线，也不默认附加 `Black borders`；颜色仅在本次已有明确要求时简写并保持一致。具体格线、沟槽、比例与坐标交给模型，特殊构图或实图修正才补必要关系。
 
 布局段先给总格数，再按行组说明并排、堆叠与主次：`side by side across the top`、`stacked on the right`、`one wide panel across the bottom` 等足够表达常见布局。复杂分组可用 `tiers`，但它表示横向行组，不能代替总格数；例如三行的 `3+1+2` 是六格。用相对大小突出重点，不把画面内容塞进布局句。详见 [布局段示例](comic-examples.md#comic-composition.s01)。
 
@@ -85,13 +86,7 @@ UC:
 
 完整导出直接执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`）。按整个生成单元判断有字/无字；主串全部布局句后只有一组质量尾，Character 框不重复质量词。有字页的静默格省略文字指令。后期排字的原文放独立清单，不进入生成引号。
 
-下面是基础排除串的原样参考，先按当前目标去冲突，不能直接照抄成所有漫画的 UC：
-
-```text
-lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, halftone, screentone, multiple views, logo, too many watermarks, negative space, blank page
-```
-
-漫画或多视图检查 `multiple views`，漫画风/网点检查 `halftone, screentone`，留白检查 `negative space`；其他冲突与预设不可操作的情况一并按共同规则处理。完整输出写实际排除词，点子、分镜和局改不因此补字段。
+UC 沿用用户自己的那套，没有就用共同规范里的基础串。所有漫画（包括全彩）都删去 `multiple views`、`halftone`、`screentone`；要留白时删去 `negative space`，画面要出现 logo 或印字时删去 `logo`。其余项原样保留，不改、不换，也不另加本单元排除项，不另外提醒用户。本单元不想要的具体元素写成质量尾之后的负权重行。预设不可操作的情况按共同规则处理。完整输出写实际 UC，点子、分镜和局改不因此补字段。
 
 <a id="comic-adapter.s04"></a>
 
@@ -109,7 +104,7 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 
 多人同格的每框只详细描述一个人的外观/表情/动作。涉及互动时用方位和接触关系提及对方，不在两框重复两份完整外貌、整段台词或两套场景。把跨框的主动作留给所属人物框，其他框不能把它变成第二次动作。
 
-`source# / target# / mutual#` 不是逐格寻址；本模式优先局部关系句。不要将一页中会换向的递物/拉手永久绑定到共享人物。Position 只按实际界面功能使用，不能用一个全页点位代表多格重复出场；未操作不得声称已设置。
+`source# / target# / mutual#` 不是逐格寻址；本模式优先局部关系句。不要将一页中会换向的递物/拉手永久绑定到共享人物。用角色位置功能指定分格时，按实际界面功能在附注里给位置：每个框一个位置，落在它所在画格的区域里（2×2：框 1 左上、框 2 右上、框 3 左下、框 4 右下；同格两个框在这一格内按站位分左右）；同一角色多格出场按框分别给，不用一个全页点位代表；未操作不得声称已设置。
 
 <a id="comic-adapter.s04.h01"></a>
 
@@ -137,7 +132,7 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 | 拟声词 | `Small sound-effect lettering beside the latch reads "咔".` |
 | 静默格 | 省略文字指令，不写 `No text in this panel.` 或同义无字声明 |
 
-对白放说话者所属框；同格旁白/声效只选一个框承载，避免重复生成。引号只包确实要画出的文字，不包制作编号或导演意图。留好文字位置，控制泡内字数；文字拥挤时指出具体问题，保留用户指定原文；不按气泡数量配额删改。
+对白放说话者所属框；同格旁白/声效只选一个框承载，避免重复生成。局改换台词时，新台词的说话人若和原来不同，气泡所在框和尾巴指向随新说话人一起改，并写进改动清单。引号只包确实要画出的文字，不包制作编号或导演意图。留好文字位置，控制泡内字数；文字拥挤时指出具体问题，保留用户指定原文；不按气泡数量配额删改。
 
 按现稿和本次明确要求表达声效，位置跟随声源所属格，必要时写大小、轻重与方向。单纯转换不新增声音内容；用户明确授权补充或润色声音表现时，可根据已有动作、环境和节拍主动安排合适的拟声词，不必要求用户先给具体字词，也不为加声效另造事件，明确这是本次新增文字。文字冻结、忠实转换、单点修改或静默要求优先，不为每格凑声效。
 
@@ -190,3 +185,22 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 分析图片写法时，先确认提示记录对应当前图片，再分别核对布局、镜头与文字效果。图生图底图、坐标等条件也可能影响结果，不以单次成图推导短语的稳定有效性；见 [如何核对效果](comic-examples.md#comic-composition.s04)。现有生成参数与 Position 规则保持适用。
 
 色彩模式、全字段转换及输出前检查见 “色彩模式与输出前检查”（`nai5-writing`：`references/conventions.md#comic-continuity.s03`）；按本次已定模式选读。
+
+<a id="comic-adapter.s08"></a>
+
+### 漫画导出前核对
+
+完整导出交付前逐项核对；只改一格或一句时只核对与它相连的项。
+
+| # | 核对项 | 依据 |
+|---|---|---|
+| 1 | 版式句的总格数、行组和各框称呼一一对得上；中文格位说明和英文定位一致 | [字段模板与先后顺序](#comic-adapter.s02) |
+| 2 | 读序默认从左往右，四格 2×2 依次是左上 → 右上 → 左下 → 右下；用户指定右读时按指定，框称呼跟着换 | 同上 |
+| 3 | 人数标签按整页身份去重，男女分别计：一女一男是 `1girl, 1boy`，两位女性是 `2girls` | [生成单元、画格称呼与输入框编号](#comic-adapter.s01) |
+| 4 | 同一格有两个可识别人物时各用一个框，定位句完全相同；匿名局部互动可以合一个框 | [决定一格用几个框](#comic-adapter.s04) |
+| 5 | 对白放在说话者的框里；局改换台词时一并核对气泡归属 | [文字只在需要的格里出现](#comic-adapter.s05) |
+| 6 | 有字页的质量尾不带 `no text`，静默格不写文字指令 | [漫画完整导出的预设检查](#comic-adapter.s03) |
+| 7 | UC 用用户的或基础串，删去漫画冲突项，不加本单元排除项；本单元不要的元素写成主串最后的负权重行 | 同上 |
+| 8 | 覆盖画面只画一个瞬间，不增加底层格数 | [前景覆盖的字段例外](#comic-adapter.s04.h01) |
+| 9 | 色彩模式和各框颜色一致 | “色彩模式与输出前检查”（`nai5-writing`：`references/conventions.md#comic-continuity.s03`） |
+| 10 | 用角色位置功能指定分格时，附注给了每个 Character 框的位置，并写明从 AI's Choice 改成 Custom | [决定一格用几个框](#comic-adapter.s04) |

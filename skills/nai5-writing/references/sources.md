@@ -49,6 +49,8 @@
 | N3 [Image Generation Models](https://docs.novelai.net/en/image/models/) | 概览对相同渲染文字容量使用 tokens，与文字专页单位不一致；提示词本身的 token 容量又是另一项。本项目按文字专页字符口径引用，保留差异。 |
 | N4 [Quality Tags](https://docs.novelai.net/en/image/qualitytags/) | V5 Standard 与 Light 附加内容不同，均须按实际生效词去重和处理文字冲突，不能假定预设恒开。 |
 | N5 [Precise Reference](https://docs.novelai.net/en/image/precisereference/)、[Vibe Transfer](https://docs.novelai.net/en/image/vibetransfer/)、[Inpaint](https://docs.novelai.net/en/image/inpaint/) | 本项目 2026-09-14 核对时，Precise 文档仍标 V4.5 专有；另外两页没有完整的 V5 Full / Curated 支持矩阵。按所选模型界面确认，不推测缺项支持。 |
+| N6 [Multiple Characters](https://docs.novelai.net/en/image/multiplecharacters/) | 角色位置在角色提示词区从 AI's Choice 改成 Custom，点 Character Positions 按钮在画布上摆放，模型会贴着摆放的位置画；V4 与 V4.5 限 5×5 网格，V5 没有这项限制，是自由画布。本页写 V5 最多 22 个角色、V4 最多 6 个；N1 的 V5 页同样写最多 22 个、可把角色放在画布任意位置。每个角色另有自己的 Undesired Content 栏。本项目 2026-09-24 核对。 |
+| N7 [Tags](https://docs.novelai.net/en/image/tags/) 的 Alpha Transparency 一节 | `transparent background` 让背景透明；`has alpha` 较抽象，表示要以某种方式用到 alpha 通道；`alpha transparency` 让画面里的物体以 alpha 通道方式透空（例子是魔法特效、火焰、伞），只在 V5 可用。本项目 2026-09-24 核对。 |
 
 基础语法、字段与原串依本包共同规范，OC 库仅在用户需要且实际启用时读取；方法导航见 [写法入口](conventions.md#writing-conventions)。漫画默认字段分工按用户后续要求采用“主 Prompt 写本页去重人数标签与简短版式、Character 框承载各格内容”，详见 “漫画提示词编译”（`nai5-comic-writing`：`references/comics.md#comic-adapter.preamble`）。这是个人工作流及实图反馈支持的应用方式，不能包装成官方逐格 API；故事身份、画格与提示框数量分别计算。
 
@@ -58,7 +60,7 @@
 
 归档材料中的《分镜脚本提示词（例）》用于支持“剧情节点→页级节奏→逐格镜头/文字/衔接”的制作顺序，以及精简对白、避免连续大头、无台词格有作用、重要节点考虑页尾等建议。该文档原本服务于已有剧本改编，右→左阅读、不新增剧情、从已有页面续写等条件，不自动成为用户原创任务的要求；格数参考的适用范围见页级规划，不当作硬配额。
 
-归档材料记录了右→左、上→下、人物去重计数、简短版式与可见状态连续等用户约定，本项目延续它们。它们不是官方接口规则；实际生成单元与用户当前要求优先。
+归档材料记录了右→左、上→下、人物去重计数、简短版式与可见状态连续等用户约定。其中读向已于 2026-09-24 按用户决定改为从左往右（四格默认 2×2），其余约定本项目延续。它们不是官方接口规则；实际生成单元与用户当前要求优先。
 
 | 归档材料记录的反馈 | 保留的写法 |
 |---|---|

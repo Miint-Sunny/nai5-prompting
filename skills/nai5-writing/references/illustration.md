@@ -15,7 +15,7 @@
 |---|---|
 | **主提示词** | 画师串 · 人数 · **动作 · 表情 · 镜头 · 场景 · 背景** · 光影 · 氛围色彩 · 技法 · 质量尾 |
 | **Character 1/2… Prompt**（角色栏） | **只放外貌**，具体放多少**取决于角色是原创还是版权**——见下面那张表，这里判完就别在别处再判一次 |
-| **Undesired Content（UC）** | 这张图明确不要的东西 |
+| **Undesired Content（UC）** | 沿用用户自己的 UC，没有就用基础串，只删与本图冲突的项；这张图明确不要的东西写成主串最后一行的负权重，不进 UC（[§6](conventions.md#shared-quality)） |
 | 参数 | 仅在用户问起或排查时给 |
 
 > 这条分工不是本文的发明，运行环境规定的原话是：
@@ -73,8 +73,10 @@
 <质量尾>                        ← 先判断是否需要文字：无字默认 `very aesthetic, masterpiece, no text`；
                                   有字用 `very aesthetic, masterpiece`（按预设关写，§6）；
                                   要更高完成度再加 `best quality, amazing quality, absurdres`。
-                                  放主串最后、写在所有句子之后、只此一组；预设开启时去掉重复项，并检查文字要求
+                                  写在所有句子之后、只此一组（后面只接本图负权重行）；预设开启时去掉重复项，并检查文字要求
                                   （带后置串块时，串块在质量尾之后，见下）
+<本图负权重排除（按需）>         ← 本图不想要的具体元素写成 `-1::tag::`，另起一行放在质量尾之后、
+                                  后置串块之前；没有就不写，也不把它们塞进 UC（§6）
 
 <style>                         ← **只在有 style 串时出现**（来源见下方画师串规则；
 xxxx                              skill 输出一般不含这俩块）
@@ -100,7 +102,7 @@ Character 1:
 <未指定部分的简洁成套说法（按需）>    ← 如 swimsuit / casual clothes，不擅自拆补部件
 
 UC:
-<按本图去冲突后的基础串 + 本图排除项，一行写全（§6）；预设开启时仅去实际重复项>
+<用户自己的 UC，没有就用基础串；只删与本图冲突的项，不加本图排除项（§6）；预设开启时仅去实际重复项>
 ```
 
 **主串不带标头**（2026-08-31 起；旧版的 `Prompt:` 行不再输出）。
@@ -119,7 +121,7 @@ UC:
       ＋ Character 1 `silver hair, long hair, ahoge, white dress, frills, white gloves`
 
 2. **质量词收在第一段 tag 的尾巴上**，后面还有几段句子。
-   它该在**主串的最末尾、所有句子之后**，而不是第一段 tag 的结尾。
+   它该在**所有句子之后**（后面只接本图负权重行），而不是第一段 tag 的结尾。
 
 3. **反向漏**：动作、表情、镜头、场景、背景漏进角色栏。它们默认留在主提示词；施受前缀例外见 [§4.9](#general-writing.s06.h13)。
 
@@ -296,6 +298,7 @@ V5 不在乎某一块写成 tag 还是句子——官方原话是 "Just describe
 
 - `solo focus` **不是** `solo`：多人图聚焦一人时写 `2girls, solo focus`，两者并存合法；
   `solo` 只配单人图，跟任何多人数词同写都是自相矛盾。
+- 动物和人同框时去掉 `solo`，人数标签照写（如 `1girl`），动物用普通名词写进画面，例如 `black cat`。
 - 分格人数按[实际生成单元](conventions.md#field-contract)中出现的不同身份去重：同一角色四格仍是 `1girl`；两位女性轮流单独出镜仍为 `2girls`。多格不写 `solo`，不按格数乘人数。
 
 <a id="general-writing.s05.h02"></a>
@@ -475,8 +478,9 @@ danbooru 服装 tag 里，**「一种衣服」和「一种穿法」长得很像�
 - **复杂度**：`low/medium/high/ultra complexity`——**功能开关，不是质量尾，默认不加**。
   加不加看开篇「V5 开关」那三条：画师串合不合、画面内容配不配、
   它有画面固化倾向（实测有负权重后画面反而变好的例子）
-- **透明**：`transparent background`（背景透明）/ `alpha transparency`（画面内物体半透明，
-  魔法特效、火焰、伞）/ `has alpha`（较抽象）。不稳定时 `2.1::transparent background::`
+- **透明**：`transparent background`（背景透明）/ `alpha transparency`（画面内物体在输出文件里真的透空，
+  走 alpha 通道，如魔法特效、火焰、伞，多配透明背景做素材）/ `has alpha`（较抽象）。不稳定时 `2.1::transparent background::`。
+  完整画面里画透明的伞写 `transparent umbrella`，不用 `alpha transparency`
 - **`depthness`**：给阴影增加纵深
 - **年代倾向**：`meta:novel era`（偏旧）/ `meta:golden era`（偏新）
 - **视觉小说风**：`visual novel art` / `visual novel bg` / `visual novel cg` /
@@ -784,9 +788,9 @@ A→B→C 的链式交互就是这么写的：
   构图和机位（viewer 角度）**；**角色之间不要靠得太近，否则坏图**
   （4.5「周围 8 格不放人」的精神继承）
 
-**输出为文本时这条是硬性的，不是可选**：三人以上、或画面有明确前后景层次的图，
-成品末尾**必附一行 Position 建议**（[普通多人画面的设置建议](conventions.md#field-contract)）——
-「Position 建议切 Custom：Character 1 左下、Character 2 中、Character 3 右上」。
+**普通插画和多人图的附注不主动给位置**，角色位置由用户自己在 Character Positions 画布上定（[字段职责](conventions.md#field-contract)）；
+本节用来把层次写进句子。用户问到怎么摆时，再按上面的方法给建议，例如
+「角色位置：在角色提示词区把位置从 AI's Choice 改成 Custom，点 Character Positions 打开画布，这样放：Character 1 左下、Character 2 中、Character 3 右上」。
 此为文本设置建议，不代表已经操作；实际能否精确控制层次仍需按当前模型与结果判断。
 
 <a id="general-writing.s06.h22"></a>
@@ -818,7 +822,7 @@ A→B→C 的链式交互就是这么写的：
 
 某些单人 UC 模板里有 `2::little dolls, extra characters, ..., ::`——
 **那是给 solo 图写的**。三个人的图带着它，权重 2 的「多余角色」会跟你的 `3girls` 打架。
-多人图要先把这一段拿掉。基础排除串（[§6](conventions.md#shared-quality)）里本来没有这段，别从单人 UC 模板抄进来。
+多人图只从这一段里删去 `extra characters`，同段其他项保留，按[§6](conventions.md#shared-quality)的冲突删除规则处理。基础排除串里本来没有这段，别从单人 UC 模板抄进来。
 
 
 <a id="general-writing.s06.h24"></a>
@@ -937,11 +941,11 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 | 服装状态词已核语义，不把一种衣服误作一种穿法 | [§3.5](#general-writing.s05.h05) |
 | 视线、距离、背景形态按同一主体 / 同一画面检查冲突 | [§3.9](#general-writing.s05.h09)；多人和分格先判归属 |
 | 多人归属清楚，没有凭印象分配职能或乐器 | [§4.1](#general-writing.s06.h01)–4.2 |
-| 三人以上或有前后景层次时附 Position 建议 | [§4.9](#general-writing.s06.h13) |
+| 普通插画、多人图的附注没有主动给角色位置（由用户自己定，问到才给）；层次写进了句子 | [相对位置](#general-writing.s06.h21)、[字段职责](conventions.md#field-contract) |
 | 质量词只有一组，放所有句子之后、不包 `<quality>` 块 | [§6](conventions.md#shared-quality) |
 | 无字用 `very aesthetic, masterpiece, no text`；有字去掉 `no text` 并检查预设 | [§6](conventions.md#shared-quality) |
 | 要画的文字有引号与载体；漫画台词逐格绑定，静默格省略文字指令 | 开篇「文字渲染」「漫画」 |
-| UC 一行写全、随本图目标去冲突项；多人不带 `extra characters` | [§6](conventions.md#shared-quality) |
+| UC 沿用用户的或基础串，只删与本图冲突的项；本图不要的写成主串最后的负权重，不进 UC；多人删去 `extra characters` | [§6](conventions.md#shared-quality) |
 | 用户逐字原串（含空格、标点、年份）和指定权重原样保留；未拿通用化当作删细节的理由 | [§0](#general-writing.s02)、[§3.7](#general-writing.s05.h07) |
 | 参数仅在询问或排查时给，已有具体值未被静默修改 | [§7](#general-writing.s09) |
 
@@ -950,4 +954,4 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 
 ## 多个完整方案
 
-用户要求多个完整提示词时，各方案有自己的主串、必要角色栏和 UC；数量按请求，不共用字段或写“同上”。只要点子或构图时不使用完整字段格式。附注以实际需要为限。
+用户要求多个完整提示词时，各方案有自己的主串、必要角色栏和 UC（UC 按[§6](conventions.md#shared-quality)沿用并去冲突）；数量按请求，不共用字段或写“同上”。只要点子或构图时不使用完整字段格式。附注以实际需要为限。

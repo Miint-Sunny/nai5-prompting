@@ -15,7 +15,7 @@
 - 默认先输出角色已知且必要的固定可见提示词，再紧接服装描述；不把 OC 名字本身当作模型已知角色标签。用户明确只要衣物串、不带角色时仅交服装；缺失外貌不为了补槽而编造。
 - 不包含人数、通用姿势、表情、镜头、场景、背景、光影、氛围、画风、质量词或 UC。服装自带的包与武器若必须说明携带方式，可保留一句最短的佩戴、手持或肩扛关系。
 - 当前资料中的固定特征用于设计适配，按本次交付范围选择必要可见项；资料里的场景与动作不自动进入服装片段。
-- 默认只给一个可直接复制的代码块，不附设计摘要、术语映射、参数或排错说明；用户明确索要时再补。
+- 默认只给一个可直接复制的代码块，代码块里只放最终片段；不附设计摘要、术语映射、参数或排错说明，用户明确索要时再补，放在代码块外。
 - 新写部件按[服装表达](#costume-writing.s06)一次定义、以部件为主语，并使用正向目标形态。
 - 逐字原串和单点局改按“用户事实、原串与本次可见范围”（`nai5-writing`：`references/conventions.md#shared-facts`），已有否定句与权重也保留，不为片段规范重写。
 
@@ -147,7 +147,7 @@ Six overlapping petal-shaped panels form a layered black overskirt around the wa
 
 1. **部件一次写清。** 一个部件只出现一次；同义标签、宽泛标签和完整句不围绕同一部件重复堆叠。
 2. **部件直接定义。** 使用 `[颜色/材质/形制] + [部件] + [with 细节]`，或让部件成为句子主语。避免 `She wears...`、`The character has...` 等角色引导句。
-3. **新写内容定义正向目标。** 直接描述部件的实际形态，未采用样式不写，也不主动加入负权重排除块。用户锁定原串时，已有否定句与权重按 [入口局改约定](#costume-entry.s03) 保留。
+3. **新写内容定义正向目标。** 直接描述部件的实际形态，未采用样式不写，片段里也不主动加入负权重排除块；完整画面按[下文](#costume-writing.full-export)把本图不要的元素写成负权重。用户锁定原串时，已有否定句与权重按 [入口局改约定](#costume-entry.s03) 保留。
 4. **按穿着位置排序。** 可先放整套原型或最关键的自定义结构，再按头颈、上身、腰胯、下装、腿脚、配件排列。与某部件绑定的材质和装饰紧跟该部件，不另开全局材质清单。
 5. **关系才写句子。** 交叉、缠绕、覆盖、从某处延伸、单侧位置和层叠先后用简短正向句；普通颜色、材质、长度和类别用词组。
 6. **可见信息才落笔。** 穿脱方式、隐藏安全层和设定解释若画面不可见，不进入服装片段。
@@ -171,13 +171,7 @@ Six overlapping petal-shaped panels form a layered black overskirt around the wa
 
 先按“字段职责：先选画面类型”（`nai5-writing`：`references/conventions.md#field-contract`）选择普通插画或漫画。普通画面动作、镜头、场景、光影在主串，已知可见外貌与服装在对应 Character；漫画将各格可见衣物和状态写入对应框。印字按“文字渲染”（`nai5-writing`：`references/conventions.md#general-writing.s01.h05`）保留原文与载体。使用黑白或半黑白时，对所有待输出字段执行“按需色彩参考”（`nai5-writing`：`references/conventions.md#shared-color`），不修改原色事实。
 
-完整导出执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`），片段省略质量和 UC 的规则不再适用。下面保留完整画面基础 UC 的原样参考；它是去冲突的起点，不是所有服装图必抄的固定串：
-
-```text
-lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, halftone, screentone, multiple views, logo, too many watermarks, negative space, blank page
-```
-
-有服装印字、logo/徽记、留白、网点、多视图或多人时，按目标检查实际生效的正向、UC 与预设；只改手写词不能抵消预设冲突。局部修改仍保留原来的其他字段和完整设置，不借转换重构。
+完整导出执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`），片段省略质量和 UC 的规则不再适用。UC 沿用用户自己的那套，没有就用那里的基础串；有服装印字、logo 或徽记时删去 `logo`，留白、网点、多视图或多人时删去相应冲突项，其余不改。本图不想要的衣物元素写成质量尾之后的负权重行，不进 UC。只改手写词不能抵消预设冲突。局部修改仍保留原来的其他字段和完整设置，不借转换重构。
 
 <a id="costume-writing.s08"></a>
 
