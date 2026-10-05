@@ -1,16 +1,16 @@
 {
-  "version": "v1.2c",
+  "version": "通用",
   "role": "ideation",
   "skill": "nai5-scene-design",
   "requires": [],
   "modules": {
     "ideation-scene": {
       "path": "方法/构思/scene.md",
-      "sha256": "ba76ce934521df293ed52af75de11b14aa9fa9c8d4f853c013688aa20485fe86"
+      "sha256": "d1359e9f639a0cf3a7a514a1515c4eecf04a0cf6be122940ca516199823d2108"
     }
   },
   "entry": {
     "path": "工具/职责拆分/入口/nai5-scene-design.md",
-    "sha256": "07438d9c8b99559da561a894d0e7236e8b66c31f0fdf167cb643f01946ce34b6"
+    "sha256": "91ed1adec9fae4e429e2734d23422e125567dba2c712a3cc2cf85357610015ec"
   }
 }

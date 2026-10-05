@@ -2,6 +2,8 @@
 
 # 写法来源与证据边界
 
+本文件记录方法出处与适用边界。技术语法、术语或当前能力需要核实时，读取对应技术节；用户明确要求核对历史依据时，再读相应归档说明。普通写词不沿历史来源自主检索旧图、完整原串或反推来补画面内容。
+
 > Copyright (C) 2026 Miint-Sunny
 > SPDX-License-Identifier: GPL-3.0-only
 > 项目与公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。

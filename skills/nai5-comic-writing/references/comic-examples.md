@@ -30,13 +30,13 @@ very aesthetic, masterpiece
 **Character 1 — 上方全宽格，室友A**
 
 ```text
-In the full-width top panel, medium shot, eye-level view: an adult woman with a pale bob and a plain dark crew-neck short-sleeve T-shirt sits on the right. She braces a squat glass jam jar with a closed ribbed screw lid on a small breakfast table, looking toward the left. A simple kitchen doorway is visible behind her.
+In the full-width top panel, medium shot, eye-level view: an adult woman with long pale hair in a loose side braid and a dark striped pajama top sits on the right. She braces a squat glass jam jar with a closed ribbed screw lid on a small breakfast table, looking toward the left. A simple kitchen doorway is visible behind her.
 ```
 
 **Character 2 — 上方全宽格，室友B**
 
 ```text
-In the full-width top panel, medium shot, eye-level view: an adult woman with dark short wavy hair and a plain light crew-neck short-sleeve T-shirt sits on the left, leaning toward the jar at the center of the table. A speech bubble above her reads "我来。", its tail pointing to her mouth.
+In the full-width top panel, medium shot, eye-level view: an adult woman with dark hair in a high ponytail and a light apron over a plain shirt sits on the left, leaning toward the jar at the center of the table. A speech bubble above her reads "我来。", its tail pointing to her mouth.
 ```
 
 **Character 3 — 中排左侧窄格，完整手部互动**
@@ -48,7 +48,7 @@ In the narrow middle left panel, tight close-up, slightly elevated view: two bar
 **Character 4 — 中排右侧宽格，室友B发力反应**
 
 ```text
-In the wide middle right panel, close-up, slightly low angle: an adult woman with dark short wavy hair, the neckline of a plain light crew-neck T-shirt visible, squeezes her eyes shut and puffs her cheeks with effort, shoulders raised. The top of her hair extends above the panel.
+In the wide middle right panel, close-up, slightly low angle: an adult woman with dark hair in a high ponytail, the strap of a light apron visible, squeezes her eyes shut and puffs her cheeks with effort, shoulders raised. The top of her hair extends above the panel.
 ```
 
 **Character 5 — 下排左侧窄格，开合结果**
@@ -60,7 +60,7 @@ In the narrow bottom left panel, tight close-up, side view: a bare hand enters f
 **Character 6 — 下排右侧宽格，室友A回应**
 
 ```text
-In the wide bottom right panel, close-up, three-quarter view: an adult woman with a pale bob, the neckline of a plain dark crew-neck T-shirt visible, turns toward the left with a relieved smile. A speech bubble above her reads "救星！", its tail pointing to her mouth.
+In the wide bottom right panel, close-up, three-quarter view: an adult woman with long pale hair in a loose side braid, the collar of a dark striped pajama top visible, turns toward the left with a relieved smile. A speech bubble above her reads "救星！", its tail pointing to her mouth.
 ```
 
 **UC:**
@@ -69,7 +69,7 @@ In the wide bottom right panel, close-up, three-quarter view: an adult woman wit
 lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, logo, too many watermarks, negative space, blank page
 ```
 
-本页是两个人、五格、六个提示框，因此主 Prompt 用 `2girls`。上方全宽格的两名可识别人物各一个框，复用完全相同的 `In the full-width top panel`；中排左侧窄格的两位人物的手合在一个框，不另加人数。人物特写没有裤子/鞋，下排左侧的道具格没有重新贴人物外观。旋盖结构从首次出现到打开一直一致；“拧开”的中间过程由格间省略完成，道具格只画已打开这一瞬间。
+本例演示三件事：同格可识别人物分别建框，匿名手部接触合框，旋盖前后的结构保持一致。本页是两个人、五格、六个提示框，因此主 Prompt 用 `2girls`。上方全宽格的两名可识别人物各一个框，复用完全相同的 `In the full-width top panel`；中排左侧窄格的两位人物的手合在一个框，不另加人数。人物特写没有裤子/鞋，下排左侧的道具格没有重新贴人物外观。旋盖结构从首次出现到打开一直一致；“拧开”的中间过程由格间省略完成，道具格只画已打开这一瞬间。
 
 <a id="comic-examples.s02"></a>
 
@@ -114,7 +114,7 @@ very aesthetic, masterpiece, no text
 **Character 1 — 上方全宽格，读书**
 
 ```text
-In the large full-width top panel, medium shot, side view: an adult woman with a pale bob and a plain dark crew-neck short-sleeve T-shirt sits at a small wooden reading table beside a window, looking down at an open book. Soft daylight falls across the tabletop.
+In the large full-width top panel, medium shot, side view: an adult woman with shoulder-length wavy light hair, round glasses, and a dark turtleneck sweater sits at a small wooden reading table beside a window, looking down at an open book. Soft daylight falls across the tabletop.
 ```
 
 **Character 2 — 下方左格，合书局部**
@@ -126,13 +126,13 @@ In the small bottom left panel, close-up: a bare hand rests on the just-closed c
 **Character 3 — 下方右格，看向窗外**
 
 ```text
-In the small bottom right panel, facial close-up, profile: an adult woman with a pale bob looks left toward the window, with relaxed eyebrows and a faint smile. Her face is near the outer right side of the panel.
+In the small bottom right panel, facial close-up, profile: an adult woman with shoulder-length wavy light hair and round glasses looks left toward the window, with relaxed eyebrows and a faint smile. Her face is near the outer right side of the panel.
 ```
 
 **Character 4 — 下方中央的覆盖画面**
 
 ```text
-In the lower-center foreground overlay across the inner portions of both small bottom panels, waist-up, three-quarter view: an adult woman with a pale bob and a plain dark crew-neck short-sleeve T-shirt sits with her chin resting on one hand, eyes gently closed and shoulders relaxed. Her elbow rests on the wooden tabletop beside the closed book. This is a single resting moment after the small bottom right panel.
+In the lower-center foreground overlay across the inner portions of both small bottom panels, waist-up, three-quarter view: an adult woman with shoulder-length wavy light hair, round glasses, and a dark turtleneck sweater sits with her chin resting on one hand, eyes gently closed and shoulders relaxed. Her elbow rests on the wooden tabletop beside the closed book. This is a single resting moment after the small bottom right panel.
 ```
 
 **UC:**
@@ -141,7 +141,7 @@ In the lower-center foreground overlay across the inner portions of both small b
 lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, logo, too many watermarks, negative space, blank page
 ```
 
-这是一个角色、三个底层画格、一个覆盖画面、四个提示框，因此主 Prompt 用 `1girl`；重复出场及覆盖画面不增加人数或底层格数。覆盖范围以位置和大小说明即可，不逐条补写格线遮挡规则。闭合的书在下方局部格和覆盖画面中都保持闭合；看窗外的面部特写省略画外的书和手。
+本例的关键是覆盖只跨下方两格的内侧，底层两格的脸和手分别靠外，留出遮挡空间。这是一个角色、三个底层画格、一个覆盖画面、四个提示框，因此主 Prompt 用 `1girl`；重复出场及覆盖画面不增加人数或底层格数。覆盖范围以位置和大小说明即可，不逐条补写格线遮挡规则。闭合的书在下方局部格和覆盖画面中都保持闭合；看窗外的面部特写省略画外的书和手。
 
 <a id="comic-examples.s06"></a>
 
@@ -157,19 +157,19 @@ very aesthetic, masterpiece, no text
 **Character 1 — 左侧小格，已拿着钥匙**
 
 ```text
-In the small left panel, waist-up, front view: an adult woman with a dark bob and a plain light T-shirt holds a small keyring in her right hand. Her empty left hand rests beside a plain mug on the table.
+In the small left panel, waist-up, front view: an adult woman with long curly hair clipped up at the back and a plain light T-shirt holds a small keyring in her right hand. Her empty left hand rests beside a plain mug on the table.
 ```
 
 **Character 2 — 中间小格，左手拿起杯子**
 
 ```text
-In the small middle panel, waist-up, front view: an adult woman with a dark bob and a plain light T-shirt has just picked up the plain mug with her left hand. Her right hand still holds the small keyring.
+In the small middle panel, waist-up, front view: an adult woman with long curly hair clipped up at the back and a plain light T-shirt has just picked up the plain mug with her left hand. Her right hand still holds the small keyring.
 ```
 
 **Character 3 — 右侧小格，表情特写**
 
 ```text
-In the small right panel, tight facial close-up, front view: an adult woman with a dark bob gives a faint, satisfied smile.
+In the small right panel, tight facial close-up, front view: an adult woman with long curly hair clipped up at the back gives a faint, satisfied smile.
 ```
 
 **UC:**
@@ -195,13 +195,13 @@ very aesthetic, masterpiece
 **Character 1 — 左上格，发现没带伞**
 
 ```text
-In the top left panel, medium shot, eye-level view: an adult woman with short black hair and a navy trench coat stands under the entrance canopy of an office building, rummaging through her open shoulder bag with a troubled look. Heavy rain falls beyond the canopy edge. A thought bubble above her reads "……伞呢？"
+In the top left panel, medium shot, eye-level view: an adult woman with a low auburn ponytail and a grey office blazer over a white blouse stands under the entrance canopy of an office building, rummaging through her open shoulder bag with a troubled look. Heavy rain falls beyond the canopy edge. A thought bubble above her reads "……伞呢？"
 ```
 
 **Character 2 — 右上格，同伴递伞**
 
 ```text
-In the top right panel, medium shot, three-quarter view: an adult woman with long light brown hair and a beige knit cardigan holds out a closed yellow umbrella toward the left with a small smile. A speech bubble above her reads "一起走吧。"
+In the top right panel, medium shot, three-quarter view: an adult woman with wavy shoulder-length pink hair and a dark green field jacket holds out a closed yellow umbrella toward the left with a small smile. A speech bubble above her reads "一起走吧。"
 ```
 
 **Character 3 — 左下格，伞下两双脚（匿名局部，合一个框）**
@@ -213,13 +213,13 @@ In the bottom left panel, low-angle close-up: two pairs of feet in ankle boots w
 **Character 4 — 右下格，左边的人**
 
 ```text
-In the bottom right panel, medium shot, back view: an adult woman with short black hair and a navy trench coat walks on the left under a shared yellow umbrella, her outer shoulder dark with rain. She glances toward the woman on her right with a small laugh.
+In the bottom right panel, medium shot, back view: an adult woman with a low auburn ponytail and a grey office blazer over a white blouse walks on the left under a shared yellow umbrella, her outer shoulder dark with rain. She glances toward the woman on her right with a small laugh.
 ```
 
 **Character 5 — 右下格，右边的人**
 
 ```text
-In the bottom right panel, medium shot, back view: an adult woman with long light brown hair and a beige knit cardigan holds the shared yellow umbrella on the right, her outer shoulder dark with rain. A speech bubble above her reads "伞有点小。"
+In the bottom right panel, medium shot, back view: an adult woman with wavy shoulder-length pink hair and a dark green field jacket holds the shared yellow umbrella on the right, her outer shoulder dark with rain. A speech bubble above her reads "伞有点小。"
 ```
 
 **UC:**

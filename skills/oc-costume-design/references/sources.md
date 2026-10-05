@@ -2,6 +2,8 @@
 
 # 创作研究来源与证据边界
 
+本文件用于用户明确要求的方法出处核对或创作研究，不是普通构思的必读步骤。日常任务直接使用相应方法；不沿来源入口自主查找旧图、逐图分析或历史作品来补题。用户已提供或指定参考时，按本次范围分析。
+
 > Copyright (C) 2026 Miint-Sunny
 > SPDX-License-Identifier: GPL-3.0-only
 > 项目与公开来源：[Miint-Sunny/nai5-prompting](https://github.com/Miint-Sunny/nai5-prompting)。

@@ -1,32 +1,32 @@
 {
-  "version": "v1.2c",
+  "version": "通用",
   "role": "ideation",
   "skill": "nai5-comic-storyboard",
   "requires": [],
   "modules": {
     "ideation-comic-story": {
       "path": "方法/构思/comic-story.md",
-      "sha256": "6363a8950ae2875ed497958bbb3e6fcea4537c0fa072dd79c40c5eedb266d239"
+      "sha256": "d6a5e68dc03fe4d4ef58f4c03f57897de3f5daf897235d1b28d74b04184ea28d"
     },
     "ideation-comic-layout": {
       "path": "方法/构思/comic-layout.md",
-      "sha256": "d1bec413dea2028660cd618eac32366c8dd963b211260f4c56f9697cea7d616f"
+      "sha256": "18939d6f226d6fd00e5ade686b0d438108dc9330e9e230f74a085678b2dab1c8"
     },
     "ideation-comic-continuity": {
       "path": "方法/构思/comic-continuity.md",
-      "sha256": "e369fbb0e4cb0634bafbdfa4a5837317bb6d7cae5f5c0fa85a376e962b8eb06e"
+      "sha256": "a11fc57d7ba3f69d9db949191cadb8ee950cba17f44bef0192c786aed2481aea"
     },
     "ideation-composition": {
       "path": "方法/构思/composition.md",
-      "sha256": "20b7ae6f7b065984a44458ca9a83933d31b2f60bbe774648571933cff38e552d"
+      "sha256": "372d31c248bbb6692f2e232caf6b61ec71d269b267f9f1968c80f9db0d70e56a"
     },
     "ideation-sources": {
       "path": "方法/构思/sources.md",
-      "sha256": "e9c1955b6f35b8e60933b95ed3bb0e6b021ed4cf23dc6ed8206aa62ef31f77ba"
+      "sha256": "2f219d70323ab890a89d0c238b8145072deadec1bd096eb3036dac05fd7da9a1"
     }
   },
   "entry": {
     "path": "工具/职责拆分/入口/nai5-comic-storyboard.md",
-    "sha256": "deb03e79cc0b800e38201c6f91761f48fc32cee2fce26d5f6e8326622b1c328e"
+    "sha256": "b9e8014ccb01562e7a6e33e318b1dd9949bc47a5bdd4372c9b448c3186d06a27"
   }
 }
