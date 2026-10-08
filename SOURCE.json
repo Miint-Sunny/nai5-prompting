@@ -1,5 +1,5 @@
 {
-  "version": "通用",
+  "version": "v1.2d",
   "form": "single",
   "branch": "single",
   "primary_form": "split",
@@ -17,14 +17,14 @@
       "branch": "single"
     }
   },
-  "source_commit": "6f2ecaaec7f1912032f68e66c73f87209089caaa",
+  "source_commit": "7025c6a18d6ce820217511ef19b639495ec47d80",
   "source_locks": {
-    "工具/职责拆分/职责映射.json": "bf88bd9d371ac0712d2b6052a2bc555409d1200905f28e6d00dd1d21b0ea121f",
+    "工具/职责拆分/职责映射.json": "129b8a703d6f6a70916959adc90619091f1662dbdd86c0ff26f2fa37abd083cc",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f"
   },
   "release_assets": [
-    "downloads/nai5-single-通用.zip"
+    "downloads/nai5-single-v1.2d.zip"
   ],
   "skill_order": [
     "nai5-ideas",
@@ -131,7 +131,7 @@
     },
     "writing-conventions": {
       "role": "writing",
-      "sha256": "326278a4cc55b7a3d3843534caa065af043ee94fb3aed20c42a004d9e70145b9",
+      "sha256": "c565a995004d23d9df2410685dfee8ed813f19f7de9018216cfb8db6c87e2254",
       "public_copies": [
         "references/NAI5_All_Prompting.md"
       ]
@@ -181,8 +181,8 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 1569,
-      "sha256": "ca5a0f4177e12eb4d292473c8dce7601bc4ea03ad37869322746555825e7754f"
+      "bytes": 1792,
+      "sha256": "dcc02c3fb9074d42cca6f346cb566b98cbac79445fd427fffc7c56fddd0684a2"
     },
     "LICENSE": {
       "bytes": 35150,
@@ -193,24 +193,24 @@
       "sha256": "edac9a621223db6340d51905612cde3402c81313de0e4145d647771c7f1cdb13"
     },
     "README.md": {
-      "bytes": 2163,
-      "sha256": "acecf6bb3368f1a1c663aa66d896fed486f4422650f0a67cbbe44064d096f0c0"
+      "bytes": 2210,
+      "sha256": "58e254308ef5448e781daf7bddac95c554e9560cb28e0db7142564fd13f87ff6"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 8633,
-      "sha256": "f80d30683449eb5aa5110a462ef3d9d0e9386025b72484daf464f5128a592beb"
+      "bytes": 10163,
+      "sha256": "a47b0996e2e4a017c7b77f58f9ab443d187ddf3d7a5ddc9741f1e8f550e80c0b"
     },
     "SKILL.md": {
       "bytes": 1390,
       "sha256": "bb4a92b299da7e6e5a8fe8c4400438d8402a99a45b396b1823754c5f2addfe9d"
     },
-    "downloads/nai5-single-通用.zip": {
-      "bytes": 128374,
-      "sha256": "47f21174e8a625397f3174a99c525d8f6453786acaa5061811e8eebaf3b3af85"
+    "downloads/nai5-single-v1.2d.zip": {
+      "bytes": 129050,
+      "sha256": "45becb11bfc1351b9b752797d8a547a23a55dc618f121562aede9bd52b50b15c"
     },
     "references/NAI5_All_Prompting.md": {
-      "bytes": 278827,
-      "sha256": "71445eafbf8e324ec534d1509db1d0f06b3fa08039a9c27b08a3bc0eb100c528"
+      "bytes": 280564,
+      "sha256": "501d6fd3e6ba492053c5e1e8e4210d2883f632683d4d4c1460b211b75e0f97cd"
     }
   }
 }
