@@ -17,9 +17,9 @@
       "branch": "single"
     }
   },
-  "source_commit": "87a2256a8dc3fe0f95968237f9d900e66808d3ab",
+  "source_commit": "f82ccce2a061f621c406aa728061b07c144b6861",
   "source_locks": {
-    "工具/职责拆分/职责映射.json": "4dc1b0167ec1150e16f09b225869bbb6a307635ea0d577e11ded734e9d20a322",
+    "工具/职责拆分/职责映射.json": "0741b31f85ec78358bd3f78676b03a76f4566fc8e132909974527feccef23ff2",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f"
   },
@@ -181,8 +181,8 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 1790,
-      "sha256": "0fdc02a79f38e5ab64fa6b6cfd7874cd0f0ed6fe1f2c23725b220461ef1a0bcd"
+      "bytes": 1836,
+      "sha256": "f4e44135c012f71eb3114d76aa7e0f528640887a100f4fd815814801e6c1be32"
     },
     "LICENSE": {
       "bytes": 35150,
@@ -193,12 +193,12 @@
       "sha256": "edac9a621223db6340d51905612cde3402c81313de0e4145d647771c7f1cdb13"
     },
     "README.md": {
-      "bytes": 2410,
-      "sha256": "80daaf2517b3cb1be2f91c341c7ecb1cb8d306a8350d5d88feaf5da52cc37278"
+      "bytes": 3024,
+      "sha256": "a5b76165f20a2bd14d45d3e54915b13b1cefe646b6b11259666fe25124de329e"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 5175,
-      "sha256": "8860d49fe637f1ac12af300c4200ca63c9d526e22c34fd7c68633a0f3a6db3cb"
+      "bytes": 5840,
+      "sha256": "f501cf2809c7a6aa6d224a094e4ffb4561ed07063efc1b76298d9ed6318e6a75"
     },
     "SKILL.md": {
       "bytes": 1521,
