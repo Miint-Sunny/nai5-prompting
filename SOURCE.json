@@ -1,5 +1,5 @@
 {
-  "version": "v1.2d",
+  "version": "v1.2e",
   "form": "merged",
   "branch": "merged",
   "primary_form": "split",
@@ -17,14 +17,14 @@
       "branch": "single"
     }
   },
-  "source_commit": "7025c6a18d6ce820217511ef19b639495ec47d80",
+  "source_commit": "87a2256a8dc3fe0f95968237f9d900e66808d3ab",
   "source_locks": {
-    "工具/职责拆分/职责映射.json": "129b8a703d6f6a70916959adc90619091f1662dbdd86c0ff26f2fa37abd083cc",
+    "工具/职责拆分/职责映射.json": "4dc1b0167ec1150e16f09b225869bbb6a307635ea0d577e11ded734e9d20a322",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f"
   },
   "release_assets": [
-    "downloads/nai5-merged-v1.2d.zip"
+    "downloads/nai5-merged-v1.2e.zip"
   ],
   "skill_order": [
     "nai5-ideas",
@@ -131,21 +131,21 @@
     },
     "writing-conventions": {
       "role": "writing",
-      "sha256": "c565a995004d23d9df2410685dfee8ed813f19f7de9018216cfb8db6c87e2254",
+      "sha256": "b517d9777c2de9565c16bf5a406e704e2a0535c911fa42e9647023d071cec732",
       "public_copies": [
         "references/通用写法.md"
       ]
     },
     "writing-illustration": {
       "role": "writing",
-      "sha256": "7321ba44ee13cdfb5615f4ff393c04617ae9ec9e4b5c6d59c53d3079d04d917f",
+      "sha256": "421f166e4ce923c1ef615fd5084c9d9b7df3fd50d92412871a1c1dda94a0e0bc",
       "public_copies": [
         "references/通用写法.md"
       ]
     },
     "writing-comics": {
       "role": "writing",
-      "sha256": "bf692cb370946132dbb111f850288f08eb38cab12c506b351714d02e94913a5d",
+      "sha256": "57bb9209140acaea93ef080da69ea0fb62e3daa3dc79ab9e069fc7731c058cfd",
       "public_copies": [
         "references/通用写法.md"
       ]
@@ -159,14 +159,14 @@
     },
     "writing-costume": {
       "role": "writing",
-      "sha256": "3d0c542324de88aaefda787055ee4d9c64c534c88a9ca5b3fa615c66fe15dee4",
+      "sha256": "452162e742aae63cced073c042828ef32f02053a46e05745c2f5ae11654e206e",
       "public_copies": [
         "references/通用写法.md"
       ]
     },
     "writing-reverse": {
       "role": "writing",
-      "sha256": "7c54a3843891d9be112acb1ac6887d5ce0cd00a05984324053140e3b9d12b702",
+      "sha256": "983441c1a1c47bb2ad840daee44853996901100866465b9407cbb4164896b35f",
       "public_copies": [
         "references/通用写法.md"
       ]
@@ -181,8 +181,8 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 1792,
-      "sha256": "dcc02c3fb9074d42cca6f346cb566b98cbac79445fd427fffc7c56fddd0684a2"
+      "bytes": 1790,
+      "sha256": "0fdc02a79f38e5ab64fa6b6cfd7874cd0f0ed6fe1f2c23725b220461ef1a0bcd"
     },
     "LICENSE": {
       "bytes": 35150,
@@ -193,28 +193,28 @@
       "sha256": "edac9a621223db6340d51905612cde3402c81313de0e4145d647771c7f1cdb13"
     },
     "README.md": {
-      "bytes": 2310,
-      "sha256": "f130dcbe6d4743d726e134dab4faa15b0be5204674f40e1ad736cf4b6f8a8f79"
+      "bytes": 2410,
+      "sha256": "80daaf2517b3cb1be2f91c341c7ecb1cb8d306a8350d5d88feaf5da52cc37278"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 10163,
-      "sha256": "a47b0996e2e4a017c7b77f58f9ab443d187ddf3d7a5ddc9741f1e8f550e80c0b"
+      "bytes": 5175,
+      "sha256": "8860d49fe637f1ac12af300c4200ca63c9d526e22c34fd7c68633a0f3a6db3cb"
     },
     "SKILL.md": {
       "bytes": 1521,
       "sha256": "f24963970df7ff53694a108ea0d5f19fac905c9e256cb2bc253b31d11ad524f5"
     },
-    "downloads/nai5-merged-v1.2d.zip": {
-      "bytes": 130548,
-      "sha256": "53470ca3a7c649d51a320740142b266275abb888f5f1c9d21d2d72cc7c248035"
+    "downloads/nai5-merged-v1.2e.zip": {
+      "bytes": 131958,
+      "sha256": "3003a6ddee29fe618a423c11f5682323331a3b7085fbebc7e538a6e6feceb093"
     },
     "references/通用写法.md": {
-      "bytes": 179929,
-      "sha256": "34ea5a20661961a07d7fc54291f67bf83c46815c6ecc058b72598e14c58964c3"
+      "bytes": 182392,
+      "sha256": "714d2f0e5e472a1f89833068399b30bc0413fb88d3fd32e3e73d061520548383"
     },
     "references/通用构思.md": {
       "bytes": 100331,
-      "sha256": "a69b0218884f5e91dad3bc9c8cf267c6d82a4c0af16f884cc351b7b7949648e9"
+      "sha256": "ee8f87c1b0a4e8f1d258a2c9876f271326fe316b3690d0798f91dfc0b061d556"
     }
   }
 }
