@@ -1,5 +1,5 @@
 {
-  "version": "v1.2d",
+  "version": "v1.2e",
   "role": "writing",
   "skill": "nai5-costume-writing",
   "requires": [
@@ -8,7 +8,7 @@
   "modules": {
     "writing-costume": {
       "path": "方法/写法/costume.md",
-      "sha256": "3d0c542324de88aaefda787055ee4d9c64c534c88a9ca5b3fa615c66fe15dee4"
+      "sha256": "452162e742aae63cced073c042828ef32f02053a46e05745c2f5ae11654e206e"
     }
   },
   "entry": {

@@ -1,4 +1,4 @@
-# NovelAI V5 构思与写法 · 拆分版 · v1.2d-nightly
+# NovelAI V5 构思与写法 · 拆分版 · v1.2e-nightly
 
 **拆分版是主要版本。** `main` 按任务提供十一个技能，日常维护围绕各项方法与技能入口进行。合并版和单文件版由同一批方法源自动生成，分别放在 `merged`、`single` 分支；三种形式选择一种使用。
 
@@ -6,11 +6,11 @@
 
 | 版本与下载 | 包里是什么 | 使用方式 |
 | --- | --- | --- |
-| **[拆分版（主要版本）](downloads/nai5-split-v1.2d.zip)** | 十一个按任务划分的技能 | 启用本次需要的技能；也可从下表逐个下载 |
-| [合并版（构思／写法两卷）](https://github.com/Miint-Sunny/nai5-prompting/blob/merged/downloads/nai5-merged-v1.2d.zip) | 一个入口＋构思卷、写法卷 | 由共同方法自动合并，写法卷含全部专项补充 |
-| [单文件版](https://github.com/Miint-Sunny/nai5-prompting/blob/single/downloads/nai5-single-v1.2d.zip) | 一个入口＋完整合订稿 | 由共同方法自动合订，按章节阅读 |
+| **[拆分版（主要版本）](downloads/nai5-split-v1.2e.zip)** | 十一个按任务划分的技能 | 启用本次需要的技能；也可从下表逐个下载 |
+| [合并版（构思／写法两卷）](https://github.com/Miint-Sunny/nai5-prompting/blob/merged/downloads/nai5-merged-v1.2e.zip) | 一个入口＋构思卷、写法卷 | 由共同方法自动合并，写法卷含全部专项补充 |
+| [单文件版](https://github.com/Miint-Sunny/nai5-prompting/blob/single/downloads/nai5-single-v1.2e.zip) | 一个入口＋完整合订稿 | 由共同方法自动合订，按章节阅读 |
 
-本版为 **v1.2d-nightly（2026-10-09）**，下载也集中在 [v1.2d Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2d)。方法基于 `v1.2-next-preview.8-20261009`，包含近期文稿、读取条件和例子使用修订；10-08 确定拆分主线及独立形式分支。本次发布统一版本标识，方法内容沿用已核候选。稳定 Latest 仍为 v1.1；修订与验证范围见 [发布说明](RELEASE_NOTES.md)。
+本版为 **v1.2e-nightly（2026-10-09）**，下载也集中在 [v1.2e Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2e)。方法基于 `v1.2-next-preview.11-20261009`，修订普通写词、漫画逐框交付、服装限定词保留与照图反推的整理步骤；继续使用拆分主线及独立形式分支。稳定 Latest 仍为 v1.1；修订与验证范围见 [发布说明](RELEASE_NOTES.md)。
 
 下载表中的 ZIP 后在客户端导入；不要导入整个仓库的源码 ZIP。拆分版 ZIP 面向支持多技能导入的客户端；只支持单技能导入时，分别下载下表中需要的小包。漫画、服装写法补充和照图反推需同时启用本版 **通用 NAI5 写法**。
 
@@ -36,17 +36,17 @@
 
 | 技能与用途 | 方法全文 | 单独下载 |
 |---|---|---|
-| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](skills/nai5-ideas-v1.2d.zip) |
-| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](skills/nai5-scene-design-v1.2d.zip) |
-| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](skills/nai5-art-direction-v1.2d.zip) |
-| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](skills/oc-character-design-v1.2d.zip) |
-| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](skills/nai5-illustration-composition-v1.2d.zip) |
-| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](skills/nai5-comic-storyboard-v1.2d.zip) |
-| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](skills/oc-costume-design-v1.2d.zip) |
-| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](skills/nai5-writing-v1.2d.zip) |
-| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串、角色串与 UC | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](skills/nai5-comic-writing-v1.2d.zip) |
-| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](skills/nai5-costume-writing-v1.2d.zip) |
-| [照图反推](skills/nai5-reverse-prompt/SKILL.md)：照图写提示词，或只推其中一部分 | [照图反推](skills/nai5-reverse-prompt/references/reverse.md) | [ZIP](skills/nai5-reverse-prompt-v1.2d.zip) |
+| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](skills/nai5-ideas-v1.2e.zip) |
+| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](skills/nai5-scene-design-v1.2e.zip) |
+| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](skills/nai5-art-direction-v1.2e.zip) |
+| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](skills/oc-character-design-v1.2e.zip) |
+| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](skills/nai5-illustration-composition-v1.2e.zip) |
+| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](skills/nai5-comic-storyboard-v1.2e.zip) |
+| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](skills/oc-costume-design-v1.2e.zip) |
+| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](skills/nai5-writing-v1.2e.zip) |
+| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串、角色串与 UC | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](skills/nai5-comic-writing-v1.2e.zip) |
+| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](skills/nai5-costume-writing-v1.2e.zip) |
+| [照图反推](skills/nai5-reverse-prompt/SKILL.md)：照图写提示词，或只推其中一部分 | [照图反推](skills/nai5-reverse-prompt/references/reverse.md) | [ZIP](skills/nai5-reverse-prompt-v1.2e.zip) |
 
 合并版见 [`merged` 分支](https://github.com/Miint-Sunny/nai5-prompting/tree/merged)，单文件版见 [`single` 分支](https://github.com/Miint-Sunny/nai5-prompting/tree/single)。两者都由脚本从拆分版使用的共同方法自动合并，修改方法后统一重建；本地公开仓使用相同的三条分支。
 
