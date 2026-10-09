@@ -6,7 +6,7 @@
 
 以下步骤适用于支持 Skill 安装、附件读取和文件管理的 agent。
 
-1. [下载合并版（构思／写法两卷）安装包](downloads/nai5-merged-v1.2e.zip)。
+1. [下载合并版（构思／写法两卷）安装包](packs/v1.2e/nai5-merged-v1.2e.zip)。
 2. 将 ZIP 拖入 agent 对话，请它将压缩包中的完整 `nai5-prompting` 技能安装到当前环境，保留全部目录和资源，并确认可被识别和调用。
 3. 安装完成后，直接描述任务。agent 根据请求读取相关章节；如果客户端要求刷新或重启，按其提示完成。
 
@@ -15,6 +15,8 @@
 默认拆分版的安装请求和 11 项职责清单见 [主线使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)。
 
 ## 阅读与切换
+
+三种当前安装包均集中在 `packs/v1.2e/`：[拆分版](packs/v1.2e/nai5-split-v1.2e.zip) · [合并版](packs/v1.2e/nai5-merged-v1.2e.zip) · [单文件版](packs/v1.2e/nai5-single-v1.2e.zip)。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 - [技能入口](SKILL.md)；正文：[构思卷](references/通用构思.md) · [写法卷](references/通用写法.md)。
 - [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single)。三种形式选择一种安装。
