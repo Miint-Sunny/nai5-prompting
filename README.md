@@ -10,7 +10,7 @@
 
 以下步骤适用于支持 Skill 安装、附件读取和文件管理的 agent。
 
-1. **下载完整拆分包**：[nai5-split-v1.2e.zip](downloads/nai5-split-v1.2e.zip)。
+1. **下载完整拆分包**：[nai5-split-v1.2e.zip](packs/v1.2e/nai5-split-v1.2e.zip)。
 2. **将 ZIP 拖入 agent 对话**，发送以下安装请求：
 
    ```text
@@ -41,9 +41,11 @@
 
 | 版本与下载 | 内容 | 安装方式 |
 | --- | --- | --- |
-| **[拆分版（推荐）](downloads/nai5-split-v1.2e.zip)** | 11 个按职责组织的技能 | 完整安装 11 个技能，运行时按需读取。 |
-| [合并版（构思／写法两卷）](https://github.com/Miint-Sunny/nai5-prompting/blob/merged/downloads/nai5-merged-v1.2e.zip) | 一个入口与两卷完整方法 | 安装一个完整技能包，按任务读取相关卷和章节。 |
-| [单文件版](https://github.com/Miint-Sunny/nai5-prompting/blob/single/downloads/nai5-single-v1.2e.zip) | 一个入口与完整合订稿 | 安装一个完整技能包，按任务读取相关章节。 |
+| **[拆分版（推荐）](packs/v1.2e/nai5-split-v1.2e.zip)** | 11 个按职责组织的技能 | 完整安装 11 个技能，运行时按需读取。 |
+| [合并版（构思／写法两卷）](packs/v1.2e/nai5-merged-v1.2e.zip) | 一个入口与两卷完整方法 | 安装一个完整技能包，按任务读取相关卷和章节。 |
+| [单文件版](packs/v1.2e/nai5-single-v1.2e.zip) | 一个入口与完整合订稿 | 安装一个完整技能包，按任务读取相关章节。 |
+
+三种当前安装包均位于 `packs/v1.2e/`，无需切换分支下载。单技能小包集中在 `packs/v1.2e/individual/`；`skills/` 仅保留技能目录。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 支持多技能 ZIP 导入的客户端可直接导入拆分合集；一次只能导入一个技能时，将下表的 11 个小包全部依次导入。若客户端只能安装一个技能，可选择合并版或单文件版。GitHub 自动生成的仓库源码 ZIP 用于获取源码，技能安装使用本页列出的安装包。
 
@@ -59,17 +61,17 @@
 
 | 技能与用途 | 方法全文 | 单独下载 |
 |---|---|---|
-| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](skills/nai5-ideas-v1.2e.zip) |
-| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](skills/nai5-scene-design-v1.2e.zip) |
-| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](skills/nai5-art-direction-v1.2e.zip) |
-| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](skills/oc-character-design-v1.2e.zip) |
-| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](skills/nai5-illustration-composition-v1.2e.zip) |
-| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](skills/nai5-comic-storyboard-v1.2e.zip) |
-| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](skills/oc-costume-design-v1.2e.zip) |
-| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](skills/nai5-writing-v1.2e.zip) |
-| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串、角色串与 UC | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](skills/nai5-comic-writing-v1.2e.zip) |
-| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](skills/nai5-costume-writing-v1.2e.zip) |
-| [照图反推](skills/nai5-reverse-prompt/SKILL.md)：照图写提示词，或只推其中一部分 | [照图反推](skills/nai5-reverse-prompt/references/reverse.md) | [ZIP](skills/nai5-reverse-prompt-v1.2e.zip) |
+| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](packs/v1.2e/individual/nai5-ideas-v1.2e.zip) |
+| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](packs/v1.2e/individual/nai5-scene-design-v1.2e.zip) |
+| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](packs/v1.2e/individual/nai5-art-direction-v1.2e.zip) |
+| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](packs/v1.2e/individual/oc-character-design-v1.2e.zip) |
+| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](packs/v1.2e/individual/nai5-illustration-composition-v1.2e.zip) |
+| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](packs/v1.2e/individual/nai5-comic-storyboard-v1.2e.zip) |
+| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](packs/v1.2e/individual/oc-costume-design-v1.2e.zip) |
+| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](packs/v1.2e/individual/nai5-writing-v1.2e.zip) |
+| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串、角色串与 UC | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](packs/v1.2e/individual/nai5-comic-writing-v1.2e.zip) |
+| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](packs/v1.2e/individual/nai5-costume-writing-v1.2e.zip) |
+| [照图反推](skills/nai5-reverse-prompt/SKILL.md)：照图写提示词，或只推其中一部分 | [照图反推](skills/nai5-reverse-prompt/references/reverse.md) | [ZIP](packs/v1.2e/individual/nai5-reverse-prompt-v1.2e.zip) |
 
 
 ## 资源读取与工具接续
