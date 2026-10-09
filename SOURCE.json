@@ -17,9 +17,9 @@
       "branch": "single"
     }
   },
-  "source_commit": "6bb10a012ab3787efe49b3796b45fa7c72893388",
+  "source_commit": "a26fa60eac7818bf8341644b559d91315d2d7151",
   "source_locks": {
-    "工具/职责拆分/职责映射.json": "0741b31f85ec78358bd3f78676b03a76f4566fc8e132909974527feccef23ff2",
+    "工具/职责拆分/职责映射.json": "7dcd76e3d2bb2b7641dec8ac964f62a2a0f0d184017ecca88b26337ff3b71fd1",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f"
   },
@@ -183,8 +183,12 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 2023,
-      "sha256": "4761b6c80089cf16ed65de0f68aaaa7d1c4936f53a7667430e7a424b323e8db9"
+      "bytes": 2152,
+      "sha256": "94894981836fd4a656ac8dc62634cefecee8d08a734f5bba96134b91c9261e55"
+    },
+    "INSTALL.md": {
+      "bytes": 5492,
+      "sha256": "4be817e6add385421a1da8e8e0ff24103fe52a3db1a8be5cea4c241551bb09f2"
     },
     "LICENSE": {
       "bytes": 35150,
@@ -195,16 +199,20 @@
       "sha256": "edac9a621223db6340d51905612cde3402c81313de0e4145d647771c7f1cdb13"
     },
     "README.md": {
-      "bytes": 3322,
-      "sha256": "87104e758b32ff664ff8a7a26b8f02baf69a94916ceacf66b95efe3a351c2336"
+      "bytes": 3836,
+      "sha256": "e911b7004e00a7e77219674b2d1e1c075e7094debe004a2652e317ebe024b3f1"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 6098,
-      "sha256": "ad39e7e5cf32e4130848704a079ec3b57001fadf9c485a253635bd44f6d6d071"
+      "bytes": 6263,
+      "sha256": "f3cd5386f2d65d61f99e6da322863a7c09351e8104e151ecca56c51d69cafee4"
     },
     "SKILL.md": {
       "bytes": 1521,
       "sha256": "f24963970df7ff53694a108ea0d5f19fac905c9e256cb2bc253b31d11ad524f5"
+    },
+    "packs/README.md": {
+      "bytes": 1330,
+      "sha256": "2901838e0e3ce6a7a6b7a78c1c4b470f919a6311933afc179367bfb92ce46489"
     },
     "packs/v1.2e/individual/nai5-art-direction-v1.2e.zip": {
       "bytes": 19730,

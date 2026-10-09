@@ -2,26 +2,35 @@
 
 本分支提供一个入口与构思、写法两卷，包含全部通用方法。主要维护形式是 [`main` 的拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main)，本分支由相同方法源自动生成。
 
-## 安装与开始使用
+<a id="quick-start"></a>
 
-以下步骤适用于支持 Skill 安装、附件读取和文件管理的 agent。
+## 配置与开始使用
 
-1. [下载合并版（构思／写法两卷）安装包](packs/v1.2e/nai5-merged-v1.2e.zip)。
-2. 将 ZIP 拖入 agent 对话，请它将压缩包中的完整 `nai5-prompting` 技能安装到当前环境，保留全部目录和资源，并确认可被识别和调用。
-3. 安装完成后，直接描述任务。agent 根据请求读取相关章节；如果客户端要求刷新或重启，按其提示完成。
+本项目提供技能文档和参考资料，配置只需放置完整技能目录，无需构建或安装项目依赖。
 
-**完整安装，按需读取。** 本形式包含一个完整技能，无需另外安装拆分版的 11 个技能。`SKILL.md` 是 agent 读取方法的入口文件，安装由 agent 处理，无需双击运行。
+**未指定形式时，默认配置全部 11 个拆分技能，使用时优先从拆分技能中按需读取。** 本分支的合并版（构思／写法两卷）仅在用户明确指定时配置或调用。
 
-默认拆分版的安装请求和 11 项职责清单见 [主线使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)。
+推荐把[项目地址](https://github.com/Miint-Sunny/nai5-prompting)发给 agent，请它按照 [INSTALL.md](INSTALL.md)完成配置。用户明确选择本形式时，可发送：
+
+```text
+请按照项目中的 INSTALL.md，为当前 agent 配置合并版（构思／写法两卷）：
+https://github.com/Miint-Sunny/nai5-prompting/tree/merged
+
+保留完整技能目录和资源，完成后告知配置位置和可用状态。
+```
+
+备用方式：下载[本形式的完整包](packs/v1.2e/nai5-merged-v1.2e.zip)，交给 agent 配置；或解压后，将完整 `nai5-prompting` 文件夹复制到[客户端技能目录](INSTALL.md#manual-paths)。配置完成后直接描述任务，如客户端提示刷新或重启，按其提示完成。
+
+`SKILL.md` 是供 agent 读取的入口文档，无需双击运行。默认拆分版的说明和 11 项职责清单见[主线使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)。
 
 ## 阅读与切换
 
 三种当前安装包均集中在 `packs/v1.2e/`：[拆分版](packs/v1.2e/nai5-split-v1.2e.zip) · [合并版](packs/v1.2e/nai5-merged-v1.2e.zip) · [单文件版](packs/v1.2e/nai5-single-v1.2e.zip)。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 - [技能入口](SKILL.md)；正文：[构思卷](references/通用构思.md) · [写法卷](references/通用写法.md)。
-- [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single)。三种形式选择一种安装。
+- [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single)。默认使用拆分版，另外两种形式按用户明确选择使用。
 
-合并版与单文件版均使用 `nai5-prompting` 名称，切换时替换同名技能。与拆分版切换时，停用原形式，避免同时加载两份相同方法。
+合并版与单文件版均使用 `nai5-prompting` 名称。明确切换时先核对已有配置，避免重复读取；已同时配置多种形式时，普通任务仍优先使用拆分技能。
 
 已有构思、方案或定稿时，直接进入对应阶段；仅请求构思时交付方案，请求提示词时进入写法。普通任务使用当前技能正文和用户提供的资料；历史作品与维护记录仅在明确要求核对、分析或制作变体时读取。本分支不包含个人或群偏好。
 
