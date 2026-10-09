@@ -2,21 +2,17 @@
 
 2026-10-09 预发布。方法快照为 `v1.2-next-preview.11-20261009`，来源提交与文件哈希见 `SOURCE.json`。下载集中在 [v1.2e Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2e)，稳定 Latest 仍为 v1.1。
 
-**拆分版是主要版本；合并版和单文件版由同一批方法源生成。三种形式选择一种即可。**
+**拆分版是主要版本；合并版和单文件版由同一批方法源生成。默认配置和使用拆分版，另外两种形式按用户明确选择使用。**
 
 - **`nai5-split-v1.2e.zip` — 拆分版（主要版本）**：完整安装 11 个通用技能，使用时按任务读取相关技能和章节。
 - **`nai5-merged-v1.2e.zip` — 合并版**：一个入口＋构思、写法两卷。
 - **`nai5-single-v1.2e.zip` — 单文件版**：一个入口＋完整合订稿。
 
-### 三步开始使用
+### 配置与开始使用
 
-适用于支持 Skill 安装、附件读取和文件管理的 agent。
+推荐将[项目地址](https://github.com/Miint-Sunny/nai5-prompting)交给能够读取仓库、管理技能文件的 agent，请它按照仓库中的 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)配置技能。用户未指定形式时，默认配置全部 11 个拆分技能，执行任务时优先从拆分技能中按需读取；合并版和单文件版仅在用户明确指定时使用。
 
-1. 下载本页的 `nai5-split-v1.2e.zip` 完整拆分包。
-2. 将 ZIP 拖入 agent 对话，请它安装其中全部 11 个技能，保留完整目录和资源，并确认可被识别和调用。
-3. 安装完成后，直接描述任务，由 agent 按需读取相关内容；如客户端要求刷新或重启，按其提示完成。
-
-无需手动解压或双击 `SKILL.md`。可复制的安装请求及其他客户端的导入方式见 [安装与开始使用](https://github.com/Miint-Sunny/nai5-prompting#quick-start)。本次说明补充不改变 v1.2e 的技能正文与安装附件。
+本项目的配置是放置完整技能目录，无需构建或安装项目依赖。下载 ZIP 后交给 agent、解压后自行复制目录是两种备用方式，具体步骤和常见客户端目录见[使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)。本次说明修订不改变 v1.2e 的技能正文与安装附件。
 
 ## 本次修改
 
