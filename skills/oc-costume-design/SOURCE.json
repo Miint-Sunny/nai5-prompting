@@ -1,5 +1,5 @@
 {
-  "version": "v1.2e",
+  "version": "v1.2f",
   "role": "ideation",
   "skill": "oc-costume-design",
   "requires": [],
@@ -10,11 +10,15 @@
     },
     "ideation-sources": {
       "path": "方法/构思/sources.md",
-      "sha256": "2f219d70323ab890a89d0c238b8145072deadec1bd096eb3036dac05fd7da9a1"
+      "sha256": "0c24fc795051443cba8dea920182e7a210575decc014613f689c38cf433dd821"
+    },
+    "ideation-background": {
+      "path": "方法/构思/background.md",
+      "sha256": "bf7ab33c6587dbc104bbb9e595a7b0347f4204ce0cd030bef5c706803cd547a2"
     }
   },
   "entry": {
     "path": "工具/职责拆分/入口/oc-costume-design.md",
-    "sha256": "8bfac89488072db2a7fc7c00ead358b541d5f99becdad114fe365ad017e73602"
+    "sha256": "b84235d9f07b541838c35b577fdd6a1bb704e4ca16e1c7f7fe1eb28e8f51206c"
   }
 }

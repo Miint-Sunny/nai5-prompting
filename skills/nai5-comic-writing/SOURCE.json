@@ -1,5 +1,5 @@
 {
-  "version": "v1.2e",
+  "version": "v1.2f",
   "role": "writing",
   "skill": "nai5-comic-writing",
   "requires": [
@@ -8,11 +8,11 @@
   "modules": {
     "writing-comics": {
       "path": "方法/写法/comics.md",
-      "sha256": "57bb9209140acaea93ef080da69ea0fb62e3daa3dc79ab9e069fc7731c058cfd"
+      "sha256": "c45ac84071d32e8134d6ff50d19396d49dafcc725de641a89883de085ae34e05"
     },
     "writing-comic-examples": {
       "path": "方法/写法/comic-examples.md",
-      "sha256": "f0dd75a747825900b50dab25738db8387fcde8434b1f97034052a25e3d552374"
+      "sha256": "7fb27073f4bdc41f80a78c7895ef8380a093fbb32dbe36e07b6301fbed64d554"
     }
   },
   "entry": {

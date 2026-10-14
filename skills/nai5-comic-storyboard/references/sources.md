@@ -83,6 +83,27 @@
 - [The Met Costume Institute](https://www.metmuseum.org/about-the-met/collection-areas/the-costume-institute)
 
 
+<a id="ideation-sources.background"></a>
+
+### 背景资料核对
+
+2026-10-14 核对 [Elowwwen / Fanfic-background-assistant](https://github.com/Elowwwen/Fanfic-background-assistant) 的 `0b5da382b5f5d0150b406bc66bfbc0c4aaa11e3f` 版本。上游采用 MIT License，Copyright (c) 2026 Elowwwen；许可原文随本项目 `NOTICE` 保留。
+
+本项目将以下方法改写为场景、角色与服装设计包内的按需参考 `references/background.md`：
+
+- [领域导览](https://github.com/Elowwwen/Fanfic-background-assistant/blob/0b5da382b5f5d0150b406bc66bfbc0c4aaa11e3f/fanfic-background-assistant/references/domain-orientation.md)：从职业流程、可获得的器物与日常运行中找到实际条件，落实到本次画面的工具、路径、取放与穿用关系。
+- [研究与风险核对](https://github.com/Elowwwen/Fanfic-background-assistant/blob/0b5da382b5f5d0150b406bc66bfbc0c4aaa11e3f/fanfic-background-assistant/references/research-and-risk.md)：核对来源适用的年代、地区和身份，区分事实与推断，保留用户意图及已定架空规则。
+
+背景手册与持续记录流程未采用。以上是方法来源说明，尚无本项目对这些改写的新模型或成图验证。
+
+<a id="ideation-sources.action"></a>
+
+### 动作设计方法
+
+2026-10-14 对照署名 antimomi 的《动作扩写》与现有构图方法，补充动作阶段选择、身体支撑与配合、可见后果及取景判断。文件由用户提供；此处依文件署名注明来源，未获得可核对的公开仓库链接。
+
+补充内容以本项目的任务分工与修改范围重新表述，放在 `references/composition.md` 的动作章节。原文中的完整场景示例、固定戏剧机位、默认环境破坏、强制英文主副标题与输出格式没有并入。原文件未随包分发；本轮文稿核对不代表已经验证生成效果。
+
 <a id="ideation-sources.archive"></a>
 
 ### 用户材料的叙事经验

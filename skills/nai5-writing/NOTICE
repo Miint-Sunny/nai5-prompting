@@ -15,3 +15,34 @@ Miint-Sunny 在本项目中的原创贡献、编排与修改依照 GNU General P
 上述项目版权署名不将其他贡献者的作品、引用、第三方材料或其原文据为 Miint-Sunny 所有。其他贡献者与第三方材料保留各自权利和来源；已有版权、许可声明及出处应继续保留，本声明不替代适用于它们的许可条件。历史材料的收录本身不表示权利转让或重新许可。
 
 LICENSE 中 Free Software Foundation 的版权行属于许可证文本本身。该 GPL 原文与附录示例模板保持原样；本项目的署名和许可选择由本 NOTICE 及随附文件短声明表达。
+
+## 第三方方法：Fanfic-background-assistant
+
+按需参考中的部分背景资料核对方法参考并改写自 Elowwwen 的 Fanfic-background-assistant：
+https://github.com/Elowwwen/Fanfic-background-assistant
+
+核对版本：0b5da382b5f5d0150b406bc66bfbc0c4aaa11e3f（2026-10-14）。相关改写见场景、角色与服装设计包的 references/background.md，以及创作来源记录。原项目面向同人文背景研究；本项目按图像构思任务重新组织，不表示原作者参与或认可本项目的改写与输出。
+
+以下保留原项目版权与 MIT 许可声明；上方 GPL-3.0-only 声明适用于本项目自己的贡献，不替代原作者的许可条件。
+
+MIT License
+
+Copyright (c) 2026 Elowwwen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
