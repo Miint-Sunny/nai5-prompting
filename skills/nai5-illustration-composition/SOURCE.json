@@ -1,16 +1,16 @@
 {
-  "version": "v1.2f",
+  "version": "v1.2g",
   "role": "ideation",
   "skill": "nai5-illustration-composition",
   "requires": [],
   "modules": {
     "ideation-composition": {
       "path": "方法/构思/composition.md",
-      "sha256": "dda69c7670b367fb591ed3c1ace259fb151cab2414ff359d348ab2f971b6ac7c"
+      "sha256": "7a573d26d66312401b42d7b2a79ba9f37f3ea9773217033c1fa119b572107a4b"
     },
     "ideation-sources": {
       "path": "方法/构思/sources.md",
-      "sha256": "0c24fc795051443cba8dea920182e7a210575decc014613f689c38cf433dd821"
+      "sha256": "8cb2b6be620a1de9fc73510aec65e798d1f889edde007f779719dc701d24a9b2"
     }
   },
   "entry": {
