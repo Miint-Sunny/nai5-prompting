@@ -1,4 +1,4 @@
-# NovelAI V5 构思与写法 · 单文件版 · v1.2f-nightly
+# NovelAI V5 构思与写法 · 单文件版 · v1.2g-nightly
 
 本分支提供一个入口与完整合订稿，包含全部通用方法。主要维护形式是 [`main` 的拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main)，本分支由相同方法源自动生成。
 
@@ -19,16 +19,16 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/single
 保留完整技能目录和资源，完成后告知配置位置和可用状态。
 ```
 
-备用方式：下载[本形式的完整包](packs/v1.2f/nai5-single-v1.2f.zip)，交给 agent 配置；或解压后，将完整 `nai5-prompting` 文件夹复制到[客户端技能目录](INSTALL.md#manual-paths)。配置完成后直接描述任务，如客户端提示刷新或重启，按其提示完成。
+备用方式：下载[本形式的完整包](packs/v1.2g/nai5-single-v1.2g.zip)，交给 agent 配置；或解压后，将完整 `nai5-prompting` 文件夹复制到[客户端技能目录](INSTALL.md#manual-paths)。配置完成后直接描述任务，如客户端提示刷新或重启，按其提示完成。
 
-`SKILL.md` 是供 agent 读取的入口文档，无需双击运行。默认拆分版的说明和 11 项职责清单见[主线使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)。
+`SKILL.md` 是供 agent 读取的入口文档，无需双击运行。默认拆分版的说明见[主线使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)，11 项职责清单见[技能职责](https://github.com/Miint-Sunny/nai5-prompting#split-skills)。
 
 ## 阅读与切换
 
-三种当前安装包均集中在 `packs/v1.2f/`：[拆分版](packs/v1.2f/nai5-split-v1.2f.zip) · [合并版](packs/v1.2f/nai5-merged-v1.2f.zip) · [单文件版](packs/v1.2f/nai5-single-v1.2f.zip)。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
+四种当前安装包均集中在 `packs/v1.2g/`：[拆分版](packs/v1.2g/nai5-split-v1.2g.zip) · [合并版](packs/v1.2g/nai5-merged-v1.2g.zip) · [单文件版](packs/v1.2g/nai5-single-v1.2g.zip) · [极简版](packs/v1.2g/nai5-mini-v1.2g.zip)。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 - [技能入口](SKILL.md)；正文：[完整构思与写法](references/NAI5_All_Prompting.md)。
-- [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single)。默认使用拆分版，另外两种形式按用户明确选择使用。
+- [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single) · [极简版](https://github.com/Miint-Sunny/nai5-prompting/tree/mini)。默认使用拆分版，其他形式按用户明确选择使用。
 
 合并版与单文件版均使用 `nai5-prompting` 名称。明确切换时先核对已有配置，避免重复读取；已同时配置多种形式时，普通任务仍优先使用拆分技能。
 
@@ -38,7 +38,7 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/single
 
 ## 版本与维护
 
-当前为 **v1.2f-nightly（2026-10-14）**，方法快照为 `v1.2-next-preview.20-20261014`。本次累计修订通用写法、角色分工、构图动作与取景，并新增按需背景参考；三种形式从同一批方法源生成。三个附件集中在 [v1.2f Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2f)，稳定 Latest 为 v1.1。
+当前为 **v1.2g-nightly（2026-10-17）**，方法快照为 `v1.2-next-preview.24-20261017`。本次纳入 preview.21–23 的正文精简与对齐，修订写法字段（字段名位置、可见性写法、未指定性别、人数词表），并新增独立维护的极简版；本分支与拆分版从同一批方法源生成。四个附件集中在 [v1.2g Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2g)，稳定 Latest 为 v1.1。
 
 [发布说明](RELEASE_NOTES.md)记录修订和实际验证范围；[主线与版本](BRANCHES.md)说明分支关系；[来源](SOURCE.json)与[校验清单](SHA256SUMS.txt)用于核对本分支文件。模型文字复测与装配检查的范围分别记录，未生图或新增客户端真实导入测试。
 
