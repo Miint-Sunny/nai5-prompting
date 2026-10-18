@@ -1,5 +1,5 @@
 {
-  "version": "v1.2g",
+  "version": "v1.2",
   "form": "single",
   "branch": "single",
   "primary_form": "split",
@@ -21,19 +21,19 @@
       "branch": "mini"
     }
   },
-  "source_commit": "a7ff2a58bdf46ccd7ce0e5a22079d71b98b94522",
+  "source_commit": "79d4b4ad7c77e3fd21a3b683d2cddba31acfd786",
   "source_locks": {
     "工具/职责拆分/职责映射.json": "78e63e2669691d0ef92e881af39a708882b50230e92a5a0aa19c33d277101463",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f",
     "极简/nai5-mini/SKILL.md": "b3474086b3bb99616f1187667f906baaf69eb7cd45f145056bb80b62cae57cc0",
-    "极简/nai5-mini/references/写法.md": "df1e526eb0a6ebe2e28c125d73649b60393e3b3ee8d90b972588a5f8072a2dc6"
+    "极简/nai5-mini/references/写法.md": "7936e2e9c2eb9cb4a73548fe9b0a3e32882f103609db6eee794b6f883fb497d6"
   },
   "release_assets": [
-    "packs/v1.2g/nai5-split-v1.2g.zip",
-    "packs/v1.2g/nai5-merged-v1.2g.zip",
-    "packs/v1.2g/nai5-single-v1.2g.zip",
-    "packs/v1.2g/nai5-mini-v1.2g.zip"
+    "packs/v1.2/nai5-split-v1.2.zip",
+    "packs/v1.2/nai5-merged-v1.2.zip",
+    "packs/v1.2/nai5-single-v1.2.zip",
+    "packs/v1.2/nai5-mini-v1.2.zip"
   ],
   "skill_order": [
     "nai5-ideas",
@@ -197,8 +197,8 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 2391,
-      "sha256": "e48015ab33ebd06e248090542b5c8234c33007d9f22ab694500f82eb552a8c2d"
+      "bytes": 2408,
+      "sha256": "284b01411bba43b4bb43ca94d7b7dead3a648618102d9483eccd9a3a718e0ed8"
     },
     "INSTALL.md": {
       "bytes": 5765,
@@ -213,84 +213,84 @@
       "sha256": "bf97bdddeabd8d7a44f2e64f82e3a68d4552dc77ee67d14516513eae874e7090"
     },
     "README.md": {
-      "bytes": 4123,
-      "sha256": "4e54f74c2e64f425ca839eef6e82ff1dec4b4f20a69f173d4577ecd6f3371053"
+      "bytes": 4014,
+      "sha256": "06ce069f24a63117a4f546fc30531abe8f8f140b8a12bca561965327684024e9"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 9693,
-      "sha256": "5a824eca6702e89113c080fe47b732afe0160e2decb75cf2ab7b34f83a16cc5c"
+      "bytes": 13728,
+      "sha256": "4c2cc7d622b946d6c156331afbdbf5fe8c1300dc80b56123c9f018d96134d1c3"
     },
     "SKILL.md": {
       "bytes": 1390,
       "sha256": "bb4a92b299da7e6e5a8fe8c4400438d8402a99a45b396b1823754c5f2addfe9d"
     },
     "packs/README.md": {
-      "bytes": 1461,
-      "sha256": "3ff7cb97dc6dc8c733bf670d29ec8c640e33b39fed0582782cd3f46ebd247bf0"
+      "bytes": 1446,
+      "sha256": "077b3dcaa96f8962d2515e02a593e6774e4d2657e670e8825f7b9d6985578da3"
     },
-    "packs/v1.2g/individual/nai5-art-direction-v1.2g.zip": {
-      "bytes": 20747,
-      "sha256": "89439c65c75bebd0d1034edaccad4a9e786c773560a455bc00ee2896f3200b5d"
+    "packs/v1.2/individual/nai5-art-direction-v1.2.zip": {
+      "bytes": 20745,
+      "sha256": "93b2b52390ddb8a5dbd18563222c57dff2ac8956e7bbcb2fbfa1836e2c4a19d5"
     },
-    "packs/v1.2g/individual/nai5-comic-storyboard-v1.2g.zip": {
-      "bytes": 46434,
-      "sha256": "f6a36c2f62fd3fae454b530835755d2d130085a3290255b4c5556f6427c30176"
+    "packs/v1.2/individual/nai5-comic-storyboard-v1.2.zip": {
+      "bytes": 46432,
+      "sha256": "2c55c531ca59e69284162a279a2f5b30bef2e109b4314a933ea96b1c58d86163"
     },
-    "packs/v1.2g/individual/nai5-comic-writing-v1.2g.zip": {
-      "bytes": 39098,
-      "sha256": "aa59a9432017e1c75ab642271cb52f33a9e4c1b9ada6ff8420b313a6c91684b7"
+    "packs/v1.2/individual/nai5-comic-writing-v1.2.zip": {
+      "bytes": 39099,
+      "sha256": "ec2defd35ef81b6490a3365ee1005c07116e21aa7b2ca16ac6049918b6da4efc"
     },
-    "packs/v1.2g/individual/nai5-costume-writing-v1.2g.zip": {
+    "packs/v1.2/individual/nai5-costume-writing-v1.2.zip": {
       "bytes": 23869,
-      "sha256": "fa9f64049630429c1f86bd6a4e72ef23e0235d7b8912d899320c7bb676cdb625"
+      "sha256": "46923f21ea23348c1add97bac7fb36275c9e690e6648e6654c336f9b0312ea3f"
     },
-    "packs/v1.2g/individual/nai5-ideas-v1.2g.zip": {
-      "bytes": 20642,
-      "sha256": "8bdaa3c1f52d7388ec286cb330749387139c349282d51ed2ceeb37fea476be96"
+    "packs/v1.2/individual/nai5-ideas-v1.2.zip": {
+      "bytes": 20641,
+      "sha256": "eb7f4905007240bce7c0378096c9e2c97dc733a19cf8aec93bc42deafd63bcc4"
     },
-    "packs/v1.2g/individual/nai5-illustration-composition-v1.2g.zip": {
-      "bytes": 26348,
-      "sha256": "58985e276865848f04edda9866fc56e34542834bbca5420ae5542021663b7d71"
+    "packs/v1.2/individual/nai5-illustration-composition-v1.2.zip": {
+      "bytes": 26346,
+      "sha256": "15614fc6c22bdf1e5f15de3557ab2019c9143a06dc4dedb8a845f702e7d5e342"
     },
-    "packs/v1.2g/individual/nai5-reverse-prompt-v1.2g.zip": {
-      "bytes": 19937,
-      "sha256": "77af82609e836776cb913d48594e0523300b28b747bb86729e9348655e507cc0"
+    "packs/v1.2/individual/nai5-reverse-prompt-v1.2.zip": {
+      "bytes": 19938,
+      "sha256": "e7f6a57216e1ce78bd0c5737e46ab037d2caf888ef5f9b5dbc6ed65853209e48"
     },
-    "packs/v1.2g/individual/nai5-scene-design-v1.2g.zip": {
-      "bytes": 21834,
-      "sha256": "e80a4cf6bc87595ed489ae49a58354da667046b7bf99574a982e88b0ed1848ee"
+    "packs/v1.2/individual/nai5-scene-design-v1.2.zip": {
+      "bytes": 21833,
+      "sha256": "e168799c31e9a7d3f2f0590e34f5f46568ff8f7c6422902627229f9411e3e2bd"
     },
-    "packs/v1.2g/individual/nai5-writing-v1.2g.zip": {
+    "packs/v1.2/individual/nai5-writing-v1.2.zip": {
       "bytes": 63292,
-      "sha256": "51f428a138cde71fe96be6b142bb3682c1b43577488a34a53d3fc46a53ff43c1"
+      "sha256": "86c498551de88002ded0d9b59962c596155e92f1ef8382d6b2105ca894db4f9e"
     },
-    "packs/v1.2g/individual/oc-character-design-v1.2g.zip": {
-      "bytes": 22485,
-      "sha256": "445d6016e231cc27895b5117cf010aa390dea622818bdd080a8d9c24c2be5823"
+    "packs/v1.2/individual/oc-character-design-v1.2.zip": {
+      "bytes": 22484,
+      "sha256": "070814df49104e84aca8823d3ccb97f4c35df9aa0abde058c52c6c808aa099c1"
     },
-    "packs/v1.2g/individual/oc-costume-design-v1.2g.zip": {
+    "packs/v1.2/individual/oc-costume-design-v1.2.zip": {
       "bytes": 31037,
-      "sha256": "6cf51ac80de0ce69410d89977b46f02329d29733588d897b68c3d3ff35bda6fe"
+      "sha256": "65068f7ab778498358dd7348e69a0bdc71b90f5fbc22aa9a436a0e709c208d04"
     },
-    "packs/v1.2g/nai5-merged-v1.2g.zip": {
-      "bytes": 133434,
-      "sha256": "9934082dad22ca6b2837277e998d603fb6c9271567b9bfbec578b1db00ffbf1e"
+    "packs/v1.2/nai5-merged-v1.2.zip": {
+      "bytes": 133432,
+      "sha256": "fbc834a31e5a0f7fb058a371ce74ba966703c54e29e4518f5897f0f45aa4b314"
     },
-    "packs/v1.2g/nai5-mini-v1.2g.zip": {
-      "bytes": 20317,
-      "sha256": "fdfa395142b7360f1829b09567d2078d0eff48a909c08cb1c3839c1054bdd2b1"
+    "packs/v1.2/nai5-mini-v1.2.zip": {
+      "bytes": 20582,
+      "sha256": "fae554d11019df82dfa323c834dd2c12627de2609c4f05fc7662796d1e2db306"
     },
-    "packs/v1.2g/nai5-single-v1.2g.zip": {
-      "bytes": 131986,
-      "sha256": "58c6ddb3b3cdf0be6593e390978d0b6d6762b10a267fb07face7b67dead27d58"
+    "packs/v1.2/nai5-single-v1.2.zip": {
+      "bytes": 131984,
+      "sha256": "3dc5bc7c7a515a7ccfd35457a357f5c29d86bad8fa1e17a01d2065002733d8c5"
     },
-    "packs/v1.2g/nai5-split-v1.2g.zip": {
-      "bytes": 335503,
-      "sha256": "995e46ac180e104a2b3bd08c2d9271aa190185eaa50a64f4beb346ec1f27b174"
+    "packs/v1.2/nai5-split-v1.2.zip": {
+      "bytes": 335496,
+      "sha256": "757b674ddd9cbb73d931a49f0e03dc89e38cada7d4da928d98fe3191cb8320df"
     },
     "references/NAI5_All_Prompting.md": {
-      "bytes": 286287,
-      "sha256": "935b13c67a2b9d2d628e5c1c73a8a1d11f10c54d9dade9f148724182040b8d51"
+      "bytes": 286286,
+      "sha256": "e71586bb1213a1250c231e87efeb036e518c35d8ad1c7ea915380f44b19b8d69"
     }
   }
 }
