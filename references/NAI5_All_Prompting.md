@@ -1,4 +1,4 @@
-> v1.2.1
+> v1.2.2
 > Copyright (C) 2026 Miint-Sunny · GPL-3.0-only。[LICENSE](../LICENSE) · [NOTICE](../NOTICE)。
 
 # NovelAI · 构思与写法
