@@ -1,5 +1,5 @@
 {
-  "version": "v1.2",
+  "version": "v1.2.1",
   "form": "single",
   "branch": "single",
   "primary_form": "split",
@@ -21,21 +21,21 @@
       "branch": "mini"
     }
   },
-  "source_commit": "79d4b4ad7c77e3fd21a3b683d2cddba31acfd786",
+  "source_commit": "3cfa988a549181b7cfd9286d0eabc9375c95d2e9",
   "source_locks": {
     "工具/职责拆分/职责映射.json": "78e63e2669691d0ef92e881af39a708882b50230e92a5a0aa19c33d277101463",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f",
     "极简/nai5-mini/SKILL.md": "b3474086b3bb99616f1187667f906baaf69eb7cd45f145056bb80b62cae57cc0",
     "适配/gemini/nai5-art-studio-gemini-1.2.zip": "f50ec6789267fc6a1c3fff3213f4e4cdcde7fd8acfa0eeb4cce4a66e9269e2d3",
-    "极简/nai5-mini/references/写法.md": "7936e2e9c2eb9cb4a73548fe9b0a3e32882f103609db6eee794b6f883fb497d6"
+    "极简/nai5-mini/references/写法.md": "432056eff148a54d66aecc5d6f4941986802173ba72149dddcab219a733435f6"
   },
   "release_assets": [
-    "packs/v1.2/nai5-split-v1.2.zip",
-    "packs/v1.2/nai5-merged-v1.2.zip",
-    "packs/v1.2/nai5-single-v1.2.zip",
-    "packs/v1.2/nai5-mini-v1.2.zip",
-    "packs/v1.2/nai5-art-studio-gemini-1.2.zip"
+    "packs/v1.2.1/nai5-split-v1.2.1.zip",
+    "packs/v1.2.1/nai5-merged-v1.2.1.zip",
+    "packs/v1.2.1/nai5-single-v1.2.1.zip",
+    "packs/v1.2.1/nai5-mini-v1.2.1.zip",
+    "packs/v1.2.1/nai5-art-studio-gemini-1.2.zip"
   ],
   "adaptations": {
     "nai5-art-studio-gemini-1.2.zip": {
@@ -205,8 +205,8 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 2517,
-      "sha256": "0343bff72370aac14fbb32900c5207da1ee68a5f5e716c6b04ac62e1dd94a3f0"
+      "bytes": 2503,
+      "sha256": "0fb6140c045e9a7718e6fb6332be66211201fc7ab2c3d52f9c385016e9549ff6"
     },
     "INSTALL.md": {
       "bytes": 5765,
@@ -221,88 +221,88 @@
       "sha256": "bf97bdddeabd8d7a44f2e64f82e3a68d4552dc77ee67d14516513eae874e7090"
     },
     "README.md": {
-      "bytes": 4183,
-      "sha256": "6ab007c4d5f39fb9245d2bd1d4d0703e143cfa7bee4054bb075e659d09707cd8"
+      "bytes": 4189,
+      "sha256": "321aaa23eead515534f1e1a1a487e5c8aaab3ce3376fd8f52c315a8fb380be3f"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 14195,
-      "sha256": "bb827381dd6f157d42f2103118a4eb7c56fa8f2080bd2ffa33b4926755b41db8"
+      "bytes": 17728,
+      "sha256": "cef9a628ba96edfac59b815125cafc35c38a613895c5b005c1dfbb8138dcf2b0"
     },
     "SKILL.md": {
       "bytes": 1390,
       "sha256": "bb4a92b299da7e6e5a8fe8c4400438d8402a99a45b396b1823754c5f2addfe9d"
     },
     "packs/README.md": {
-      "bytes": 1856,
-      "sha256": "552fb9d0ac2471b53ff6a5d71805a91f4107f429dc9f1973c7974b3b3fc3ff6b"
+      "bytes": 1888,
+      "sha256": "785d5ec9fd9c671403f2cd76fdaaf7e9e8939114b1a1016c245835afd1f8cdb7"
     },
-    "packs/v1.2/individual/nai5-art-direction-v1.2.zip": {
-      "bytes": 20745,
-      "sha256": "93b2b52390ddb8a5dbd18563222c57dff2ac8956e7bbcb2fbfa1836e2c4a19d5"
+    "packs/v1.2.1/individual/nai5-art-direction-v1.2.1.zip": {
+      "bytes": 20747,
+      "sha256": "9f45fe0fe57078a949edcf154e0c61b503d6d7e08424556433d352b5ac6118c0"
     },
-    "packs/v1.2/individual/nai5-comic-storyboard-v1.2.zip": {
-      "bytes": 46432,
-      "sha256": "2c55c531ca59e69284162a279a2f5b30bef2e109b4314a933ea96b1c58d86163"
+    "packs/v1.2.1/individual/nai5-comic-storyboard-v1.2.1.zip": {
+      "bytes": 46434,
+      "sha256": "49e545fd63d42c2c668cd83cdc30285093d07c06618ab573e5624dac2826cdad"
     },
-    "packs/v1.2/individual/nai5-comic-writing-v1.2.zip": {
-      "bytes": 39099,
-      "sha256": "ec2defd35ef81b6490a3365ee1005c07116e21aa7b2ca16ac6049918b6da4efc"
+    "packs/v1.2.1/individual/nai5-comic-writing-v1.2.1.zip": {
+      "bytes": 39101,
+      "sha256": "b16227629da417283a5bc63825c4b375c075d66898607209886a9bfd53fee286"
     },
-    "packs/v1.2/individual/nai5-costume-writing-v1.2.zip": {
-      "bytes": 23869,
-      "sha256": "46923f21ea23348c1add97bac7fb36275c9e690e6648e6654c336f9b0312ea3f"
+    "packs/v1.2.1/individual/nai5-costume-writing-v1.2.1.zip": {
+      "bytes": 23872,
+      "sha256": "abc246a3b390363e18c34e81a2c771f453df8c14c13a0d70f81a9497f8e95b4e"
     },
-    "packs/v1.2/individual/nai5-ideas-v1.2.zip": {
-      "bytes": 20641,
-      "sha256": "eb7f4905007240bce7c0378096c9e2c97dc733a19cf8aec93bc42deafd63bcc4"
+    "packs/v1.2.1/individual/nai5-ideas-v1.2.1.zip": {
+      "bytes": 20643,
+      "sha256": "8ba4be0ebf51cd11849e1fbcda03dde38d1b5d5a2e28f463f69d384433bdd429"
     },
-    "packs/v1.2/individual/nai5-illustration-composition-v1.2.zip": {
-      "bytes": 26346,
-      "sha256": "15614fc6c22bdf1e5f15de3557ab2019c9143a06dc4dedb8a845f702e7d5e342"
+    "packs/v1.2.1/individual/nai5-illustration-composition-v1.2.1.zip": {
+      "bytes": 26348,
+      "sha256": "c04a801aabf4520602f9402cb3c39b616c79b486aad625c7c88db8bcad9af7e1"
     },
-    "packs/v1.2/individual/nai5-reverse-prompt-v1.2.zip": {
-      "bytes": 19938,
-      "sha256": "e7f6a57216e1ce78bd0c5737e46ab037d2caf888ef5f9b5dbc6ed65853209e48"
+    "packs/v1.2.1/individual/nai5-reverse-prompt-v1.2.1.zip": {
+      "bytes": 19939,
+      "sha256": "74e329db619af71bce5bd4adff4b5b5eb6ed46dc037d0c856e671ed9c6ffbfcb"
     },
-    "packs/v1.2/individual/nai5-scene-design-v1.2.zip": {
-      "bytes": 21833,
-      "sha256": "e168799c31e9a7d3f2f0590e34f5f46568ff8f7c6422902627229f9411e3e2bd"
+    "packs/v1.2.1/individual/nai5-scene-design-v1.2.1.zip": {
+      "bytes": 21835,
+      "sha256": "89ff81dcb7f8e5234fc4ce96439afa009960d5cb89d18fa2696487e42ac302aa"
     },
-    "packs/v1.2/individual/nai5-writing-v1.2.zip": {
-      "bytes": 63292,
-      "sha256": "86c498551de88002ded0d9b59962c596155e92f1ef8382d6b2105ca894db4f9e"
+    "packs/v1.2.1/individual/nai5-writing-v1.2.1.zip": {
+      "bytes": 63293,
+      "sha256": "7d9e7816ed4cf51d9accffece3900516ff8564c7bb04f8b3c6820804d97aee94"
     },
-    "packs/v1.2/individual/oc-character-design-v1.2.zip": {
+    "packs/v1.2.1/individual/oc-character-design-v1.2.1.zip": {
       "bytes": 22484,
-      "sha256": "070814df49104e84aca8823d3ccb97f4c35df9aa0abde058c52c6c808aa099c1"
+      "sha256": "05676d21fa77b3d3d3f4c6bfe1eb65da22932998f463d9105ed8a3ee8a6afc3c"
     },
-    "packs/v1.2/individual/oc-costume-design-v1.2.zip": {
-      "bytes": 31037,
-      "sha256": "65068f7ab778498358dd7348e69a0bdc71b90f5fbc22aa9a436a0e709c208d04"
+    "packs/v1.2.1/individual/oc-costume-design-v1.2.1.zip": {
+      "bytes": 31038,
+      "sha256": "d4549479a94bbe5b1544580016fe5aa57431072f929614a48f9bb9b9edd194ed"
     },
-    "packs/v1.2/nai5-art-studio-gemini-1.2.zip": {
+    "packs/v1.2.1/nai5-art-studio-gemini-1.2.zip": {
       "bytes": 199086,
       "sha256": "f50ec6789267fc6a1c3fff3213f4e4cdcde7fd8acfa0eeb4cce4a66e9269e2d3"
     },
-    "packs/v1.2/nai5-merged-v1.2.zip": {
-      "bytes": 133432,
-      "sha256": "fbc834a31e5a0f7fb058a371ce74ba966703c54e29e4518f5897f0f45aa4b314"
+    "packs/v1.2.1/nai5-merged-v1.2.1.zip": {
+      "bytes": 133436,
+      "sha256": "62ef21716369fb85dafcf3ea4ebec3b88d9675b2058487a28c7ed69377f87e9a"
     },
-    "packs/v1.2/nai5-mini-v1.2.zip": {
-      "bytes": 20582,
-      "sha256": "fae554d11019df82dfa323c834dd2c12627de2609c4f05fc7662796d1e2db306"
+    "packs/v1.2.1/nai5-mini-v1.2.1.zip": {
+      "bytes": 20763,
+      "sha256": "5da9ab05cfb7139d2abe0037d81e2f074248fd1a3ed2e8e8912e90f5c217a141"
     },
-    "packs/v1.2/nai5-single-v1.2.zip": {
-      "bytes": 131984,
-      "sha256": "3dc5bc7c7a515a7ccfd35457a357f5c29d86bad8fa1e17a01d2065002733d8c5"
+    "packs/v1.2.1/nai5-single-v1.2.1.zip": {
+      "bytes": 131987,
+      "sha256": "bb4d9467d5d956aa27aeb970021cf72679c3c43125d33554534e1f2bb1547625"
     },
-    "packs/v1.2/nai5-split-v1.2.zip": {
-      "bytes": 335496,
-      "sha256": "757b674ddd9cbb73d931a49f0e03dc89e38cada7d4da928d98fe3191cb8320df"
+    "packs/v1.2.1/nai5-split-v1.2.1.zip": {
+      "bytes": 335514,
+      "sha256": "3448f51b112be44bcf0d49db27e33e588e91ccb68324ecdfcd6edb81145162a0"
     },
     "references/NAI5_All_Prompting.md": {
-      "bytes": 286286,
-      "sha256": "e71586bb1213a1250c231e87efeb036e518c35d8ad1c7ea915380f44b19b8d69"
+      "bytes": 286288,
+      "sha256": "8c1690935a8ec568450044f7cc0ec7308fe9849d3d91f20223b34f29a98799a0"
     }
   }
 }
