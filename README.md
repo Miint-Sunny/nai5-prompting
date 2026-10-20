@@ -25,7 +25,7 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/single
 
 ## 阅读与切换
 
-四种当前安装包均集中在 `packs/v1.2/`：[拆分版](packs/v1.2/nai5-split-v1.2.zip) · [合并版](packs/v1.2/nai5-merged-v1.2.zip) · [单文件版](packs/v1.2/nai5-single-v1.2.zip) · [极简版](packs/v1.2/nai5-mini-v1.2.zip)。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
+四种当前安装包和 Gemini 适配包均集中在 `packs/v1.2/`：[拆分版](packs/v1.2/nai5-split-v1.2.zip) · [合并版](packs/v1.2/nai5-merged-v1.2.zip) · [单文件版](packs/v1.2/nai5-single-v1.2.zip) · [极简版](packs/v1.2/nai5-mini-v1.2.zip) · [Gemini 适配版](packs/v1.2/nai5-art-studio-gemini-1.2.zip)（维护者整合，没有单独做模型测试）。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 - [技能入口](SKILL.md)；正文：[完整构思与写法](references/NAI5_All_Prompting.md)。
 - [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single) · [极简版](https://github.com/Miint-Sunny/nai5-prompting/tree/mini)。默认使用拆分版，其他形式按用户明确选择使用。
@@ -38,7 +38,7 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/single
 
 ## 版本与维护
 
-当前为 **v1.2（2026-10-19）**，正式版，Latest 从 v1.1 更新到这里。方法快照仍为 `v1.2-next-preview.24-20261017`，本分支内容与 v1.2g 相同，只换版本号；本次改动在极简版（`mini` 分支）。四个附件集中在 [v1.2 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2)。
+当前为 **v1.2（2026-10-19）**，正式版，Latest 从 v1.1 更新到这里。方法快照仍为 `v1.2-next-preview.24-20261017`，本分支内容与 v1.2g 相同，只换版本号；本次改动在极简版（`mini` 分支）。四个安装包和 Gemini 适配包都在 [v1.2 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2) 的附件里。
 
 [发布说明](RELEASE_NOTES.md)记录修订和实际验证范围；[主线与版本](BRANCHES.md)说明分支关系；[来源](SOURCE.json)与[校验清单](SHA256SUMS.txt)用于核对本分支文件。本分支只核对了装配保真，没有单独做模型测试、生图或客户端真实导入测试；方法层的验证见发布说明。
 
