@@ -4,7 +4,7 @@
 
 ## 当前版本：v1.2
 
-用户未指定形式时，配置完整拆分版；使用时优先从拆分技能中按需读取。极简版、合并版和单文件版仅在用户明确指定时选择。
+用户未指定形式时，配置完整拆分版；使用时优先从拆分技能中按需读取。极简版、合并版和单文件版仅在用户明确指定时选择；Gemini 适配版只在 Gemini 环境里或用户指定时选择。
 
 | 文件 | 内容 |
 | --- | --- |
@@ -12,6 +12,7 @@
 | [nai5-merged-v1.2.zip](v1.2/nai5-merged-v1.2.zip) | 一个入口与构思、写法两卷 |
 | [nai5-single-v1.2.zip](v1.2/nai5-single-v1.2.zip) | 一个入口与完整合订稿 |
 | [nai5-mini-v1.2.zip](v1.2/nai5-mini-v1.2.zip) | 极简版：一个技能 `nai5-mini`，只写普通单幅插画 |
+| [nai5-art-studio-gemini-1.2.zip](v1.2/nai5-art-studio-gemini-1.2.zip) | Gemini 适配版：11 个模块整合成一个技能 `nai5-art-studio`，只在 Gemini 环境里或用户指定时用；参考正文取自 v1.2 拆分版，只改了模块导航、角色资料与角色栏编号的说法；维护者整合，没有单独做模型测试 |
 
 下载后可将 ZIP 交给 agent 配置，或解压后按[手动配置目录](../INSTALL.md#manual-paths)放置。仅支持逐个导入的客户端，可使用 `v1.2/individual/` 中的 11 个小包；完整职责和下载清单见[主线说明](https://github.com/Miint-Sunny/nai5-prompting#split-skills)。
 

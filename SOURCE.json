@@ -27,14 +27,22 @@
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f",
     "极简/nai5-mini/SKILL.md": "b3474086b3bb99616f1187667f906baaf69eb7cd45f145056bb80b62cae57cc0",
+    "适配/gemini/nai5-art-studio-gemini-1.2.zip": "f50ec6789267fc6a1c3fff3213f4e4cdcde7fd8acfa0eeb4cce4a66e9269e2d3",
     "极简/nai5-mini/references/写法.md": "7936e2e9c2eb9cb4a73548fe9b0a3e32882f103609db6eee794b6f883fb497d6"
   },
   "release_assets": [
     "packs/v1.2/nai5-split-v1.2.zip",
     "packs/v1.2/nai5-merged-v1.2.zip",
     "packs/v1.2/nai5-single-v1.2.zip",
-    "packs/v1.2/nai5-mini-v1.2.zip"
+    "packs/v1.2/nai5-mini-v1.2.zip",
+    "packs/v1.2/nai5-art-studio-gemini-1.2.zip"
   ],
+  "adaptations": {
+    "nai5-art-studio-gemini-1.2.zip": {
+      "path": "适配/gemini/nai5-art-studio-gemini-1.2.zip",
+      "sha256": "f50ec6789267fc6a1c3fff3213f4e4cdcde7fd8acfa0eeb4cce4a66e9269e2d3"
+    }
+  },
   "skill_order": [
     "nai5-ideas",
     "nai5-scene-design",
@@ -202,8 +210,8 @@
   },
   "files": {
     "BRANCHES.md": {
-      "bytes": 2408,
-      "sha256": "284b01411bba43b4bb43ca94d7b7dead3a648618102d9483eccd9a3a718e0ed8"
+      "bytes": 2517,
+      "sha256": "0343bff72370aac14fbb32900c5207da1ee68a5f5e716c6b04ac62e1dd94a3f0"
     },
     "INSTALL.md": {
       "bytes": 5765,
@@ -218,16 +226,16 @@
       "sha256": "bf97bdddeabd8d7a44f2e64f82e3a68d4552dc77ee67d14516513eae874e7090"
     },
     "README.md": {
-      "bytes": 10330,
-      "sha256": "6b8b1154b414548bee5e0b4e1f55ac94126e798d67f7c8f10906d9bc2f3372c5"
+      "bytes": 10789,
+      "sha256": "fbe11355c7a28e686593bddd2504659bbc52859e2f8c70bdda6c04da29b17735"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 13728,
-      "sha256": "4c2cc7d622b946d6c156331afbdbf5fe8c1300dc80b56123c9f018d96134d1c3"
+      "bytes": 14195,
+      "sha256": "bb827381dd6f157d42f2103118a4eb7c56fa8f2080bd2ffa33b4926755b41db8"
     },
     "packs/README.md": {
-      "bytes": 1446,
-      "sha256": "077b3dcaa96f8962d2515e02a593e6774e4d2657e670e8825f7b9d6985578da3"
+      "bytes": 1856,
+      "sha256": "552fb9d0ac2471b53ff6a5d71805a91f4107f429dc9f1973c7974b3b3fc3ff6b"
     },
     "packs/v1.2/individual/nai5-art-direction-v1.2.zip": {
       "bytes": 20745,
@@ -272,6 +280,10 @@
     "packs/v1.2/individual/oc-costume-design-v1.2.zip": {
       "bytes": 31037,
       "sha256": "65068f7ab778498358dd7348e69a0bdc71b90f5fbc22aa9a436a0e709c208d04"
+    },
+    "packs/v1.2/nai5-art-studio-gemini-1.2.zip": {
+      "bytes": 199086,
+      "sha256": "f50ec6789267fc6a1c3fff3213f4e4cdcde7fd8acfa0eeb4cce4a66e9269e2d3"
     },
     "packs/v1.2/nai5-merged-v1.2.zip": {
       "bytes": 133432,
