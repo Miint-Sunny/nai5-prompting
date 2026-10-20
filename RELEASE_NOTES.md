@@ -10,8 +10,9 @@
 - **`nai5-mini-v1.2.zip` — 极简版**：一个技能 `nai5-mini`，两份正文，只写普通单幅插画。
 - **`nai5-merged-v1.2.zip` — 合并版**：一个入口与构思、写法两卷。
 - **`nai5-single-v1.2.zip` — 单文件版**：一个入口与完整合订稿。
+- **`nai5-art-studio-gemini-1.2.zip` — Gemini 适配版**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2/nai5-art-studio-gemini-1.2.zip)）：11 个模块整合成一个技能 `nai5-art-studio`，只在 Gemini 环境里或用户指定时用；参考正文取自 v1.2 拆分版，只改了模块导航、角色资料与角色栏编号的说法；维护者 2026-10-20 整合，没有单独做模型测试。
 
-四个完整包集中在各分支的 `packs/v1.2/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
+四个完整包和 Gemini 适配包集中在各分支的 `packs/v1.2/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
 
 ## 本次修改（极简版 `references/写法.md`）
 
