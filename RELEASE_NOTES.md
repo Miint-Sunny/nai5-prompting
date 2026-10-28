@@ -1,6 +1,39 @@
+# v1.2.4 · 出词口径修订
+
+2026-10-28 正式发布，Latest 从 v1.2.3 更新为 v1.2.4。拆分版、合并版、单文件版来自 `v1.2-next-preview.25-20261028`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。按使用反馈改了出词口径：不写质量词，UC 用户要才给，两个人以上时主串不写动作、英文句子简单写，角色栏默认不写动作，Character 1 是最左边那个，人物长相用户没给就不编。来源提交与文件哈希见 `SOURCE.json`。
+
+## 下载与配置
+
+- **`nai5-split-v1.2.4.zip` — 拆分版（默认）**：11 个通用技能及各自资源。
+- **`nai5-mini-v1.2.4.zip` — 极简版**：一个技能 `nai5-mini`，两份正文，只写普通单幅插画。
+- **`nai5-merged-v1.2.4.zip` — 合并版**：一个入口与构思、写法两卷。
+- **`nai5-single-v1.2.4.zip` — 单文件版**：一个入口与完整合订稿。
+- **`nai5-art-studio-gemini-1.2.zip` — Gemini 适配版**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.4/nai5-art-studio-gemini-1.2.zip)）：与 v1.2 附件相同，11 个模块整合成一个 Gemini 技能，只在 Gemini 环境里或用户指定时用；这次的出词口径没有改进这个包。
+
+四个完整包和 Gemini 适配包集中在各分支的 `packs/v1.2.4/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
+
+## 本次修改
+
+- **质量词**：不写。官网的质量词开关默认开着，会自己加上（V5 标准档 `very aesthetic, masterpiece, no text`）；开关带 `no text`，图里要画字时交稿最后提醒关掉开关。用户要质量词时才写，用户贴来的串里本来有的照留。
+- **UC**：默认不给，用户要 UC（包括要 SFW／全年龄）才给。要了先用用户自己的那套，没有就用基础串；基础串换成 `2::extra characters, extra fingers, extra toes, logo, watermark, signature, deformed, ::, artistic error, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, dithering, too many watermarks`（原来那串和官网 Heavy 预设相同，预设开着时等于重复）。多人图和漫画只删 `extra characters` 这一个词，同一加权段的其他词照留；本图不要的东西照旧写成主串最后的负权重。
+- **UC 预设的提醒**：不给 UC 时，官网的 UC 预设照样生效。漫画、分格、多视图交稿最后提醒「UC 预设换成 Light 或 None」（Heavy、Human Focus 带网点、多视图这类词，Furry Focus 带 `comic`）；要留白、整页空白或画面主体是 logo 时，提醒 Heavy、Human Focus 换成 Light 或 None。普通的对白、招牌字只提醒关质量词开关。
+- **两个人以上**：主串人数词后面不写动作和姿势词；人物的位置和动作只用一两句英文简单写，先说谁在左谁在右，再说谁对谁做什么，用户给的接触和谁拿着什么照写。句子里不用 `Character 1` 这类编号指人。
+- **角色栏**：默认只写性别、外貌和衣服。用户说要把动作分开写进角色栏时，动作接在各人那一栏最后：做的人写 `source#hug`，被做的人写同一个词 `target#hug`，互相做的写 `mutual#holding hands`，表情和视线跟着进各人那一栏。极简版单人照旧把一两个动作词接在角色栏最后。
+- **编号**：两个人以上时从看画的人这边看从左往右编号，`Character 1` 是最左边那个（官方文档：不设位置时，模型通常按角色栏的先后从左往右摆）。
+- **长相**：人物长相用户没给就不写、不编，随便画也一样；几个人时句子里靠衣服或左右分人。用户明确要从零设计角色时不受此限。
+- 拆分版的漫画、服装、反推写法按同一口径改了质量词、UC 和两个人以上的写法；合并版、单文件版由同一份方法生成；极简版同步以上各条。
+
+依据：使用反馈，以及 NovelAI 官方文档的质量词、Undesired Content、Multiple Characters 三页（2026-10-28 核对；官方也说明 `source#`、`target#` 这套写法不一定每次都灵）。
+
+## 验证范围
+
+这一版没有出图，也没有做整版同题对照。改动由四位模型评审分两轮逐条核对写法和官方说法，意见已改；长相和基础 UC 两处是评审后按维护者意见补改的。四种形式的装配、ZIP 结构、链接、校验值和私有内容审计通过；没有新增客户端真实导入测试。
+
+---
+
 # v1.2.3 · 极简版自用修复
 
-2026-10-23 正式发布，Latest 从 v1.2.2 更新为 v1.2.3。拆分版、合并版、单文件版与 v1.2 相同，基线 `v1.2-next-preview.24-20261017`，只换版本号；Gemini 适配包原样随包。本次改动只在**极简版**（`mini` 分支，技能名 `nai5-mini`）的 `references/写法.md`：按补测结果修订一组需求还原规则，随便画加一条只看画面也要看得懂的自查，另把几处会读成两种做法的说法写清。来源提交与文件哈希见 `SOURCE.json`。
+2026-10-23 正式发布，Latest 从 v1.2.2 更新为 v1.2.3；2026-10-28 由 v1.2.4 接替。拆分版、合并版、单文件版与 v1.2 相同，基线 `v1.2-next-preview.24-20261017`，只换版本号；Gemini 适配包原样随包。本次改动只在**极简版**（`mini` 分支，技能名 `nai5-mini`）的 `references/写法.md`：按补测结果修订一组需求还原规则，随便画加一条只看画面也要看得懂的自查，另把几处会读成两种做法的说法写清。来源提交与文件哈希见 `SOURCE.json`。
 
 ## 下载与配置
 
