@@ -38,7 +38,7 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/merged
 
 ## 版本与维护
 
-当前为 **v1.2.5（2026-10-28）**，正式版，Latest。方法快照为 `v1.2-next-preview.26-20261028`，本次改了交稿格式（角色栏只放外貌和衣服、代码块里不写栏名、两个人以上时主串里每人一行 `Character N:`），极简版同步修改。四个安装包和 Gemini 适配包都在 [v1.2.5 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.5) 的附件里。
+当前为 **v1.2.5（2026-10-28）**，正式版，Latest。方法快照为 `v1.2-next-preview.27-20261028`，本次按维护者给的格式重做交稿格式（栏名带冒号写在代码块上面、两个人以上时主串最后每人一行 `Character N:`、角色栏两行只放外貌和服装），极简版同步修改；同日早些时候发布的 v1.2.5 第一版已撤回。四个安装包和 Gemini 适配包都在 [v1.2.5 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.5) 的附件里。
 
 [发布说明](RELEASE_NOTES.md)记录修订和实际验证范围；[主线与版本](BRANCHES.md)说明分支关系；[来源](SOURCE.json)与[校验清单](SHA256SUMS.txt)用于核对本分支文件。本分支只核对了装配保真，没有单独做模型测试、生图或客户端真实导入测试；方法层的验证见发布说明。
 
