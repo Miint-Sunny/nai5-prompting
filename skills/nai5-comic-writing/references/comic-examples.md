@@ -10,7 +10,7 @@
 
 下例展示字段和取景，不是已出图验证的样张。示例使用示意角色，长相当作用户已经给出，不是用户 OC；用户没给长相时不编，实际用库内 OC 时按本格可见范围提取其身份事实，不照搬此处外貌或剧情。
 
-这些完整提示词示例按官网默认设置写：不写质量词，用户没要 UC 就不给。只有例七假设用户要了 UC、又没有自己的那套，给出删去漫画冲突项后的基础串；用户有自己的 UC 时换成它，同样只删冲突项。交稿最后的设置提醒（有字页关质量词开关、UC 预设换成 Light 或 None）按适配器写，例七写在附注里，其他例子省略。主串不带 `Prompt:` 显示标头，Character 保留，给 UC 时 UC 也保留。
+这些完整提示词示例按官网默认设置写：不写质量词，用户没要 UC 就不给。只有例七假设用户要了 UC、又没有自己的那套，给出删去漫画冲突项后的基础串；用户有自己的 UC 时换成它，同样只删冲突项。交稿最后的设置提醒（有字页关质量词开关、UC 预设换成 Light 或 None）按适配器写，例七写在附注里，其他例子省略。每个代码块上面一行写栏名（Base Prompt、Character N、UC），代码块里不写 `Prompt:`、`Character N:`、`UC:`。
 
 这些提示词示例属于**分镜经用户确认或修改后的第二阶段**。未审的新剧情先由 `nai5-comic-storyboard` 处理当前创作阶段；已有定稿或明确直接转换时使用这些表达示例。
 
@@ -21,6 +21,8 @@
 ### 例一：五格黑白短段，六个 Character 框
 
 情境：两人准备早餐，一起拧开果酱瓶。左→右、上→下：上方建立情境，中段用手部互动和发力反应，底部确认打开与回应。中排右侧宽格的小幅破框强调使劲的瞬间。此例是完整小段落；用户只要开头时，按其要求保留后续空间。
+
+**Base Prompt**
 
 ```text
 2girls, manga, monochrome. Read left to right, then top to bottom. The page is divided into five panels: one full-width top panel, a narrow middle left panel beside a wide middle right panel, a narrow bottom left panel beside a wide bottom right panel.
@@ -99,6 +101,8 @@ In the wide bottom right panel, close-up, three-quarter view: a woman with long 
 
 三格记录一位室友读书、合书、望向窗外；下方居中的无框半身承载随后歇一会儿的收尾。读序为上方全宽格→下方左格→下方右格→覆盖画面。覆盖只跨下方并排两格的内侧，两个小格的关键内容分别靠外侧安排。这里只演示一种局部范围，不是通用布局。
 
+**Base Prompt**
+
 ```text
 1girl, manga, monochrome. Read left to right, then top to bottom. The page is divided into three panels: one large full-width top panel above two equal small bottom panels. An unframed foreground overlay occupies the lower center, covering the inner portions of both bottom panels.
 ```
@@ -135,6 +139,8 @@ In the lower-center foreground overlay across the inner portions of both small b
 
 右手已经拿着钥匙，下一格左手才拿起杯子；最后切脸部特写。以下三个局部框依次对应同一行中从左到右的三个小格。
 
+**Base Prompt**
+
 ```text
 1girl, manga, monochrome. Read left to right, then top to bottom. The page is divided into three equal small panels side by side in one row.
 ```
@@ -164,6 +170,8 @@ In the small right panel, tight facial close-up, front view: a woman with long c
 ### 例七：全彩四格，默认 2×2 从左往右
 
 情境：雨天下班，一人忘了带伞，同伴递伞，两人共撑一把伞回家。用户没指定版式，按默认 2×2、从左往右读：左上 → 右上 → 左下 → 右下。全彩，有字。
+
+**Base Prompt**
 
 ```text
 2girls, manga. Read left to right, then top to bottom. The page is divided into four panels: two panels side by side across the top and two panels side by side across the bottom.
@@ -200,7 +208,7 @@ In the bottom right panel, medium shot, back view: a woman with a low auburn pon
 In the bottom right panel, medium shot, back view: a woman with wavy shoulder-length pink hair and a dark green field jacket holds the shared yellow umbrella on the right, her outer shoulder dark with rain. A speech bubble above her reads "伞有点小。"
 ```
 
-**UC:**
+**UC**
 
 ```text
 2::extra fingers, extra toes, watermark, signature, deformed, ::, artistic error, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, dithering, too many watermarks

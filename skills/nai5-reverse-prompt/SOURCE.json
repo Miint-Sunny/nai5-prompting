@@ -1,5 +1,5 @@
 {
-  "version": "v1.2.4",
+  "version": "v1.2.5",
   "role": "writing",
   "skill": "nai5-reverse-prompt",
   "requires": [
@@ -8,7 +8,7 @@
   "modules": {
     "writing-reverse": {
       "path": "方法/写法/reverse.md",
-      "sha256": "8ee90362d0380542add7442602fa888ab5156a00c6fa285f36a3301dd351b2bb"
+      "sha256": "dd2f3bc2279a2321a074274d3b8d2304f0c584366b2f2a0bbad0e37de3324bbf"
     }
   },
   "entry": {
