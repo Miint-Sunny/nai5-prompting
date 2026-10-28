@@ -173,7 +173,7 @@ Six overlapping petal-shaped panels form a layered black overskirt around the wa
 
 先按“字段职责：先选画面类型”（`nai5-writing`：`references/conventions.md#field-contract`）选择普通插画或漫画。普通画面动作、镜头、场景、光影在主串，已知可见外貌与服装在对应 Character；漫画将各格可见衣物和状态写入对应框。印字按“文字渲染”（`nai5-writing`：`references/conventions.md#general-writing.s01.h05`）保留原文与载体。使用黑白或半黑白时，对所有待输出字段执行“按需色彩参考”（`nai5-writing`：`references/conventions.md#shared-color`），不修改原色事实。
 
-完整导出执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`），片段省略质量和 UC 的规则不再适用。UC 沿用用户自己的那套，没有就用那里的基础串；有服装印字、logo 或徽记时删去 `logo`，留白、网点、多视图或多人时删去相应冲突项，其余不改。本图不想要的衣物元素写成质量尾之后的负权重行，不进 UC。只改手写词不能抵消预设冲突。局部修改仍保留原来的其他字段和完整设置，不借转换重构。
+完整导出执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`）：不写质量词，用户要 UC 才给。给 UC 时沿用用户自己的那套，没有就用那里的基础串；有服装印字、logo 或徽记时删去 `logo`，留白、网点、多视图或多人时删去相应冲突项，其余不改。本图不想要的衣物元素写成主串最后的负权重行，不进 UC。只改手写词不能抵消预设冲突。局部修改仍保留原来的其他字段和完整设置，不借转换重构。
 
 <a id="costume-writing.s08"></a>
 

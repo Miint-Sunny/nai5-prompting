@@ -13,9 +13,9 @@
 
 | 字段 | 装什么 |
 |---|---|
-| **主提示词** | 人数 · **动作 · 表情 · 镜头 · 场景 · 背景** · 光影 · 氛围色彩 · 技法 · 质量尾；带标签的画师／技法块按[样式块](#general-writing.s02.h03)后置 |
-| **Character 1/2… Prompt**（角色栏） | **只放外貌**，具体放多少**取决于角色是原创还是版权**——见下面那张表，在此确定后，后文沿用同一分类 |
-| **Undesired Content（UC）** | 沿用用户自己的 UC，没有就用基础串，只删与本图冲突的项；这张图明确不要的东西写成主串最后一行的负权重，不进 UC（[§6](conventions.md#shared-quality)） |
+| **主提示词** | 人数 · **动作 · 表情 · 镜头 · 场景 · 背景** · 光影 · 氛围色彩 · 技法；两个人以上时不写动作和姿势词，动作只在英文句子里简单写（[§4.9](#general-writing.s06.h13)）；不写质量词（[§6](conventions.md#shared-quality)）；带标签的画师／技法块按[样式块](#general-writing.s02.h03)后置 |
+| **Character 1/2… Prompt**（角色栏） | **放性别、外貌和服装**，具体放多少**取决于角色是原创还是版权**——见下面那张表，在此确定后，后文沿用同一分类；用户说要把动作分开写进角色栏时，动作接在最后（[§4.9](#general-writing.s06.h13)） |
+| **Undesired Content（UC）** | 用户要 UC 才给：沿用用户自己的 UC，没有就用基础串，只删与本图冲突的项；这张图明确不要的东西写成主串最后一行的负权重，不进 UC（[§6](conventions.md#shared-quality)） |
 | 参数 | 仅在用户问起或排查时给 |
 
 本包把角色外观集中放进各自角色栏，便于核对归属和避免重复；这是本包的输出约定。实际接口允许哪些内容，以当前工具为准。
@@ -46,8 +46,8 @@
    性别词跟着**这个角色本身**：用户指定的照写，没指定的按题材与角色身份选定一个明确性别，照[人数与主体](#general-writing.s05.h01)的写法写人数词，不随手写 girl；`other` 指性别不明或无性别的角色，只用于明确中性的设定、无性别的非人，或用户点名。
 2. **作品名可省**，写了不算错但不是必须。独立作品 tag 与角色名括号中的作品信息是两回事。
    拿不准角色名对不对时补上作品名有帮助，认得就不用。
-3. **动作 · 表情 · 镜头 · 场景 · 背景默认留在主提示词**。
-   施受方向与相应表情的前缀例外见 [§0.1](#general-writing.s02.h02) 与 [§4.9](#general-writing.s06.h13)。
+3. **动作 · 表情 · 镜头 · 场景 · 背景默认留在主提示词**；两个人以上时动作只在主串的英文句子里简单写，不写成动作和姿势词。
+   用户说要把动作分开写进角色栏时，各人的动作接在自己那一栏最后，表情和视线也跟着写进去，见 [§0.1](#general-writing.s02.h02) 与 [§4.9](#general-writing.s06.h13)。
 
 > 版权角色的**用户明确细节逐项写入角色栏**，即使与常规设定一致也保留；
 > 换装 / 换发色等改动按 [§3.7](#general-writing.s05.h07) 写，不额外补回未指定的默认设计。
@@ -57,22 +57,23 @@
 
 ## 普通插画完整模板与落笔检查
 
-本节用于普通完整画面；[角色类型](#ordinary-identity)决定外貌写多少，[字段职责](conventions.md#field-contract)区分漫画与衣物片段。完整交付按下面的顺序组装。示意中的尖括号填成本次内容；每个字段各用一个代码块，`Character N:` 与 `UC:` 字段名写在各自块内第一行，其余说明放块外。
+本节用于普通完整画面；[角色类型](#ordinary-identity)决定外貌写多少，[字段职责](conventions.md#field-contract)区分漫画与衣物片段。完整交付按下面的顺序组装。示意中的尖括号填成本次内容；每个字段各用一个代码块，`Character N:` 字段名写在各自块内第一行（用户要 UC 时 `UC:` 也一样），其余说明放块外。
 
 **画幅与画面内容分开表达。** 用户指定竖、横、超宽或方时，按该画幅组织取景；需要交代时在代码块外沿用这一描述。只说画幅不等于询问像素尺寸，像素及其他参数仅在用户询问参数或明确要求排查参数时给；已有具体尺寸按原要求保留。主串、角色栏和关系句描述画内的对象、取景与布局。`portrait` 表达人物近景，`landscape` 表达风景题材，按实际画面内容选用。
 
-**1. 主串。** 从已定画面提取需要看清的物件、接触与姿态，再选吻合可见范围的景别词。需要看清的部位写成已定机位与物件朝向带出的结果，不离开机位单独说全部可见。手里操作、承托身体以及形成遮挡的实体先各列一个名词短语，保留已定数量、颜色和形态；关系句围绕同一对象连写位置、接触与支撑。只列本图已有的物件，按下列顺序交付。
+**1. 主串。** 从已定画面提取需要看清的物件、接触与姿态，再选吻合可见范围的景别词。需要看清的部位写成已定机位与物件朝向带出的结果，不离开机位单独说全部可见。手里操作、承托身体以及形成遮挡的实体先各列一个名词短语，保留已定数量、颜色和形态；关系句围绕同一对象连写位置、接触与支撑，两个人以上时人物的位置和动作按模板下面那段简单写。只列本图已有的物件，按下列顺序交付。
 
 ```text
 <人数；仅一名人物且无其他动物入镜时按需加 solo；无人画面写 no humans>, <持握物、身体支撑物及决定遮挡或取景的实体词组>
-<姿势、取景与机位词组>, <场景、时段、光线>
-<谁的哪只手接触哪个部位、同一物件由谁承托、前后遮挡等关系句>
+<姿势词组，只有一个人时写>, <表情、视线词>, <取景与机位词组>, <场景、时段、光线>
+<谁的哪只手接触哪个部位、同一物件由谁承托、前后遮挡等关系句；两个人以上时人物的位置和动作按下段简单写>
 <本次确需的技法词>
-<无字：very aesthetic, masterpiece, no text；有字：very aesthetic, masterpiece>
 <本图排除项的负权重行；没有排除要求时省略>
 ```
 
-主串到这里完成，再开始角色栏。质量尾属于主串，写在所有内容句之后、第一项 `Character N:` 之前；不能放在最后一个角色栏与 UC 之间。实际预设或用户指定原串另按[共同质量规则](conventions.md#shared-quality)处理。
+主串到这里完成，再开始角色栏。不写质量词：官网的质量词开关会自己加在主串最后；图里要画字时，交稿最后补一句让用户把开关关掉；用户要质量词或给了带质量词的原串时，按[共同质量规则](conventions.md#shared-quality)处理。
+
+**两个人以上时**，主串前两行不写动作和姿势词（`hug`、`holding hands`、`sitting`、`standing` 这类）；表情和视线词（`smile`、`looking at another`）不算动作，照写在第二行，各人表情不同时在句子里说清谁是哪个。写人物的英文句子简单写一两句：先写从看画的人这边看谁在左、谁在右（用户没说就自己定，不用问），再写谁对谁在做什么，不铺开写每只手的接触和支撑；用户给定的接触、持物归属和分工照写，不算铺开。文字载体、光线、遮挡这些句子照常写。用户要求写细时再按[多人交互](#general-writing.s06.h13)补；用户说要把动作分开写进角色栏时，按下面角色栏的写法。
 
 本次有指定的 `<style>`、`<artist>` 原串时，在主串之后、角色栏之前依次附上，按[样式块](#general-writing.s02.h03)保留原文；没有相应原串就省略该块。
 
@@ -80,12 +81,14 @@
 
 ```text
 Character 1:
-<girl / boy / other>, <本次沿用或按用户要求调整的外貌锚点>, <本次服装与配饰>
+<girl / boy / other>, <本次沿用或按用户要求调整的外貌锚点>, <本次服装与配饰>, <本栏的动作：用户说要分开写进角色栏时才写>
 ```
 
-具名版权角色在起手词后写规范角色名；用户明确的外观与服饰继续逐项写入，未指定的常规外观由名称触发。原创角色按已给设定填实，不用名字替代外貌。更多角色依次另开 `Character 2:` 等字段；无人画面省略角色栏。施受前缀的例外按[多人交互](#general-writing.s06.h13)处理。
+具名版权角色在起手词后写规范角色名；用户明确的外观与服饰继续逐项写入，未指定的常规外观由名称触发。原创角色按已给设定填实，不用名字替代外貌。更多角色依次另开 `Character 2:` 等字段；两个人以上时从看画的人这边看从左往右编号，最左边的是 `Character 1`。无人画面省略角色栏。
 
-**3. UC。** 另开一个字段，填入实际串：
+用户说要把动作分开写进角色栏时，各人的动作接在自己那一栏最后，表情和视线也跟着写进去：一个人对另一个人做的动作，做的人写 `source#hug`、被做的人写同一个词 `target#hug`，两人互相做的都写 `mutual#holding hands`，不是互动的动作直接写动作词；主串的英文句子照旧简单写。细则见[多人交互](#general-writing.s06.h17)。
+
+**3. UC。** 用户要 UC 时才写（要 SFW／全年龄也算要），另开一个字段，填入实际串：
 
 ```text
 UC:
@@ -109,10 +112,10 @@ UC:
    ✅ 主提示词 `1girl, solo, from below, snowy plains, backlighting, looking at viewer`
       ＋ Character 1 `girl, silver hair, long hair, ahoge, white dress, frills, white gloves`
 
-2. **质量词收在第一段 tag 的尾巴上**，后面还有几段句子。
-   它该在**所有句子之后**（后面只接本图负权重行），而不是第一段 tag 的结尾。
+2. **又手写了质量词**：主串末尾写 `very aesthetic, masterpiece, no text`。
+   官网的质量词开关会自己加，手写就加了两遍；图里要画字时，它带的 `no text` 还可能让字出不来。用户要质量词时才写，见 [§6](conventions.md#shared-quality)。
 
-3. **反向漏**：动作、表情、镜头、场景、背景漏进角色栏。它们默认留在主提示词；施受前缀例外见 [§4.9](#general-writing.s06.h13)。
+3. **反向漏**：动作、表情、镜头、场景、背景漏进角色栏。它们默认留在主提示词；用户说要把动作分开写进角色栏时才写进去，见 [§4.9](#general-writing.s06.h13)。
 
 4. **按角色类型核对角色栏的详细程度。**
 
@@ -143,6 +146,9 @@ UC:
    （`archetto (arknights), arknights`）。想不起来英文写法时按 [§3.7](#general-writing.s05.h07) 的中间档处理，
    **不用中文名代替规范标签**。
 
+9. **两个人以上时主串堆动作**：`1girl, 1boy, hug, holding hands, standing, sitting` 这样把各人的动作和姿势都写成主串的词，
+   模型分不清谁做哪个。两个人以上时主串不写动作和姿势词，用一两句英文简单交代；用户要分开写时进各人的角色栏。
+
 画师串来源与原文保留见[共同事实契约](conventions.md#shared-facts)，完整输出范围和必要附注见[字段职责](conventions.md#field-contract)。
 
 **普通完整插画按实际人物逐人写角色栏，单人也保留。** 角色栏写本次已确定的身份、外貌和服装，不为填栏补造未定细节。
@@ -161,8 +167,8 @@ UC:
 配饰的完整描述随所属角色放入角色栏；交互句只复用辨认必需的简短锚点，
 例如 `the girl with headphones`，不把整套配饰重新列一遍。
 **表情默认留在主提示词**。
-**例外**：配合 `source#`/`target#` 前缀、标注施受气质的表情词
-（[§4.9](#general-writing.s06.h13) 的 `smirk` / `blush`）可以随前缀进角色栏；没用前缀就没有这个例外。
+**例外**：用户说要把动作分开写进角色栏时，各人的表情和视线跟着动作写进自己那一栏
+（[§4.9](#general-writing.s06.h13) 的 `smirk` / `blush`、`looking at target`）；没分开写就没有这个例外。
 
 **角色栏里的人数词不带数字**：写 `girl` / `boy` / `other`，不写 `1girl`。
 `1girl` / `2girls` 只在主提示词最前面出现一次。
@@ -177,10 +183,10 @@ UC:
 **NAI 不把这些标签解析成特殊语法。** `<artist>` 与 `<style>` 仅用于让人看清
 画师串和技法串的边界；没有相应内容就省略，不留空块。
 有串时逐字保留选定内容：`<artist>` 放画师串，`<style>` 放技法/画风词，保留原有顺序、权重、空格与年份。
-不要外推造出 `<content>`、`<scene>`、`<quality>` 等块；质量词直接放主串末尾。
+不要外推造出 `<content>`、`<scene>`、`<quality>` 等块。
 
-**带串的完整输出**：先完成主串的画面内容、质量尾和本次排除项，再附 `<style>`、`<artist>`，然后开始角色栏。
-样式块各自空行分隔（[§0](#general-writing.s02) 模板），只保留本次有原串的块；它们不替代质量尾。
+**带串的完整输出**：先完成主串的画面内容和本次排除项，再附 `<style>`、`<artist>`，然后开始角色栏。
+样式块各自空行分隔（[§0](#general-writing.s02) 模板），只保留本次有原串的块。
 既有材料中的串位置各不相同，位置统计不能替代这一输出约定。
 
 <a id="general-writing.s02.h04"></a>
@@ -193,11 +199,10 @@ UC:
 人数 →  外貌  →  服装  →  表情  →  镜头  →  动作
       发型/体征/眼睛                    ↑
                           场景 · 背景 ──┘（在镜头之前）
-                                              质量尾 → 最后
 ```
 
-**人数放最前、质量尾放最后**。中间的镜头、动作、场景等按画面关系组织，
-不把既有材料里的常见位置当成引擎规则；镜头词放在哪更有效尚无对应的位置对照。
+**人数放最前**。中间的镜头、动作、场景等按画面关系组织，
+不把既有材料里的常见位置当成引擎规则；镜头词放在哪更有效尚无对应的位置对照。两个人以上时动作只写在英文句子里。
 
 ---
 
@@ -220,24 +225,21 @@ UC:
 |---|---|---|
 | **主体锚** | 人数、solo、关键独立物件 | **最前** |
 | **场景 / 背景** | 空间结构、物件清单、天气时段 | 中前 |
-| **动作** | 姿势、体位、手部动作 | **中后**（排在表情和镜头之后） |
+| **动作** | 姿势、体位、手部动作 | **中后**（排在表情和镜头之后）；两个人以上时只写在关系句里 |
 | **关系** | 空间关系、道具归属、运动的进行中状态 | 跟着动作 |
 | **镜头** | 取景、视角、机位高低、部位锚定 | **中后**，见 [§0.3](#general-writing.s02.h04) 的注意事项 |
 | **光影** | 主光方向与性质、第二光源、投影 | 中后 |
 | **氛围色彩** | 色调、饱和、情绪 | 后 |
-| **技法风格** | 上色方式、线条、媒材、复杂度 | 质量尾之前 |
+| **技法风格** | 上色方式、线条、媒材、复杂度 | 靠后 |
 | **版式与文字** | 分格、贴纸、画面内文字 | 视需要 |
-| **质量尾** | 质量词 | **主串的最末尾**，见下 |
 
 不必全有，按画面需要取。
 **完整外观清单与角色名走角色栏**；交互句只复用辨认必需的简短外观锚点，见 [§0.1](#general-writing.s02.h02)。
 
-> **质量词只写一组、只放在主串的最末尾，写在句子之后**（带后置串块时，
-> 串块在质量尾之后）——不是「tag 段的末尾」，
-> 也不要在开头或中段再来一份。用 A 形态（tag 块 + 句子块）时，
-> 尤其要检查质量词是否误收在第一段 tag 的尾巴上。
+> **不写质量词**：官网的质量词开关会自己加在主串最后。用户要质量词时才写一组，
+> 放在主串所有句子之后，不放在 tag 段的末尾，也不在开头或中段再来一份（[§6](conventions.md#shared-quality)）。
 
-中间各块按画面需要排列；人数决定构成，质量词不描述内容，分别守住首尾。
+中间各块按画面需要排列，人数守住开头。
 
 <a id="general-writing.s04"></a>
 
@@ -409,15 +411,15 @@ danbooru 服装 tag 里，**「一种衣服」和「一种穿法」长得很像�
 
 | 组 | 取值 | 适用关系 |
 |---|---|---|
-| **视线方向** | `looking at viewer` · `looking to the side` · `looking up` · `looking down` · `looking away` · `looking at another` | `looking back`（回头）和 `closed eyes`（闭眼）**不是方向**，可以跟方向叠。**多角色互看**＝只写 `looking at another` **这一个**。❌ `looking up, looking down, looking at another`（想把两人视角都编码 → 全都摇摆）✅ `looking at another` + 句子 "the standing girl looks down at the squatting one"（高低差进句子，或角色栏前缀 `looking at target`，[§4.9](#general-writing.s06.h13)） |
+| **视线方向** | `looking at viewer` · `looking to the side` · `looking up` · `looking down` · `looking away` · `looking at another` | `looking back`（回头）和 `closed eyes`（闭眼）**不是方向**，可以跟方向叠。**多角色互看**＝只写 `looking at another` **这一个**。❌ `looking up, looking down, looking at another`（想把两人视角都编码 → 全都摇摆）✅ `looking at another` + 句子 "the standing girl looks down at the squatting one"（高低差进句子；用户要分开写时也可以在角色栏写 `looking at target`，[§4.9](#general-writing.s06.h13)） |
 | **取景距离** | `close-up` · `portrait` · `upper body` · `cowboy shot` · `full body` | 以已定画面的可见范围选词，关系句只描写该范围内能呈现的动作与接触；必看的部位装不下时先核对景别词是否选错，不擅自删细节或改已定取景。主体占幅另用句子说明。 |
 | **背景形态** | `simple background` · `blurry background` · `white background` · `detailed background` · `transparent background` · `dark background` | 复杂度、虚实、底色和透明性分别判断；同一区域的真实冲突才需处理，兼容维度及不同区域的属性可以并存 |
-| **体位** | `sitting` · `standing` · `lying` · `kneeling` · `squatting` | **多角色例外**——一人站一人蹲时两个都要写，靠句子说清谁是谁 |
+| **体位** | `sitting` · `standing` · `lying` · `kneeling` · `squatting` | **普通插画两个人以上时不写体位词**——一人站一人蹲写进英文句子（"the girl on the left stands while the boy on the right squats"）；用户要分开写时各写进自己的角色栏 |
 | **水平机位** | `from side` · `from behind` · `straight on` | 垂直机位 `from below` / `from above`（两者也互斥）**可以跟水平机位叠一个**：`from below, from side` 合法；`from behind, from side` 不合法 |
 | **版式** | `comic` · `4koma` · `multiple views` · `reference sheet` · `sticker` | `comic` 可与格数词（`4koma` 等）叠；格数排布 tag 说不了的用句子写，**不自造 `vertical` 这类 tag** |
 
-**检查同一主体、同一画面里的语义冲突**。多人或分格可能同时出现不同体位、视线和距离，
-要先看清各自归属，不能把共现一概算成错误。
+**检查同一主体、同一画面里的语义冲突**。分格时各格可能出现不同体位、视线和距离，多人图里各人的视线和距离也可能不同，
+要先看清各自归属，不能把共现一概算成错误；普通插画两个人以上时主串本来就不写体位词。
 `close up` 和 `close-up` 是同一个词的两种写法，挑一个即可。
 
 ---
@@ -428,7 +430,7 @@ danbooru 服装 tag 里，**「一种衣服」和「一种穿法」长得很像�
 
 这些是功能开关，只能词组化：
 
-- **复杂度**：`low/medium/high/ultra complexity`——**功能开关，不是质量尾，默认不加**。
+- **复杂度**：`low/medium/high/ultra complexity`——**功能开关，不是质量词，默认不加**。
   加不加看开篇「V5 开关」那三条：画师串合不合、画面内容配不配、
   留意它对画面变化的影响
 - **透明**：`transparent background`（背景透明）/ `alpha transparency`（画面内物体在输出文件里真的透空，
@@ -452,20 +454,23 @@ danbooru 服装 tag 里，**「一种衣服」和「一种穿法」长得很像�
 
 ### 空间关系与归属
 谁在谁前面、谁离镜头更近、道具属于谁。**多人防串味的主要手段。**
-> "Character 1 stands at the left side of the room beneath a red safelight.
-> Character 2 stands farther back on the right side beside an enlarger.
-> The umbrella belongs only to Character 2."
+> "The girl with a short black bob stands on the left side of the room beneath a red safelight.
+> The girl with a long braid stands farther back on the right beside an enlarger.
+> The umbrella belongs only to the girl with the braid."
 
 > **角色栏的编号顺序不一定由你定。** 用户在自己的角色词库里存过的角色，
 > 只要名字出现在需求里，前端就按**名字在需求文本里首次出现的先后**
 > 直接指派 `Character 1 / 2 / 3…`，并把那个角色的外观串塞进对应格。
 > 这种时候你收到的上下文里会有「【用户点名的角色】Character 1 = 某某：…」，
-> **照它的编号写，不要自己重排**。没有这段的时候编号才由你定。
+> **照它的编号写，不要自己重排**；没说左右时，句子里按这个编号从左往右写。用户说的左右和编号顺序相反时，
+> 句子照用户说的写，交稿提醒一句可能画反、可以在角色位置里调。
+> 没有这段的时候，从看画的人这边看从左往右编号：最左边的是 `Character 1`，依次往右。
+> 官方说明：不设位置时，模型通常按角色栏的先后从上到下、从左到右摆（[Multiple Characters](https://docs.novelai.net/en/image/multiplecharacters/)）。
 
-**编号必须跟角色栏的名字一模一样**：角色栏叫 `Character 1` / `Character 2`，
-句子里就写 `Character 1` / `Character 2`。**不要写 `Character A / B`**——
-那样句子与角色栏使用了两套称呼，无法按编号核对归属。
-编号一致是字段对应要求，实际生成的归属仍可能出错。
+**句子里不用 `Character 1` / `Character 2` 当主语**：群里实际用下来，句子里的编号常对不上角色栏，
+官方也没说能这样指人。用从看画的人这边看的左右位置和简短外观锚点指认
+（`the girl on the left`、`the boy with glasses`），角色栏里的整套外观不抄进句子。
+这样写只是让指认更清楚，实际生成的归属仍可能出错。
 
 <a id="general-writing.s06.h02"></a>
 
@@ -501,13 +506,13 @@ danbooru 服装 tag 里，**「一种衣服」和「一种穿法」长得很像�
 #### 归属未确定时保留不确定性
 
 > ✅ "Each member stands at her own instrument position."
-> ❌ "Character 3 plays bass while Character 4 plays electric guitar."
+> ❌ "The girl on the far right plays bass while the girl in the middle plays electric guitar."
 
 未查明乐器归属时，可先表达已经确定的演出场合（`band performance, on stage, live house`），
 不把猜测写成具体分配。特定归属是当前任务的必要条件时，先补足资料。
 
 **已由用户或资料确定的归属直接写清**：
-> "The microphone belongs only to Character 1."
+> "The microphone belongs only to the girl on the left."
 
 归属句让读者能核对每件物品属于谁；已定内容应完整表达。
 
@@ -563,12 +568,11 @@ tag 只能说 `running`，说不出停在哪一瞬、衣物头发怎么响应。
 <a id="general-writing.s06.h12"></a>
 
 ### 句法约定
-- 主语：单人 `The character`。多人**两分工**——**归属 / 位置句**用
-  `Character 1 / 2 / 3`（跟角色栏同名，[§4.1](#general-writing.s06.h01)）；**交互动作句**（谁对谁做什么）用
-  **外观短语**指认（"the girl in the beige coat hands the cup to the girl with
-  headphones"），见 [多人交互](#general-writing.s06.h13)。
+- 主语：单人 `The character`。多人用左右位置或**外观短语**指认（`the girl on the left`；
+  "the girl in the beige coat hands the cup to the girl with headphones"），
+  不用 `Character 1 / 2 / 3` 当主语（[§4.1](#general-writing.s06.h01)），见 [多人交互](#general-writing.s06.h13)。
   只复用辨认必需的简短锚点，不把角色栏整套外观抄进句子，也不擅造辨认特征。
-  **两种句子都不用角色真名当主语**（真名属于角色栏）
+  **不用角色真名当主语**（真名属于角色栏）
 - 时态：现在时或现在进行时
 - 一段一个职能，段间空行
 - **物件先列词组，关系再写句子**：持握物、身体支撑物和决定遮挡或取景的实体都按[完整模板](#general-writing.s02)进入前部物件清单，随后说明接触、位置与遮挡。
@@ -585,6 +589,8 @@ tag 只能说 `running`，说不出停在哪一瞬、衣物头发怎么响应。
 
 当已定画面包含互动时，除人物与场合，还要表达**谁对谁做什么**。
 「三个人在野餐」只给出人数与场合；若方案还要求递杯或按住另一人的手，应继续写出对应动作。各自活动或旁观也可以是完整的多人画面。
+
+**两个人以上时默认简单写**：主串前两行不写动作和姿势词；写人物的英文句子一两句，先写从看画的人这边看谁在左、谁在右，再写谁对谁在做什么，不铺开写每只手的接触和支撑；用户给定的接触、持物归属和分工照写。角色栏默认不写动作。下面「围绕同一对象写清接触与支撑」「为已定动作选择词组与关系句」两节，在用户要求写细时再用；讲前缀的几节（到「第三人的动作遗漏」为止），在用户说要分开写进角色栏、要画「A cos B」，或看到成图出错要给建议时再用；其余几节照常适用。
 
 <a id="general-writing.s06.h14"></a>
 
@@ -616,6 +622,8 @@ tag 只能说 `running`，说不出停在哪一瞬、衣物头发怎么响应。
 | 一只手压在另一人的手上 | `hand on another's hand` 配合接触关系句 |
 | 伸到一半，尚未接住 | 用句子说明距离与接触状态 |
 
+两个人以上时这些动作词组不写进主串：用户说要分开写时进各人的角色栏，否则用句子简单写。
+
 **词典写法不能只靠语感猜。** 找不到现成 tag 时用句子把动作说清，
 不把直觉造出的短语当作已收录词。
 
@@ -637,24 +645,28 @@ mutual#{动作}   两人互相做同一个动作
 只有这三个，前缀表示**动作方向**，不是角色身份 ——
 `female#hug` `char1#hug` `left#hug` 都无效。
 
+**多人动作的前缀只在用户说要把动作分开写进角色栏时用**（cosplay 另见下）。动作接在各人那一栏最后（性别、外貌、服装之后），表情和视线跟着写进去：一个人对另一个人做的动作，做的人写 `source#hug`、被做的人写同一个词 `target#hug`（官方例子）；两人互相做的都写 `mutual#holding hands`；不是互动的动作直接写动作词。前缀后面接现成的动作 tag；找不到现成的，不自造前缀词，这个动作留在主串英文句子里写清，交稿时说一句它没分开写。
+
 需要区分动作和接触部位时，**各写一条前缀**，视线可用 `looking at target`：
 
 ```
-Character 1: <角色名>, source#teasing, source#touching face, smirk, looking at target
-Character 2: <角色名>, target#teased,  target#face touched, blush, embarrassed
+Character 1: girl, <角色名或外貌>, <服装>, source#teasing, source#hand on another's face, smirk, looking at target
+Character 2: girl, <角色名或外貌>, <服装>, target#teasing, target#hand on another's face, blush, embarrassed
 ```
 
-（这里的 `smirk` / `blush` 是 [§0.1](#general-writing.s02.h02) 的表情词例外：跟着前缀标施受气质
-才允许进角色栏；没挂前缀时，表情回主提示词。）
+（这里的 `smirk` / `blush`、`looking at target` 就是 [§0.1](#general-writing.s02.h02) 的例外：分开写时各人的表情和视线跟着进自己那一栏；没分开写时回主提示词。）
 
-**前缀按需使用**：它标明谁发起、谁接受；句子继续说明手从哪边伸到哪里、碰到什么、动作完成到哪一步。分工见 [§2](#general-writing.s04)：
+**写了前缀，主串的英文句子照旧简单写**：一两句交代谁在左右、谁对谁做什么。分工见 [§2](#general-writing.s04)。官方说明这套写法不一定每次都灵。
 
-**什么时候值得加前缀**：「谁对谁」本身容易错的时候——三人以上、接触密集、
-或者两人动作互相对称（都伸着手，谁递谁接看不出来）。
+**什么时候建议用户分开写**：用户没要求时不自己加前缀，第一版也不提。看到成图里「谁对谁」做反了、动作串到别人身上，
+或用户问怎么让多人更稳时，再建议用户把动作分开写进角色栏，用户同意再写；三人以上、接触密集、
+两人动作互相对称（都伸着手，谁递谁接看不出来）时最容易出这种错。
 
 <a id="general-writing.s06.h18"></a>
 
 #### 前缀的使用情形
+
+下面的例子只列各栏最后接的动作那段，前面的性别、外貌、服装省略。
 
 **① `target#` 只绑方向，不绑「气势」。** 承受方可以是画面上更主动的那个：
 
@@ -666,9 +678,9 @@ Character 2: <角色名>, target#teased,  target#face touched, blush, embarrasse
 **② 同一个角色栏里可以同时挂 `target#` 和 `source#`**。
 A→B→C 的链式交互就是这么写的：
 
-> Character 1: `source#covering another's eyes`
-> Character 2: `target#eyes covered, source#headpat`　← 一个人两个方向
-> Character 3: `target#headpat`
+> Character 1: `source#headpat`
+> Character 2: `target#headpat, source#hug`　← 一个人两个方向
+> Character 3: `target#hug`
 
 **③ `mutual#` 表达双方互做同一动作**；下例尝试额头相抵与互看：
 
@@ -685,13 +697,14 @@ A→B→C 的链式交互就是这么写的：
 `target#` = 被 cos 对象，其**服饰发型转移到施动方**身上。
 技巧：两个角色的 Custom position **定到同一点**，避免生成两个人；
 主提示词必须点名 `1girl` / `1boy` / `1character`。
+用户要画「A cos B」时按这节写，算用户要了这种写法；同一点位是这种画法要的设置，交稿时说一句。
 
 <a id="general-writing.s06.h20"></a>
 
 #### 第三人的动作遗漏时，核对其词组与前缀
 
-若第三人的已定动作遗漏，可尝试在其角色栏用对应前缀明确发起者，再在主串补出
-手伸向哪件食物、食物离开谁的手或桌面。第三人本来只旁观时，保留旁观状态。
+若第三人的已定动作遗漏，可以建议用户把几个人的动作分开写进角色栏、用对应前缀明确发起者（用户同意再写），
+再在主串补一句手伸向哪件食物。第三人本来只旁观时，保留旁观状态。
 
 <a id="general-writing.s06.h21"></a>
 
@@ -701,15 +714,15 @@ A→B→C 的链式交互就是这么写的：
 
 - 可尝试用较低、较高的点位配合前后层次；Y 坐标本身不是独立的深度参数
 - 用法：**控件定层次，句子描述层次**，两个一起上——
-  句子写 "Character 1 is closest to the camera, cropped at the waist by the frame
-  edge… Character 3 is far up the street, clearly smaller in the frame"，
+  句子写 "The girl in the red scarf is closest to the camera, cropped at the waist by the frame
+  edge… the boy with the bicycle is far up the street, clearly smaller in the frame"，
   点位拖成 左下 / 中 / 右上
 - 这用于落实已确定的前中后景，不替用户重新设计构图；文字保留意图，必要时另给控件建议
 - 对应关系：点位**编号 = 角色栏顺序编号**；AI 会按点位**重新设计
   构图和机位（viewer 角度）**；角色点位过近时需留意人物重叠与归属错误
 
 
-**普通插画和多人图的附注不主动给位置**，角色位置由用户自己在 Character Positions 画布上定（[字段职责](conventions.md#field-contract)）；
+**普通插画和多人图的附注不主动给位置**（画「A cos B」要放同一点时例外），角色位置由用户自己在 Character Positions 画布上定（[字段职责](conventions.md#field-contract)）；
 本节用来把层次写进句子。用户问到怎么摆时，再按上面的方法给建议，例如
 「角色位置：在角色提示词区把位置从 AI's Choice 改成 Custom，点 Character Positions 打开画布，这样放：Character 1 左下、Character 2 中、Character 3 右上」。
 只给设置建议时，注明尚未操作界面。
@@ -721,10 +734,11 @@ A→B→C 的链式交互就是这么写的：
 交互错配时，逐人核对谁发起、谁承受、各自接触哪里，并按本次允许的修改范围处理：
 
 - 若用户愿意重设计，可以建议让交互只发生在两个人之间、第三人旁观，以减少错配；忠实转换与局改不能擅自采取这个变化
-- 用**外观**而不是编号来指认：写 "the girl in the beige coat hands the cup to
-  the girl with headphones" 用于补足 "Character 1 hands it to Character 3" 中只有编号的指认
+- 用**外观**而不是编号来指认（群里反馈句子里的编号常对不上角色栏，见 [§4.1](#general-writing.s06.h01)）：写 "the girl in the beige coat hands the cup to
+  the girl with headphones"，不写 "Character 1 hands it to Character 3"
   ——只复用辨认必需的简短锚点，完整外观清单仍在角色栏（[§0](#general-writing.s02)、[§4.8](#general-writing.s06.h12)）
-- 多人 UC 中的 `extra characters` 按下一节删除，不能用它区分指定人物与误增人物
+- 仍然错配时，可以建议用户把动作分开写进角色栏，用前缀标明谁发起、谁承受（[前缀](#general-writing.s06.h17)），用户同意再写
+- 给 UC 时，多人 UC 中的 `extra characters` 按下一节删除，不能用它区分指定人物与误增人物
 
 <a id="general-writing.s06.h23"></a>
 
@@ -732,7 +746,7 @@ A→B→C 的链式交互就是这么写的：
 
 某些单人 UC 模板里有 `2::little dolls, extra characters, ..., ::`——
 **那是给 solo 图写的**。三个人的图带着它，权重 2 的「多余角色」会跟你的 `3girls` 打架。
-多人图只从这一段里删去 `extra characters`，同段其他项保留，按[§6](conventions.md#shared-quality)的冲突删除规则处理。基础排除串里本来没有这段，别从单人 UC 模板抄进来。
+用户要 UC 时，用户给的这类模板和基础排除串开头那段（`2::extra characters, extra fingers, …, ::`）一样处理：多人图只从这一段里删去 `extra characters`，同段其他项和权重保留，按[§6](conventions.md#shared-quality)的冲突删除规则处理。
 
 
 <a id="general-writing.s06.h24"></a>
@@ -767,6 +781,7 @@ A→B→C 的链式交互就是这么写的：
 
 - 同一角色跨格使用一致的身份事实；当前漫画按“从现稿提取身份、状态和可见子集”（`nai5-comic-writing`：`references/comics.md#writing-comic-state`）写入每次出场框，不把全页压回一个共享外观栏。普通非叙事展示若使用共享外观方式，仍须明确各视图归属。
 - **画风上做减法**：多格信息密集时，减少单格不必要的材质和装饰细节，保住轮廓与动作。
+- 画分格、多视图时，交稿最后提醒 UC 预设换成 Light 或 None（[§6](conventions.md#shared-quality)）。
 - 画中文字照老规矩：引号 + 载体（"a small paper tag reads「…」"）
 - 已定版式采用画中实物时，表达清楚画框与实际照片/纸页等物件的关系；不自动添加相册或线索板。
 
@@ -778,7 +793,7 @@ A→B→C 的链式交互就是这么写的：
 
 | 形态 | 分配 | 适合 |
 |---|---|---|
-| **A 词组块 + 句子块** | 主体锚/镜头/姿势用词组，关系/场景/光影用句子 | **默认**，便于分别核对对象属性与关系 |
+| **A 词组块 + 句子块** | 主体锚/镜头/姿势用词组（两个人以上时姿势写进句子），关系/场景/光影用句子 | **默认**，便于分别核对对象属性与关系 |
 | **B 词组织进句子** | 混在同一行逗号并列 | 内容零散、有具体 UI/文字要求时 |
 | **C 纯句子** | 全部自然语言 | 画面是完整场景叙事，或写风格调性 |
 
@@ -815,7 +830,7 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 
 | 症状 | 处理 |
 |---|---|
-| **姿势画糊、多出一条腿** | 先查原稿姿势、肢体归属与表达冲突。若已定姿势被长句写散，可尝试对应的姿势 tag（`sitting, leg up, arm support, head rest`），关系仍用句子补清；单凭多腿现象不能认定是句子所致 |
+| **姿势画糊、多出一条腿** | 先查原稿姿势、肢体归属与表达冲突。若已定姿势被长句写散，单人时可尝试对应的姿势 tag（`sitting, leg up, arm support, head rest`），两个人以上时可建议用户把姿势分开写进角色栏；关系仍用句子补清；单凭多腿现象不能认定是句子所致 |
 | **机位压不低** | 原稿确实要求低机位时，检查视角词是否遗漏或与其他取景要求冲突，可尝试 `from below`；保留已定姿势与裁切，不因镜头词共现就直接删掉其中要求 |
 | **袜子/手套形制或数量不对** | 先查中文释义。`loose socks` 是堆堆袜、`single thighhigh` 是只穿一只，都会静默换衣服。要「一只拉起一只滑下」**用句子写状态**（`uneven legwear` 单独写未稳定推动不对称） |
 | **整张图变成一片纹理／泥浆** | 画师名或 tag **以数字结尾**又紧跟 `::`——`na_tarapisu153::` 会被解析成权重 **153**，后续内容受到异常高权重影响。写成 `na_tarapisu153, ::`——**加逗号比加空格更安全**，哪怕多打一个变成 `2::artist:na_tarapisu153, ::,` 也比 `na_tarapisu153 ::` 稳 |
@@ -824,12 +839,12 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 | 色调不符 | 对照已定配色与实际结果，检查颜色归属、遗漏和冲突；可尝试将目标色彩词前移。只有当前意图确实要求有限配色时才考虑 `limited palette`，不另定主题色 |
 | 逆光面部过暗 | 先核对原稿要求的逆光与面部明暗。若用户允许减弱逆光或补面部光，可考虑 `-2::backlighting::` 或 `front lighting` / `face lighting`；它们会改变光照表达，不作为默认修复 |
 | 角色白背景虚空 | 先确认原稿是否本就要求简洁白底。若既定场景未被表达，可补清该场景，并检查是否有冲突词；`-1::simple background::` 仅作为目标确需排除简洁背景时的尝试，不另造场景 |
-| 多角色串味 | 核对角色栏与关系句的指认、持物及接触归属；实际使用定位时核对编号；检查人数 tag 位置 |
-| 动作僵硬 | 用姿势 tag 表达已定体位，句子补出动作停在哪一瞬、手脚的接触对象及衣物头发的响应 |
+| 多角色串味 | 核对角色栏与关系句的指认、持物及接触归属；检查主串有没有写各人的动作词、句子有没有拿 `Character N` 当主语；实际使用定位时核对编号；检查人数 tag 位置；仍串时可建议用户把动作分开写进角色栏 |
+| 动作僵硬 | 单人用姿势 tag 表达已定体位，句子补出动作停在哪一瞬、手脚的接触对象及衣物头发的响应；两个人以上把体位写进句子，手脚细节用户要写细时再补，仍僵时可建议用户分开写进角色栏 |
 | 场景糊成抽象物 | 清单后补整体性要求句 |
 | 透视不对 | 机位用 tag，前后压缩用对比句式 |
 | 想强调腿但出不来 | 先核对原稿的机位、裁切与腿部占画幅是否表达清楚。`thighhighs, bare legs` 描述服饰/裸露，不能代替焦点关系；`leg focus` 或占画幅句可作为表达尝试。原方案含低机位时才用 `from below`，需要强调脚时才考虑 `foot focus`；不为突出腿默认更换镜头 |
-| 文字不出/出错 | 引号包裹 + 句子写清**载体**和位置；需要文字时去掉质量尾及预设附加的 `no text`；多格逐格绑定文字；使用引号自动处理时别另写 `Text:` 块 |
+| 文字不出/出错 | 引号包裹 + 句子写清**载体**和位置；需要文字时关掉官网的质量词开关（它带 `no text`），用户要了质量词就去掉其中的 `no text`；多格逐格绑定文字；使用引号自动处理时别另写 `Text:` 块 |
 | 画面缺少辨识点 | 先核对现稿意图与实际反馈，检查必要特征是否遗漏、词义是否准确、归属和关系是否表达清楚；需要改变内容或构图时提出具体建议，仅在获准范围内修改，或接 `nai5-illustration-composition` 处理，不在修词时擅自另定画面 |
 | 固定物体始终画不对 | 对照现稿和实际结果，先核对物体名称、词义、结构、归属及表达冲突；单凭画错不能判定模型知识盲区。先修获准范围内的表达，确需更换物体或构图时说明具体建议，获准后修改或接构图技能，不直接换掉已定方案 |
 
@@ -847,15 +862,16 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 | 版权角色用规范名字，独立作品名可选；不凭印象补默认外观，用户指定服装 / 饰品 / 外观改动逐项保留 | [§0](#general-writing.s02)、[§3.7](#general-writing.s05.h07) |
 | 原创角色给定样貌锚点完整，没为压短而删改 | [§0](#general-writing.s02) 角色类型表 |
 | 人数 tag 在最前且只写一次，与对应领域的实际生成单元及人物身份一致 | [§3.1](#general-writing.s05.h01) |
-| 表情默认在主串；施受前缀例外按需使用 | [§0.1](#general-writing.s02.h02)、[§4.9](#general-writing.s06.h13) |
+| 两个人以上时主串前两行没有动作和姿势词，写人物的英文句子只简单写谁在左右、谁对谁做什么（用户给定的接触和持物照写），不用 `Character 1 / 2` 当主语；角色栏没有动作（用户要分开写的除外）；`Character 1` 是最左边那个 | [§0](#general-writing.s02)、[§4.1](#general-writing.s06.h01)、[§4.9](#general-writing.s06.h13) |
+| 表情、视线默认在主串；用户要分开写动作时，各人的动作、表情和视线接在自己那一栏最后 | [§0.1](#general-writing.s02.h02)、[§4.9](#general-writing.s06.h13) |
 | 服装状态词已核语义，不把一种衣服误作一种穿法 | [§3.5](#general-writing.s05.h05) |
 | 视线、距离、背景形态按同一主体 / 同一画面检查冲突 | [§3.9](#general-writing.s05.h09)；多人和分格先判归属 |
 | 多人归属清楚，没有凭印象分配职能或乐器 | [§4.1](#general-writing.s06.h01)–4.2 |
-| 普通插画、多人图的附注没有主动给角色位置（由用户自己定，问到才给）；层次写进了句子 | [相对位置](#general-writing.s06.h21)、[字段职责](conventions.md#field-contract) |
-| 质量词只有一组，放所有句子之后、不包 `<quality>` 块 | [§6](conventions.md#shared-quality) |
-| 无字用 `very aesthetic, masterpiece, no text`；有字去掉 `no text` 并检查预设 | [§6](conventions.md#shared-quality) |
+| 普通插画、多人图的附注没有主动给角色位置（由用户自己定，问到才给；画「A cos B」要放同一点时说一句）；层次写进了句子 | [相对位置](#general-writing.s06.h21)、[字段职责](conventions.md#field-contract) |
+| 没写质量词；图里有字时交稿最后补了关质量词开关那句；用户要了质量词时只有一组，放在所有句子之后 | [§6](conventions.md#shared-quality) |
+| 画分格、多视图（表情集、设定图）时，交稿最后补了「UC 预设换成 Light 或 None」；要留白构图、整页空白，或画面主体是 logo、徽记时，补了「UC 预设如果是 Heavy 或 Human Focus，换成 Light 或 None」 | [§6](conventions.md#shared-quality) |
 | 要画的文字有引号与载体；漫画台词逐格绑定，静默格省略文字指令 | 开篇「文字渲染」「漫画」 |
-| UC 沿用用户的或基础串，只删与本图冲突的项；本图不要的写成主串最后的负权重，不进 UC；多人删去 `extra characters` | [§6](conventions.md#shared-quality) |
+| 用户没要 UC 就不给；要了才沿用用户的或基础串，只删与本图冲突的项，多人删去 `extra characters`；本图不要的写成主串最后的负权重，不进 UC | [§6](conventions.md#shared-quality) |
 | 用户逐字原串（含空格、标点、年份）和指定权重原样保留；未拿通用化当作删细节的理由 | [§0](#general-writing.s02)、[§3.7](#general-writing.s05.h07) |
 | 参数仅在询问或排查时给，已有具体值未被静默修改 | [§7](#general-writing.s09) |
 
@@ -864,4 +880,4 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 
 ## 多个完整方案
 
-用户要求多个完整提示词时，各方案有自己的主串、必要角色栏和 UC（UC 按[§6](conventions.md#shared-quality)沿用并去冲突）；数量按请求，不共用字段或写“同上”。只要点子或构图时不使用完整字段格式。附注以实际需要为限。
+用户要求多个完整提示词时，各方案有自己的主串和必要角色栏，用户要 UC 时各有自己的 UC（按[§6](conventions.md#shared-quality)沿用并去冲突）；数量按请求，不共用字段或写“同上”。只要点子或构图时不使用完整字段格式。附注以实际需要为限。

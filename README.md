@@ -1,4 +1,4 @@
-# NovelAI V5 构思与写法 · 拆分版 · v1.2.3
+# NovelAI V5 构思与写法 · 拆分版 · v1.2.4
 
 本项目为 AI agent 提供 NovelAI V5 创作与提示词撰写方法，涵盖整体构思、场景、艺术表达、OC、插画构图、漫画、服装及照图反推。
 
@@ -25,13 +25,13 @@ agent 按照仓库中的 [INSTALL.md 配置指南](INSTALL.md)获取文件、放
 
 ### 下载后交给 agent
 
-1. 下载[完整拆分包](packs/v1.2.3/nai5-split-v1.2.3.zip)。
+1. 下载[完整拆分包](packs/v1.2.4/nai5-split-v1.2.4.zip)。
 2. 将 ZIP 拖入 agent 对话，说明“请将里面全部 11 个拆分技能配置到当前客户端，保留完整目录和资源，并确认可用”。
 3. 配置完成后直接描述任务；如客户端提示刷新或重启，按其提示完成。
 
 ### 下载后自行配置
 
-1. 下载并解压[完整拆分包](packs/v1.2.3/nai5-split-v1.2.3.zip)。如果使用 GitHub 的 Download ZIP，取解压目录内 `skills/` 下的技能文件夹。
+1. 下载并解压[完整拆分包](packs/v1.2.4/nai5-split-v1.2.4.zip)。如果使用 GitHub 的 Download ZIP，取解压目录内 `skills/` 下的技能文件夹。
 2. 将全部 **11 个技能文件夹** 复制到客户端的技能目录，保留每个目录内的 `SKILL.md`、`references/` 及其他随附文件。[常见客户端的目录位置](INSTALL.md#manual-paths)列出了 Codex、Claude Code 和 Cursor 的个人及项目目录。
 3. 在客户端确认技能可用；如未出现，按提示刷新或重启。
 
@@ -57,19 +57,19 @@ agent 按照仓库中的 [INSTALL.md 配置指南](INSTALL.md)获取文件、放
 
 | 版本与下载 | 内容 | 使用方式 |
 | --- | --- | --- |
-| **[拆分版（推荐）](packs/v1.2.3/nai5-split-v1.2.3.zip)** | 11 个按职责组织的技能 | 默认完整配置 11 个技能，执行时优先按需读取。 |
-| [合并版（构思／写法两卷）](packs/v1.2.3/nai5-merged-v1.2.3.zip) | 一个入口与两卷完整方法 | 明确选择时配置一个完整技能，按需读取相关卷和章节。 |
-| [单文件版](packs/v1.2.3/nai5-single-v1.2.3.zip) | 一个入口与完整合订稿 | 明确选择时配置一个完整技能，按需读取相关章节。 |
-| [极简版](packs/v1.2.3/nai5-mini-v1.2.3.zip) | 一个技能 `nai5-mini`，两份正文，全是平常话，只管普通单幅插画 | 想要短的、只写普通插画的技能时选它；独立维护，第二顺位；其他任务仍用拆分版。 |
-| [Gemini 适配版](packs/v1.2.3/nai5-art-studio-gemini-1.2.zip) | 11 个模块整合成一个技能 `nai5-art-studio` | 只在 Gemini 环境里或用户指定时用；参考正文取自 v1.2 拆分版，只改了模块导航、角色资料与角色栏编号的说法；维护者整合，没有单独做模型测试。 |
+| **[拆分版（推荐）](packs/v1.2.4/nai5-split-v1.2.4.zip)** | 11 个按职责组织的技能 | 默认完整配置 11 个技能，执行时优先按需读取。 |
+| [合并版（构思／写法两卷）](packs/v1.2.4/nai5-merged-v1.2.4.zip) | 一个入口与两卷完整方法 | 明确选择时配置一个完整技能，按需读取相关卷和章节。 |
+| [单文件版](packs/v1.2.4/nai5-single-v1.2.4.zip) | 一个入口与完整合订稿 | 明确选择时配置一个完整技能，按需读取相关章节。 |
+| [极简版](packs/v1.2.4/nai5-mini-v1.2.4.zip) | 一个技能 `nai5-mini`，两份正文，全是平常话，只管普通单幅插画 | 想要短的、只写普通插画的技能时选它；独立维护，第二顺位；其他任务仍用拆分版。 |
+| [Gemini 适配版](packs/v1.2.4/nai5-art-studio-gemini-1.2.zip) | 11 个模块整合成一个技能 `nai5-art-studio` | 只在 Gemini 环境里或用户指定时用；参考正文取自 v1.2 拆分版，只改了模块导航、角色资料与角色栏编号的说法；维护者整合，没有单独做模型测试。 |
 
-四种当前安装包和 Gemini 适配包均位于 `packs/v1.2.3/`，无需切换分支下载。单技能小包集中在 `packs/v1.2.3/individual/`；`skills/` 仅保留技能目录。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
+四种当前安装包和 Gemini 适配包均位于 `packs/v1.2.4/`，无需切换分支下载。单技能小包集中在 `packs/v1.2.4/individual/`；`skills/` 仅保留技能目录。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 支持多技能 ZIP 导入的客户端可直接导入拆分合集；一次只能导入一个技能时，将下表的 11 个小包全部依次导入。若客户端只能配置一个技能，可由用户明确选择合并版或单文件版。通过项目地址直接配置时，从仓库的 `skills/` 获取文件即可。
 
 合并版和单文件版均使用 `nai5-prompting` 名称。用户明确切换形式时，先核对已有配置，避免重复读取相同方法；已同时配置多种形式时，普通任务仍优先使用拆分技能。
 
-当前版本为 **v1.2.3（2026-10-23）**，正式版，Latest。拆分版、合并版、单文件版的方法与 v1.2 相同，来自 `v1.2-next-preview.24-20261017`；本次改动只在极简版：按补测结果修订一组需求还原规则（闭眼时题目或设定里有眼睛颜色也不写；两人并排走明说用 three-quarter view、不用 from side；几个人时 blowing 也写进吹气那人那一栏；画法改成单独一行写在句子的下一行；字那条只留那一面朝着镜头，撤掉「放平」和「不俯仰拍」），随便画加一条定完只看画面再看一遍、看不出就换一样开头的东西重想，嘴里有东西又说了表情时挑做得出的嘴的词，另把角色栏各词的先后、英文句子的顺序、机位各最多一个等几处会读成两种做法的说法写清。四个安装包和 Gemini 适配包都在 [v1.2.3 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.3) 的附件里。修订记录和验证范围见 [发布说明](RELEASE_NOTES.md)。
+当前版本为 **v1.2.4（2026-10-28）**，正式版，Latest。拆分版、合并版、单文件版来自 `v1.2-next-preview.25-20261028`，和极简版一起按使用反馈改了出词口径：不写质量词，图里要画字时交稿最后提醒关掉官网的质量词开关；UC 用户要才给，基础串换了一串；两个人以上时主串不写动作和姿势词，人物的位置和动作只用一两句英文简单写，角色栏默认只写性别、外貌和衣服，用户说要把动作分开写进角色栏时才写（互动带 `source#`、`target#`、`mutual#`），`Character 1` 是最左边那个；人物长相用户没给就不编；漫画交稿提醒把官网的 UC 预设换成 Light 或 None。四个安装包和 Gemini 适配包都在 [v1.2.4 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.4) 的附件里。修订记录和验证范围见 [发布说明](RELEASE_NOTES.md)。
 
 <a id="split-skills"></a>
 
@@ -79,17 +79,17 @@ agent 按照仓库中的 [INSTALL.md 配置指南](INSTALL.md)获取文件、放
 
 | 技能与用途 | 方法全文 | 单独下载 |
 |---|---|---|
-| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](packs/v1.2.3/individual/nai5-ideas-v1.2.3.zip) |
-| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](packs/v1.2.3/individual/nai5-scene-design-v1.2.3.zip) |
-| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](packs/v1.2.3/individual/nai5-art-direction-v1.2.3.zip) |
-| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](packs/v1.2.3/individual/oc-character-design-v1.2.3.zip) |
-| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](packs/v1.2.3/individual/nai5-illustration-composition-v1.2.3.zip) |
-| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](packs/v1.2.3/individual/nai5-comic-storyboard-v1.2.3.zip) |
-| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](packs/v1.2.3/individual/oc-costume-design-v1.2.3.zip) |
-| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](packs/v1.2.3/individual/nai5-writing-v1.2.3.zip) |
-| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串、角色串与 UC | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](packs/v1.2.3/individual/nai5-comic-writing-v1.2.3.zip) |
-| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](packs/v1.2.3/individual/nai5-costume-writing-v1.2.3.zip) |
-| [照图反推](skills/nai5-reverse-prompt/SKILL.md)：照图写提示词，或只推其中一部分 | [照图反推](skills/nai5-reverse-prompt/references/reverse.md) | [ZIP](packs/v1.2.3/individual/nai5-reverse-prompt-v1.2.3.zip) |
+| [整体想法](skills/nai5-ideas/SKILL.md)：主题、关系与故事种子 | [想法](skills/nai5-ideas/references/ideas.md) | [ZIP](packs/v1.2.4/individual/nai5-ideas-v1.2.4.zip) |
+| [场景与情境](skills/nai5-scene-design/SKILL.md)：环境、空间与气氛 | [场景](skills/nai5-scene-design/references/scene.md) | [ZIP](packs/v1.2.4/individual/nai5-scene-design-v1.2.4.zip) |
+| [艺术表达](skills/nai5-art-direction/SKILL.md)：情绪、光色、媒介与风格，含具象和写实 | [艺术](skills/nai5-art-direction/references/art.md) | [ZIP](packs/v1.2.4/individual/nai5-art-direction-v1.2.4.zip) |
+| [OC 整体设计](skills/oc-character-design/SKILL.md)：角色核心、行为与外形辨识 | [角色](skills/oc-character-design/references/character.md) | [ZIP](packs/v1.2.4/individual/oc-character-design-v1.2.4.zip) |
+| [插画构图](skills/nai5-illustration-composition/SKILL.md)：已有想法变成具体画面 | [构图](skills/nai5-illustration-composition/references/composition.md) | [ZIP](packs/v1.2.4/individual/nai5-illustration-composition-v1.2.4.zip) |
+| [漫画架构与分镜](skills/nai5-comic-storyboard/SKILL.md)：故事、页格与连续性 | [架构](skills/nai5-comic-storyboard/references/comic-story.md) · [布局](skills/nai5-comic-storyboard/references/comic-layout.md) · [连续性](skills/nai5-comic-storyboard/references/comic-continuity.md) | [ZIP](packs/v1.2.4/individual/nai5-comic-storyboard-v1.2.4.zip) |
+| [服装设计](skills/oc-costume-design/SKILL.md)：轮廓、部件、配色与材质 | [服装设计](skills/oc-costume-design/references/costume.md) | [ZIP](packs/v1.2.4/individual/oc-costume-design-v1.2.4.zip) |
+| [通用 NAI5 写法](skills/nai5-writing/SKILL.md)：共同语法、字段、普通画面与精确改词 | [共同规范](skills/nai5-writing/references/conventions.md) · [普通画面](skills/nai5-writing/references/illustration.md) | [ZIP](packs/v1.2.4/individual/nai5-writing-v1.2.4.zip) |
+| [漫画写法补充](skills/nai5-comic-writing/SKILL.md)：已定分镜转主串与角色串 | [漫画编译](skills/nai5-comic-writing/references/comics.md) · [示例](skills/nai5-comic-writing/references/comic-examples.md) | [ZIP](packs/v1.2.4/individual/nai5-comic-writing-v1.2.4.zip) |
+| [服装写法补充](skills/nai5-costume-writing/SKILL.md)：已定衣物的片段或完整画面表达 | [服装表达](skills/nai5-costume-writing/references/costume.md) | [ZIP](packs/v1.2.4/individual/nai5-costume-writing-v1.2.4.zip) |
+| [照图反推](skills/nai5-reverse-prompt/SKILL.md)：照图写提示词，或只推其中一部分 | [照图反推](skills/nai5-reverse-prompt/references/reverse.md) | [ZIP](packs/v1.2.4/individual/nai5-reverse-prompt-v1.2.4.zip) |
 
 
 ## 资源读取与工具接续

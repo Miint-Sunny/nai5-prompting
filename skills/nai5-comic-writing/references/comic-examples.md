@@ -8,9 +8,9 @@
 
 ## 漫画完整示例与局部改写
 
-下例展示字段和取景，不是已出图验证的样张。示例使用示意角色，不是用户 OC；实际用库内 OC 时按本格可见范围提取其身份事实，不照搬此处外貌或剧情。
+下例展示字段和取景，不是已出图验证的样张。示例使用示意角色，长相当作用户已经给出，不是用户 OC；用户没给长相时不编，实际用库内 OC 时按本格可见范围提取其身份事实，不照搬此处外貌或剧情。
 
-这些完整提示词示例假设**质量与 UC 预设关闭**、用户没有给出自己的 UC，因此给出实际尾词和删去漫画冲突项后的基础串；用户有自己的 UC 时换成它，同样只删冲突项。开启预设时按适配器去实际重复与冲突项。主串不带 `Prompt:` 显示标头，Character / UC 保留。
+这些完整提示词示例按官网默认设置写：不写质量词，用户没要 UC 就不给。只有例七假设用户要了 UC、又没有自己的那套，给出删去漫画冲突项后的基础串；用户有自己的 UC 时换成它，同样只删冲突项。交稿最后的设置提醒（有字页关质量词开关、UC 预设换成 Light 或 None）按适配器写，例七写在附注里，其他例子省略。主串不带 `Prompt:` 显示标头，Character 保留，给 UC 时 UC 也保留。
 
 这些提示词示例属于**分镜经用户确认或修改后的第二阶段**。未审的新剧情先由 `nai5-comic-storyboard` 处理当前创作阶段；已有定稿或明确直接转换时使用这些表达示例。
 
@@ -24,7 +24,6 @@
 
 ```text
 2girls, manga, monochrome. Read left to right, then top to bottom. The page is divided into five panels: one full-width top panel, a narrow middle left panel beside a wide middle right panel, a narrow bottom left panel beside a wide bottom right panel.
-very aesthetic, masterpiece
 ```
 
 **Character 1 — 上方全宽格，室友A**
@@ -61,12 +60,6 @@ In the narrow bottom left panel, tight close-up, side view: a bare hand enters f
 
 ```text
 In the wide bottom right panel, close-up, three-quarter view: a woman with long pale hair in a loose side braid, the collar of a dark striped pajama top visible, turns toward the left with a relieved smile. A speech bubble above her reads "救星！", its tail pointing to her mouth.
-```
-
-**UC:**
-
-```text
-lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, logo, too many watermarks, negative space, blank page
 ```
 
 本例演示三件事：同格可识别人物分别建框，匿名手部接触合框，旋盖前后的结构保持一致。本页是两个人、五格、六个提示框，因此主 Prompt 用 `2girls`。上方全宽格的两名可识别人物各一个框，复用完全相同的 `In the full-width top panel`；中排左侧窄格的两位人物的手合在一个框，不另加人数。人物特写没有裤子/鞋，下排左侧的道具格没有重新贴人物外观。旋盖结构从首次出现到打开一直一致；“拧开”的中间过程由格间省略完成，道具格只画已打开这一瞬间。
@@ -108,7 +101,6 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 
 ```text
 1girl, manga, monochrome. Read left to right, then top to bottom. The page is divided into three panels: one large full-width top panel above two equal small bottom panels. An unframed foreground overlay occupies the lower center, covering the inner portions of both bottom panels.
-very aesthetic, masterpiece, no text
 ```
 
 **Character 1 — 上方全宽格，读书**
@@ -135,12 +127,6 @@ In the small bottom right panel, facial close-up, profile: a woman with shoulder
 In the lower-center foreground overlay across the inner portions of both small bottom panels, waist-up, three-quarter view: a woman with shoulder-length wavy light hair, round glasses, and a dark turtleneck sweater sits with her chin resting on one hand, eyes gently closed and shoulders relaxed. Her elbow rests on the wooden tabletop beside the closed book. This is a single resting moment after the small bottom right panel.
 ```
 
-**UC:**
-
-```text
-lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, logo, too many watermarks, negative space, blank page
-```
-
 本例的关键是覆盖只跨下方两格的内侧，底层两格的脸和手分别靠外，留出遮挡空间。这是一个角色、三个底层画格、一个覆盖画面、四个提示框，因此主 Prompt 用 `1girl`；重复出场及覆盖画面不增加人数或底层格数。覆盖范围以位置和大小说明即可，不逐条补写格线遮挡规则。闭合的书在下方局部格和覆盖画面中都保持闭合；看窗外的面部特写省略画外的书和手。
 
 <a id="comic-examples.s06"></a>
@@ -151,7 +137,6 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 
 ```text
 1girl, manga, monochrome. Read left to right, then top to bottom. The page is divided into three equal small panels side by side in one row.
-very aesthetic, masterpiece, no text
 ```
 
 **Character 1 — 左侧小格，已拿着钥匙**
@@ -172,12 +157,6 @@ In the small middle panel, waist-up, front view: a woman with long curly hair cl
 In the small right panel, tight facial close-up, front view: a woman with long curly hair clipped up at the back gives a faint, satisfied smile.
 ```
 
-**UC:**
-
-```text
-lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, logo, too many watermarks, negative space, blank page
-```
-
 中间格两只手都可见，须同时写左手的新动作和右手已成立的持物状态。左侧格用 `empty left hand` 交代当时左手状态，杯子还在桌上；右侧格只见脸，省略画外的手与道具。
 
 <a id="comic-examples.s09"></a>
@@ -188,7 +167,6 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 
 ```text
 2girls, manga. Read left to right, then top to bottom. The page is divided into four panels: two panels side by side across the top and two panels side by side across the bottom.
-very aesthetic, masterpiece
 -1::clear sky, sunlight::
 ```
 
@@ -225,12 +203,12 @@ In the bottom right panel, medium shot, back view: a woman with wavy shoulder-le
 **UC:**
 
 ```text
-lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, chromatic aberration, dithering, logo, too many watermarks, negative space, blank page
+2::extra fingers, extra toes, watermark, signature, deformed, ::, artistic error, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, dithering, too many watermarks
 ```
 
-附注（给用户，放在代码块外；本例用角色位置功能指定分格）：角色位置：在角色提示词区把位置从 AI's Choice 改成 Custom，点 Character Positions 打开画布，这样放：Character 1 左上，Character 2 右上，Character 3 左下，Character 4 右下格靠左，Character 5 右下格靠右。
+附注（给用户，放在代码块外；本例用角色位置功能指定分格）：角色位置：在角色提示词区把位置从 AI's Choice 改成 Custom，点 Character Positions 打开画布，这样放：Character 1 左上，Character 2 右上，Character 3 左下，Character 4 右下格靠左，Character 5 右下格靠右。这页有字，要把官网的质量词开关关掉；UC 预设换成 Light 或 None。
 
-本页两个人、四格、五个提示框，主串用 `2girls`。未指定版式，按默认 2×2、从左往右读，四格依次称呼 top left、top right、bottom left、bottom right。左下格只拍两人的脚和伞沿，是匿名局部，合一个框；右下格两名可识别人物各一个框，定位句完全相同。全彩只写 `manga`；有字页质量尾不带 `no text`；UC 是删去漫画冲突项后的基础串；雨天不要晴空和日光，写成主串最后的负权重行，不进 UC。
+本页两个人、四格、五个提示框，主串用 `2girls`。未指定版式，按默认 2×2、从左往右读，四格依次称呼 top left、top right、bottom left、bottom right。左下格只拍两人的脚和伞沿，是匿名局部，合一个框；右下格两名可识别人物各一个框，定位句完全相同。全彩只写 `manga`；不写质量词，有字页在附注里提醒关开关；本例假设用户要了 UC，UC 是基础串删去漫画冲突项 `extra characters`，页里有字再删 `logo`，同一加权段的其他词和权重照留；雨天不要晴空和日光，写成主串最后的负权重行，不进 UC。
 
 <a id="comic-examples.s07"></a>
 
@@ -249,7 +227,7 @@ lowres, artistic error, film grain, scan artifacts, worst quality, bad quality, 
 has just set the mug securely on the table with her left hand
 ```
 
-其他原有服饰、右手持物、台词、空格和权重均不改；不因为示例中完整导出含质量尾与 UC，就给局部修改补齐整页字段。用户冻结文字的转换也不追加新的声效。
+其他原有服饰、右手持物、台词、空格和权重均不改；不因为示例中完整导出含 UC，就给局部修改补齐整页字段。用户冻结文字的转换也不追加新的声效。
 
 <a id="comic-composition.preamble"></a>
 

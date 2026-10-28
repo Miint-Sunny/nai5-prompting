@@ -28,10 +28,11 @@
 | N1 [NovelAI Diffusion V5](https://novelai.net/v5) | 支持自然语言描述整页分格；支持多角色；前端可根据引号自动建立文字块。图像参考与重绘须按选定模型的当前界面确认，不沿用旧发布页的“后续上线”承诺。 |
 | N2 [Text Rendering](https://docs.novelai.net/en/image/textrendering/) | V5支持中文等文字及位置/载体描述；Full上限写750字符，Curated写374字符，包含空格和换行。文字未出现时可检查质量词中的文字排除。 |
 | N3 [Image Generation Models](https://docs.novelai.net/en/image/models/) | 概览对相同渲染文字容量使用 tokens，与文字专页单位不一致；提示词本身的 token 容量又是另一项。本项目按文字专页字符口径引用，保留差异。 |
-| N4 [Quality Tags](https://docs.novelai.net/en/image/qualitytags/) | V5 Standard 与 Light 附加内容不同，均须按实际生效词去重和处理文字冲突，不能假定预设恒开。 |
+| N4 [Quality Tags](https://docs.novelai.net/en/image/qualitytags/) | 开关默认开着，V5 标准档在主串末尾附加 `very aesthetic, masterpiece, no text`，轻量档附加 `very aesthetic, amazing quality, no text`，所以本包不手写质量词；两档都带 `no text`，有字的图提醒用户关开关（2026-10-28 核对）。 |
 | N5 [Precise Reference](https://docs.novelai.net/en/image/precisereference/)、[Vibe Transfer](https://docs.novelai.net/en/image/vibetransfer/)、[Inpaint](https://docs.novelai.net/en/image/inpaint/) | Precise、Vibe 与 Inpaint 各自的模型支持范围分别确认；以所选模型的当前界面及对应文档为准，不由其他模型或另一工具的支持情况类推。 |
-| N6 [Multiple Characters](https://docs.novelai.net/en/image/multiplecharacters/) | 角色位置在角色提示词区从 AI's Choice 改成 Custom，点 Character Positions 按钮在画布上摆放，模型会贴着摆放的位置画；V4 与 V4.5 限 5×5 网格，V5 没有这项限制，是自由画布。本页写 V5 最多 22 个角色、V4 最多 6 个；N1 的 V5 页同样写最多 22 个、可把角色放在画布任意位置。每个角色另有自己的 Undesired Content 栏。 |
+| N6 [Multiple Characters](https://docs.novelai.net/en/image/multiplecharacters/) | 角色位置在角色提示词区从 AI's Choice 改成 Custom，点 Character Positions 按钮在画布上摆放，模型会贴着摆放的位置画；V4 与 V4.5 限 5×5 网格，V5 没有这项限制，是自由画布。本页写 V5 最多 22 个角色、V4 最多 6 个；N1 的 V5 页同样写最多 22 个、可把角色放在画布任意位置。每个角色另有自己的 Undesired Content 栏。不设位置时，模型通常按角色栏的先后从上到下、从左到右摆；`source#` / `target#` / `mutual#` 接在动作 tag 前，被做的人写同一个动作词（`source#hug` / `target#hug`），官方说这套写法不一定每次都灵（2026-10-28 核对） |
 | N7 [Tags](https://docs.novelai.net/en/image/tags/) 的 Alpha Transparency 一节 | `transparent background` 让背景透明；`has alpha` 较抽象，表示要以某种方式用到 alpha 通道；`alpha transparency` 让画面里的物体以 alpha 通道方式透空（例子是魔法特效、火焰、伞），只在 V5 可用。 |
+| N8 [Undesired Content](https://docs.novelai.net/en/image/undesiredcontent/) | V5 的 UC 预设有 Heavy、Light、Furry Focus、Human Focus 四种；Heavy 与 Human Focus 带 `multiple views`、`halftone`、`screentone`、`logo`、`negative space`、`blank page`，Furry Focus 带 `comic`、`multiple scenes`、`sequence`，Light 都不带。文档没写 V5 默认开哪一档（2026-10-28 核对）。 |
 
 基础语法、字段与原串依本包共同规范，OC 库仅在用户需要且实际启用时读取；方法导航见 [写法入口](conventions.md#writing-conventions)。本包漫画采用“主 Prompt 写本页去重人数标签与简短版式、Character 框承载各格内容”，详见 “漫画提示词编译”（`nai5-comic-writing`：`references/comics.md#comic-adapter.preamble`）。这是本包的字段约定，故事身份、画格与提示框数量分别计算。
 
@@ -45,7 +46,7 @@
 
 | 归档材料记录的反馈 | 保留的写法 |
 |---|---|
-| 角色提示框分别写分镜可行，但每格双人、同机位导致平淡且冗长 | 采用角色框承载分镜；先改变出场与镜头调度，主串内容部分只放人数标签与简短版式，质量尾另按实际预设处理 |
+| 角色提示框分别写分镜可行，但每格双人、同机位导致平淡且冗长 | 采用角色框承载分镜；先改变出场与镜头调度，主串内容部分只放人数标签与简短版式，质量词按共同规范处理 |
 | 两只手的互动被分别画成两个窄格 | 无可识别主体的局部互动合为一个框；可识别多人同格仍每人一个框 |
 | 大幅场景中的“只入画一只手”难以成立 | 镜头尺寸、机位、画外身体与动作可达性先校验，必要时改景别/站位 |
 | 毯子前格到颈部，后格降到腹部 | 覆盖边沿用身体锚点保持一致，变化安排可理解的动作 |

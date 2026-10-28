@@ -44,15 +44,16 @@ V5 支持自然语言组织整页，这里的位置/大小称呼是自然语言�
 
 ### 字段模板与先后顺序
 
-面向用户复制的文本，**主串直接开写，不加 `Prompt:` 显示标头**，保留 `Character N:` 与 `UC:`。实际调用工具时，`prompt`、`negative_prompt` 或其他字段名及结构按当次真实接口填写；显示标头的省略不改变工具参数。
+面向用户复制的文本，**主串直接开写，不加 `Prompt:` 显示标头**，保留 `Character N:`，给 UC 时保留 `UC:`。实际调用工具时，`prompt`、`negative_prompt` 或其他字段名及结构按当次真实接口填写；显示标头的省略不改变工具参数。
 
 完整导出按页或已定的实际生成单元分组，按顺序交付：
 
 1. 简短版式说明。
-2. 从本单元的去重人数、色彩模式、读序和格位记录组装主串，再接质量尾与本单元排除项，独立一个代码块。
+2. 从本单元的去重人数、色彩模式、读序和格位记录组装主串，再接本单元排除项（没有就省略），独立一个代码块；不写质量词。
 3. 从逐格稿组装各 `Character N:`，每框独立一个代码块：先填本格可见身份、状态和动作，再填本格需要的场景、时段、光线和文字。同一地点连续出现时，在各格保留必要的环境锚点；同格多个框只选一个承载共享背景。
-4. 带 `UC:` 标头的实际 UC 独立代码块。
+4. 用户要 UC 时，带 `UC:` 标头的实际 UC 独立代码块；没要就省略。
 5. 代码块外的角色框位置表：每个框对应哪一格、在该格内哪一侧。默认给出手动定位建议，并说明在角色提示词区从 AI's Choice 改为 Custom，再打开 Character Positions 按表放置；这只是用户操作说明，未操作不称已设置。用户明确不要设置说明或已提供其他定位方式时，按其要求交付。
+6. 代码块外的设置提醒，按[预设检查](#comic-adapter.s03)：有字页提醒关掉官网的质量词开关；提醒 UC 预设换成 Light 或 None。
 
 后页也给足上述内容，不以“同上”省略角色、状态或排除串；无需重贴已审导演稿。代码块只放最终内容，共同语法与预设按核心规则。只要局部替换时仅交指定框或词句，不套完整导出格式。
 
@@ -61,7 +62,6 @@ V5 支持自然语言组织整页，这里的位置/大小称呼是自然语言�
 ```text
 <本次生成单元去重人数标签>, manga. Read left to right, then top to bottom.
 The page is divided into <本单元总格数> panels: <各行组的格数、位置与大小>.
-<按文字需求和实际预设去重后的质量尾>
 <本单元负权重排除（按需，没有就删掉这一行）>
 
 Character 1:
@@ -70,17 +70,18 @@ In the <方位和大小> panel, <视图及镜头>: <本框可见的主体与外�
 Character 2:
 In the <方位和大小> panel, <视图及镜头>: <本框重新填入可见的外貌衣物>, <该格动作及持续状态>, <该格所需环境与其他可见内容>.
 
+<用户要 UC 时才有下面这两行，没要就连同 UC: 一起删掉>
 UC:
-<用户自己的 UC，没有就用基础串；删去漫画冲突项，与实际预设去重，不加本单元排除项>
+<用户自己的 UC，没有就用基础串；删去漫画冲突项，不加本单元排除项>
 ```
 
-**主串内容部分写人数标签和简短版式，末尾按 “完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`） 处理质量词。** 阅读顺序默认从左往右、上→下；右→左只在用户指定或改编原作时用，本次另有明确约定时替换。**四格默认 2×2**，读序左上 → 右上 → 左下 → 右下，主串写 `Read left to right, then top to bottom. The page is divided into four panels: two panels side by side across the top and two panels side by side across the bottom.`，四个框依次称呼 `the top left panel`、`the top right panel`、`the bottom left panel`、`the bottom right panel`；竖排等其他版式只在用户指定或已定分镜这样安排时用。普通情况不描写分隔线，也不默认附加 `Black borders`；颜色仅在本次已有明确要求时简写并保持一致。具体格线、沟槽、比例与坐标交给模型，特殊构图或实图修正才补必要关系。
+**主串写人数标签和简短版式，不写质量词（见 “完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`））。** 阅读顺序默认从左往右、上→下；右→左只在用户指定或改编原作时用，本次另有明确约定时替换。**四格默认 2×2**，读序左上 → 右上 → 左下 → 右下，主串写 `Read left to right, then top to bottom. The page is divided into four panels: two panels side by side across the top and two panels side by side across the bottom.`，四个框依次称呼 `the top left panel`、`the top right panel`、`the bottom left panel`、`the bottom right panel`；竖排等其他版式只在用户指定或已定分镜这样安排时用。普通情况不描写分隔线，也不默认附加 `Black borders`；颜色仅在本次已有明确要求时简写并保持一致。具体格线、沟槽、比例与坐标交给模型，特殊构图或实图修正才补必要关系。
 
 布局段先给总格数，再按行组说明并排、堆叠与主次：`side by side across the top`、`stacked on the right`、`one wide panel across the bottom` 等足够表达常见布局。复杂分组可用 `tiers`，但它表示横向行组，不能代替总格数；例如三行的 `3+1+2` 是六格。用相对大小突出重点，不把画面内容塞进布局句。详见 [布局段示例](comic-examples.md#comic-composition.s01)。
 
 转换前核对总数、布局枚举及各框定位是否相容；独立叙事插格计入总格数，无框覆盖依 [漫画 3.1](#comic-adapter.s04.h01) 另记。是否是独立画格看叙事时刻和镜头归属，不能只看有无边线。不要并存 `5 panels` 与 `six panels`，也不要把一个框内新增的第二处定位或连续事件当作省格方法。若原稿冲突，先按用户确认的分镜统一，两处保留不同格数会使布局要求相互冲突。
 
-除人数标签外，人物名字、场景、道具、动作、镜头和台词放在各框。色彩模式统一按“色彩模式与输出前检查”（`nai5-writing`：`references/conventions.md#comic-continuity.s03`），质量尾按“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`）。用户原串按“用户事实、原串与本次可见范围”（`nai5-writing`：`references/conventions.md#shared-facts`）保留，不从模板继承未指定的画风。
+除人数标签外，人物名字、场景、道具、动作、镜头和台词放在各框。色彩模式统一按“色彩模式与输出前检查”（`nai5-writing`：`references/conventions.md#comic-continuity.s03`），质量词和 UC 按“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`）。用户原串按“用户事实、原串与本次可见范围”（`nai5-writing`：`references/conventions.md#shared-facts`）保留，不从模板继承未指定的画风。
 
 普通框以 `In the … panel, …: …` 起句，冒号前依次是画格称呼、视图及镜头。视图可按需写 `apartment hallway view`、`close-up`、`chat screen notification` 或 `wide shot inside an apartment room`，不必机械补齐同一套镜头词。冒号后直接写画面内容，可用自然语言主语或人物标签引入；`girl/boy/other` 等人物词不挤到定位句之前，手部、道具或环境专格不为格式补人。普通局部出框仍用该格的位置/大小称呼，将越界几何放在冒号后的内容前部；独立前景覆盖使用 [漫画 3.1](#comic-adapter.s04.h01) 的特殊开头。
 
@@ -94,9 +95,11 @@ UC:
 
 ### 漫画完整导出的预设检查
 
-完整导出直接执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`）。按整个生成单元判断有字/无字；主串全部布局句后只有一组质量尾，Character 框不重复质量词。有字页的静默格省略文字指令。后期排字的原文放独立清单，不进入生成引号。
+完整导出直接执行“完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`）：主串不写质量词，Character 框也不写。按整个生成单元判断有字/无字：任一格有字，交稿最后补一句让用户关掉官网的质量词开关；有字页的静默格省略文字指令。后期排字的原文放独立清单，不进入生成引号，生成图按无字处理。
 
-UC 沿用用户自己的那套，没有就用共同规范里的基础串。所有漫画（包括全彩）都删去 `multiple views`、`halftone`、`screentone`、`extra characters`；同一人物跨格重复出现时也删 `extra characters`，人数词仍按不同身份去重。要留白时删去 `negative space`。整页任一格有对白、旁白、拟声词、标题、印字或标记时删去 `logo`。将最终 UC 与原串逐项对照：确认应删项已从字段中移除，同一加权段的其余词及权重保留，未命中删除条件的项也保留。需要定向排除的具体元素按共同规范写成质量尾之后的负权重行；无明确目标时省略。预设不可操作的情况按共同规则处理。完整输出写实际 UC，点子、分镜和局改不因此补字段。
+不论给不给 UC，交稿最后都提醒一句：官网的 UC 预设换成 Light 或 None（Heavy、Human Focus 带 `multiple views`、`halftone`、`screentone`，Furry Focus 带 `comic`、`multiple scenes`、`sequence`，都会和漫画打架）。
+
+UC 只在用户要时给：沿用用户自己的那套，没有就用共同规范里的基础串。所有漫画（包括全彩）都删去 `multiple views`、`halftone`、`screentone`、`extra characters`；同一人物跨格重复出现时也删 `extra characters`，人数词仍按不同身份去重。要留白时删去 `negative space`。整页任一格有对白、旁白、拟声词、标题、印字或标记时删去 `logo`。将最终 UC 与原串逐项对照：确认应删项已从字段中移除，同一加权段的其余词及权重保留，未命中删除条件的项也保留。需要定向排除的具体元素按共同规范写成主串最后的负权重行；无明确目标时省略。预设不可操作的情况按共同规则处理。点子、分镜和局改不因此补字段。
 
 <a id="comic-adapter.s04"></a>
 
@@ -186,8 +189,8 @@ UC 沿用用户自己的那套，没有就用共同规范里的基础串。所�
 | 破框变成普通裁切或干扰下一格 | 边界、沟槽留位、部位与时间归属是否明确 |
 | 前景覆盖变成旁边的独立大格 | 是否误增底层格数、把覆盖框写成新画格，或指定了独立矩形背景/专属分栏；改为底层格延续在后、覆盖轮廓遮断格线 |
 | 局部覆盖铺满整页或遮住关键内容 | 是否用位置/大小明确受影响的画格、停止位置与保留区域；不要无条件套用整页、半页或删除所有分栏的模板 |
-| 台词错人、串格或重复 | 回到说话者框，核对载体与位置；静默格不自动新增无字命令，并检查实际质量预设没有全局禁字 |
-| 漫画网点、留白或文字被压掉 | 对照 “完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`） 检查主串、UC 与仍生效的预设，写出实际生效内容，处理冲突后再交付 |
+| 台词错人、串格或重复 | 回到说话者框，核对载体与位置；静默格不自动新增无字命令，并检查官网的质量词开关已经关掉（它带 `no text`） |
+| 漫画网点、留白或文字被压掉 | 对照 “完整导出的质量词与 UC”（`nai5-writing`：`references/conventions.md#shared-quality`） 检查主串、用户自己的 UC、官网的质量词开关与 UC 预设（Heavy、Human Focus 带 `halftone`、`screentone`、`negative space`，Furry Focus 带 `comic`），写出实际生效内容，处理冲突后再交付 |
 | 几何或文字仍不准 | 保留用户故事与输出要求，针对结果迭代；需要时给分组生成/后排方案 |
 
 先核对**实际给过的提示词**再归因：写错、漏写与模型自行漂移是不同问题，不能把实图里新出现的拉链说成旧稿确实写过。未实际运行的稿件称“写法检查通过”，不称出图验证通过。
@@ -209,8 +212,8 @@ UC 沿用用户自己的那套，没有就用共同规范里的基础串。所�
 | 3 | 人数标签按整页身份去重，男女分别计：一女一男是 `1girl, 1boy`，两位女性是 `2girls` | [生成单元、画格称呼与输入框编号](#comic-adapter.s01) |
 | 4 | 同一格有两个可识别人物时各用一个框，定位句完全相同；匿名局部互动可以合一个框 | [决定一格用几个框](#comic-adapter.s04) |
 | 5 | 对白放在说话者的框里；局改换台词时一并核对气泡归属 | [文字只在需要的格里出现](#comic-adapter.s05) |
-| 6 | 有字页的质量尾不带 `no text`，静默格不写文字指令 | [漫画完整导出的预设检查](#comic-adapter.s03) |
-| 7 | UC 用用户的或基础串，删去漫画冲突项，不加本单元排除项；本单元不要的元素写成主串最后的负权重行 | 同上 |
+| 6 | 没写质量词（用户要的除外）；有字页交稿最后提醒关质量词开关，静默格不写文字指令 | [漫画完整导出的预设检查](#comic-adapter.s03) |
+| 7 | 交稿最后提醒了 UC 预设换成 Light 或 None（Heavy、Human Focus、Furry Focus 都和漫画冲突）；用户要 UC 才给，用用户的或基础串，删去漫画冲突项，不加本单元排除项；本单元不要的元素写成主串最后的负权重行 | 同上 |
 | 8 | 覆盖画面只画一个瞬间，不增加底层格数 | [前景覆盖的字段例外](#comic-adapter.s04.h01) |
 | 9 | 色彩模式和各框颜色一致 | “色彩模式与输出前检查”（`nai5-writing`：`references/conventions.md#comic-continuity.s03`） |
 | 10 | 完整导出逐框给出格位与格内站位，以及 AI's Choice → Custom 的操作说明；用户明确省略或另有定位方式时按请求处理 | [字段模板与先后顺序](#comic-adapter.s02) |

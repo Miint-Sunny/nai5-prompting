@@ -1,12 +1,12 @@
 {
-  "version": "v1.2.3",
+  "version": "v1.2.4",
   "role": "ideation",
   "skill": "nai5-ideas",
   "requires": [],
   "modules": {
     "ideation-ideas": {
       "path": "方法/构思/ideas.md",
-      "sha256": "db710d82b083db329872ea4487ed079653d0a4bcd59ec837ba72f4254f2b5b0c"
+      "sha256": "164ed209b4b65ae0031772f1a20ef9136e8c4df6c61a2684ed6de420c3b60426"
     }
   },
   "entry": {
