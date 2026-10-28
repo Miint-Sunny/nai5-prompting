@@ -6,11 +6,11 @@
   "modules": {
     "writing-conventions": {
       "path": "方法/写法/conventions.md",
-      "sha256": "28f38d75e38abd06b7f4484d821810e17a57cd14df7355b9bc692608bd5978a0"
+      "sha256": "f78ed04f72613a0b03c4abb7a8ff38091a3e956e43c95043fcddfcf92a38661a"
     },
     "writing-illustration": {
       "path": "方法/写法/illustration.md",
-      "sha256": "2315cb8b65f4235f6544586d2763c5068c47512f6a0d81a27645d355ca94ab9d"
+      "sha256": "9357ce93451512a3c3c8c0f41f1b54d0974c36dfe9f89b49744ed326282047a8"
     },
     "writing-sources": {
       "path": "方法/写法/sources.md",

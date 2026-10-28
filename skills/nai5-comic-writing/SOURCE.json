@@ -8,15 +8,15 @@
   "modules": {
     "writing-comics": {
       "path": "方法/写法/comics.md",
-      "sha256": "640570d5715a47bc13d9b8b2ef4ee2b268bd1373b4dadfe490d56441d787ea8e"
+      "sha256": "71f4ba12a6a2b67c0a943ccd8dadd311be4770174d479c1408f62f1f9a13afbd"
     },
     "writing-comic-examples": {
       "path": "方法/写法/comic-examples.md",
-      "sha256": "45757c6ad7752c8766fa55c3ad99abc811f7b7279219d30273304db5d3572f86"
+      "sha256": "d24189ae74502d6cce4ce8e42774bbc7d4038f5ee2115c00043e3fd7d15e95d5"
     }
   },
   "entry": {
     "path": "工具/职责拆分/入口/nai5-comic-writing.md",
-    "sha256": "6619888b556751fe23b284ded5b89938d59e3bea3c862f08d4f471924570ea66"
+    "sha256": "91b858fa613f08c1df1c7ccbcf08913006dec5d3ab3aa1e7998d19bd589d3662"
   }
 }

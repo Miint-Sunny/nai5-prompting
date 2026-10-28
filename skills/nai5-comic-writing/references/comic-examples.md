@@ -10,7 +10,7 @@
 
 下例展示字段和取景，不是已出图验证的样张。示例使用示意角色，长相当作用户已经给出，不是用户 OC；用户没给长相时不编，实际用库内 OC 时按本格可见范围提取其身份事实，不照搬此处外貌或剧情。
 
-这些完整提示词示例按官网默认设置写：不写质量词，用户没要 UC 就不给。只有例七假设用户要了 UC、又没有自己的那套，给出删去漫画冲突项后的基础串；用户有自己的 UC 时换成它，同样只删冲突项。交稿最后的设置提醒（有字页关质量词开关、UC 预设换成 Light 或 None）按适配器写，例七写在附注里，其他例子省略。每个代码块上面一行写栏名（Base Prompt、Character N、UC），代码块里不写 `Prompt:`、`Character N:`、`UC:`。
+这些完整提示词示例按官网默认设置写：不写质量词，用户没要 UC 就不给。只有例七假设用户要了 UC、又没有自己的那套，给出删去漫画冲突项后的基础串；用户有自己的 UC 时换成它，同样只删冲突项。交稿最后的设置提醒（有字页关质量词开关、UC 预设换成 Light 或 None）按适配器写，例七写在附注里，其他例子省略。每个代码块上面一行写带冒号的栏名（Base Prompt:、Character N:、Undesired Content:），代码块里不写栏名；代码块外的说明放在最后的「补充:」下面。
 
 这些提示词示例属于**分镜经用户确认或修改后的第二阶段**。未审的新剧情先由 `nai5-comic-storyboard` 处理当前创作阶段；已有定稿或明确直接转换时使用这些表达示例。
 
@@ -22,43 +22,43 @@
 
 情境：两人准备早餐，一起拧开果酱瓶。左→右、上→下：上方建立情境，中段用手部互动和发力反应，底部确认打开与回应。中排右侧宽格的小幅破框强调使劲的瞬间。此例是完整小段落；用户只要开头时，按其要求保留后续空间。
 
-**Base Prompt**
+Base Prompt:
 
 ```text
 2girls, manga, monochrome. Read left to right, then top to bottom. The page is divided into five panels: one full-width top panel, a narrow middle left panel beside a wide middle right panel, a narrow bottom left panel beside a wide bottom right panel.
 ```
 
-**Character 1 — 上方全宽格，室友A**
+Character 1:
 
 ```text
 In the full-width top panel, medium shot, eye-level view: a woman with long pale hair in a loose side braid and a dark striped pajama top sits on the right. She braces a squat glass jam jar with a closed ribbed screw lid on a small breakfast table, looking toward the left. A simple kitchen doorway is visible behind her.
 ```
 
-**Character 2 — 上方全宽格，室友B**
+Character 2:
 
 ```text
 In the full-width top panel, medium shot, eye-level view: a woman with dark hair in a high ponytail and a light apron over a plain shirt sits on the left, leaning toward the jar at the center of the table. A speech bubble above her reads "我来。", its tail pointing to her mouth.
 ```
 
-**Character 3 — 中排左侧窄格，完整手部互动**
+Character 3:
 
 ```text
 In the narrow middle left panel, tight close-up, slightly elevated view: two bare hands enter from opposite sides. The right-entering hand braces the squat glass jam jar; the left-entering hand grips its closed ribbed screw lid, fingers tense against the ridges. Only the hands, short sections of bare forearms, and the jar fill the frame.
 ```
 
-**Character 4 — 中排右侧宽格，室友B发力反应**
+Character 4:
 
 ```text
 In the wide middle right panel, close-up, slightly low angle: a woman with dark hair in a high ponytail, the strap of a light apron visible, squeezes her eyes shut and puffs her cheeks with effort, shoulders raised. The top of her hair extends above the panel.
 ```
 
-**Character 5 — 下排左侧窄格，开合结果**
+Character 5:
 
 ```text
 In the narrow bottom left panel, tight close-up, side view: a bare hand enters from the upper left, holding the detached ribbed screw lid just above the open threaded mouth of the squat glass jam jar. Small sound-effect lettering beside the lid reads "啵".
 ```
 
-**Character 6 — 下排右侧宽格，室友A回应**
+Character 6:
 
 ```text
 In the wide bottom right panel, close-up, three-quarter view: a woman with long pale hair in a loose side braid, the collar of a dark striped pajama top visible, turns toward the left with a relieved smile. A speech bubble above her reads "救星！", its tail pointing to her mouth.
@@ -101,31 +101,31 @@ In the wide bottom right panel, close-up, three-quarter view: a woman with long 
 
 三格记录一位室友读书、合书、望向窗外；下方居中的无框半身承载随后歇一会儿的收尾。读序为上方全宽格→下方左格→下方右格→覆盖画面。覆盖只跨下方并排两格的内侧，两个小格的关键内容分别靠外侧安排。这里只演示一种局部范围，不是通用布局。
 
-**Base Prompt**
+Base Prompt:
 
 ```text
 1girl, manga, monochrome. Read left to right, then top to bottom. The page is divided into three panels: one large full-width top panel above two equal small bottom panels. An unframed foreground overlay occupies the lower center, covering the inner portions of both bottom panels.
 ```
 
-**Character 1 — 上方全宽格，读书**
+Character 1:
 
 ```text
 In the large full-width top panel, medium shot, side view: a woman with shoulder-length wavy light hair, round glasses, and a dark turtleneck sweater sits at a small wooden reading table beside a window, looking down at an open book. Soft daylight falls across the tabletop.
 ```
 
-**Character 2 — 下方左格，合书局部**
+Character 2:
 
 ```text
 In the small bottom left panel, close-up: a bare hand rests on the just-closed cover of a book on a wooden tabletop, near the outer left side of the panel.
 ```
 
-**Character 3 — 下方右格，看向窗外**
+Character 3:
 
 ```text
 In the small bottom right panel, facial close-up, profile: a woman with shoulder-length wavy light hair and round glasses looks left toward the window, with relaxed eyebrows and a faint smile. Her face is near the outer right side of the panel.
 ```
 
-**Character 4 — 下方中央的覆盖画面**
+Character 4:
 
 ```text
 In the lower-center foreground overlay across the inner portions of both small bottom panels, waist-up, three-quarter view: a woman with shoulder-length wavy light hair, round glasses, and a dark turtleneck sweater sits with her chin resting on one hand, eyes gently closed and shoulders relaxed. Her elbow rests on the wooden tabletop beside the closed book. This is a single resting moment after the small bottom right panel.
@@ -139,25 +139,25 @@ In the lower-center foreground overlay across the inner portions of both small b
 
 右手已经拿着钥匙，下一格左手才拿起杯子；最后切脸部特写。以下三个局部框依次对应同一行中从左到右的三个小格。
 
-**Base Prompt**
+Base Prompt:
 
 ```text
 1girl, manga, monochrome. Read left to right, then top to bottom. The page is divided into three equal small panels side by side in one row.
 ```
 
-**Character 1 — 左侧小格，已拿着钥匙**
+Character 1:
 
 ```text
 In the small left panel, waist-up, front view: a woman with long curly hair clipped up at the back and a plain light T-shirt holds a small keyring in her right hand. Her empty left hand rests beside a plain mug on the table.
 ```
 
-**Character 2 — 中间小格，左手拿起杯子**
+Character 2:
 
 ```text
 In the small middle panel, waist-up, front view: a woman with long curly hair clipped up at the back and a plain light T-shirt has just picked up the plain mug with her left hand. Her right hand still holds the small keyring.
 ```
 
-**Character 3 — 右侧小格，表情特写**
+Character 3:
 
 ```text
 In the small right panel, tight facial close-up, front view: a woman with long curly hair clipped up at the back gives a faint, satisfied smile.
@@ -171,52 +171,56 @@ In the small right panel, tight facial close-up, front view: a woman with long c
 
 情境：雨天下班，一人忘了带伞，同伴递伞，两人共撑一把伞回家。用户没指定版式，按默认 2×2、从左往右读：左上 → 右上 → 左下 → 右下。全彩，有字。
 
-**Base Prompt**
+Base Prompt:
 
 ```text
 2girls, manga. Read left to right, then top to bottom. The page is divided into four panels: two panels side by side across the top and two panels side by side across the bottom.
 -1::clear sky, sunlight::
 ```
 
-**Character 1 — 左上格，发现没带伞**
+Character 1:
 
 ```text
 In the top left panel, medium shot, eye-level view: a woman with a low auburn ponytail and a grey office blazer over a white blouse stands under the entrance canopy of an office building, rummaging through her open shoulder bag with a troubled look. Heavy rain falls beyond the canopy edge. A thought bubble above her reads "……伞呢？"
 ```
 
-**Character 2 — 右上格，同伴递伞**
+Character 2:
 
 ```text
 In the top right panel, medium shot, three-quarter view: a woman with wavy shoulder-length pink hair and a dark green field jacket holds out a closed yellow umbrella toward the left with a small smile. A speech bubble above her reads "一起走吧。"
 ```
 
-**Character 3 — 左下格，伞下两双脚（匿名局部，合一个框）**
+Character 3:
 
 ```text
 In the bottom left panel, low-angle close-up: two pairs of feet in ankle boots walk side by side through shallow puddles under the lower edge of one yellow umbrella, raindrops splashing around them. Only the feet, the ankles, and the umbrella edge are visible.
 ```
 
-**Character 4 — 右下格，左边的人**
+Character 4:
 
 ```text
 In the bottom right panel, medium shot, back view: a woman with a low auburn ponytail and a grey office blazer over a white blouse walks on the left under a shared yellow umbrella, her outer shoulder dark with rain. She glances toward the woman on her right with a small laugh.
 ```
 
-**Character 5 — 右下格，右边的人**
+Character 5:
 
 ```text
 In the bottom right panel, medium shot, back view: a woman with wavy shoulder-length pink hair and a dark green field jacket holds the shared yellow umbrella on the right, her outer shoulder dark with rain. A speech bubble above her reads "伞有点小。"
 ```
 
-**UC**
+Undesired Content:
 
 ```text
 2::extra fingers, extra toes, watermark, signature, deformed, ::, artistic error, scan artifacts, worst quality, bad quality, jpeg artifacts, very displeasing, dithering, too many watermarks
 ```
 
-附注（给用户，放在代码块外；本例用角色位置功能指定分格）：角色位置：在角色提示词区把位置从 AI's Choice 改成 Custom，点 Character Positions 打开画布，这样放：Character 1 左上，Character 2 右上，Character 3 左下，Character 4 右下格靠左，Character 5 右下格靠右。这页有字，要把官网的质量词开关关掉；UC 预设换成 Light 或 None。
+（本例用角色位置功能指定分格；下面这段给用户，写在代码块外最后）
 
-本页两个人、四格、五个提示框，主串用 `2girls`。未指定版式，按默认 2×2、从左往右读，四格依次称呼 top left、top right、bottom left、bottom right。左下格只拍两人的脚和伞沿，是匿名局部，合一个框；右下格两名可识别人物各一个框，定位句完全相同。全彩只写 `manga`；不写质量词，有字页在附注里提醒关开关；本例假设用户要了 UC，UC 是基础串删去漫画冲突项 `extra characters`，页里有字再删 `logo`，同一加权段的其他词和权重照留；雨天不要晴空和日光，写成主串最后的负权重行，不进 UC。
+补充:
+
+角色位置：在角色提示词区把位置从 AI's Choice 改成 Custom，点 Character Positions 打开画布，这样放：Character 1 左上，Character 2 右上，Character 3 左下，Character 4 右下格靠左，Character 5 右下格靠右。这页有字，要把官网的质量词开关关掉；UC 预设换成 Light 或 None。
+
+（本例说明，不是交稿内容）本页两个人、四格、五个提示框，主串用 `2girls`。未指定版式，按默认 2×2、从左往右读，四格依次称呼 top left、top right、bottom left、bottom right。左下格只拍两人的脚和伞沿，是匿名局部，合一个框；右下格两名可识别人物各一个框，定位句完全相同。全彩只写 `manga`；不写质量词，有字页在附注里提醒关开关；本例假设用户要了 UC，UC 是基础串删去漫画冲突项 `extra characters`，页里有字再删 `logo`，同一加权段的其他词和权重照留；雨天不要晴空和日光，写成主串最后的负权重行，不进 UC。
 
 <a id="comic-examples.s07"></a>
 

@@ -69,7 +69,7 @@ agent 按照仓库中的 [INSTALL.md 配置指南](INSTALL.md)获取文件、放
 
 合并版和单文件版均使用 `nai5-prompting` 名称。用户明确切换形式时，先核对已有配置，避免重复读取相同方法；已同时配置多种形式时，普通任务仍优先使用拆分技能。
 
-当前版本为 **v1.2.5（2026-10-28）**，正式版，Latest。拆分版、合并版、单文件版来自 `v1.2-next-preview.26-20261028`，和极简版一起改了交稿格式：角色栏只放性别、外貌和衣服（不写动作、表情、视线），代码块里不再写 `Character 1:`、`UC:` 这类栏名，栏名单独一行写在代码块上面；两个人以上时主串里每人一行 `Character N:` 写这个人的动作、姿势、视线和表情，一个人时这些直接写在主串第二行；代码块依次是主串（`Base Prompt`）、`Character 1`、其他人物、用户要了才有的 `UC`。四个安装包和 Gemini 适配包都在 [v1.2.5 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.5) 的附件里。修订记录和验证范围见 [发布说明](RELEASE_NOTES.md)。
+当前版本为 **v1.2.5（2026-10-28）**，正式版，Latest。拆分版、合并版、单文件版来自 `v1.2-next-preview.27-20261028`，和极简版一起改了交稿格式：栏名带冒号写在代码块上面（`Base Prompt:`、`Character 1:`、`Character 2:`……、用户要了才有的 `Undesired Content:`），代码块里只放要贴进那一栏的词，主串和角色栏每行末尾带英文逗号；两个人以上时主串最后空一行，每人一行 `Character N: girl, 动作, 表情, …,`；一个人时动作、表情、视线直接写在主串第二行；角色栏只放性别、外貌和服装，分两行；给用户的附注放在最后的 `补充:` 下面。同日早些时候发布的第一版 v1.2.5 格式写得有歧义，已撤回。四个安装包和 Gemini 适配包都在 [v1.2.5 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.5) 的附件里。修订记录和验证范围见 [发布说明](RELEASE_NOTES.md)。
 
 <a id="split-skills"></a>
 
