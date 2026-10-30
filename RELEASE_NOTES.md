@@ -1,6 +1,41 @@
+# v1.2.6 · 多人一定写 source# / target#
+
+2026-10-30 正式发布，Latest 从 v1.2.5 更新为 v1.2.6。拆分版、合并版、单文件版来自 `v1.2-next-preview.28-20261030`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。两个人以上一定写方向前缀：谁对谁做的动作，做的人写 `source#`、被做的人写同一个词的 `target#`，互相做或一起做的写 `mutual#`；默认写在主串里各人那行 `Character N:`，用户说要把动作分开写进角色栏时连同前缀写进角色栏。来源提交与文件哈希见 `SOURCE.json`。
+
+## 下载与配置
+
+- **`nai5-split-v1.2.6.zip` — 拆分版（默认）**：11 个通用技能及各自资源。
+- **`nai5-mini-v1.2.6.zip` — 极简版**：一个技能 `nai5-mini`，两份正文，只写普通单幅插画。
+- **`nai5-merged-v1.2.6.zip` — 合并版**：一个入口与构思、写法两卷。
+- **`nai5-single-v1.2.6.zip` — 单文件版**：一个入口与完整合订稿。
+- **`nai5-art-studio-gemini-1.2.zip` — Gemini 适配版**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.6/nai5-art-studio-gemini-1.2.zip)）：与 v1.2 附件相同，11 个模块整合成一个 Gemini 技能，只在 Gemini 环境里或用户指定时用；v1.2.4 起的出词口径和格式修改都没有改进这个包。
+
+四个完整包和 Gemini 适配包集中在各分支的 `packs/v1.2.6/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
+
+## 本次修改
+
+- **多人一定写前缀**：两个人以上时，人和人之间的动作一定带方向前缀：一个人对另一个人做的动作，做的人写 `source#hug`、被做的人写同一个词 `target#hug`；两人互相做或一起做的都写 `mutual#`，比如 `mutual#holding hands`、对视 `mutual#eye contact`。每张多人图至少有一组。只跟自己有关的动作照旧直接写动作词。
+- **写在哪**：默认写在主串最后各人那行 `Character N:` 里，角色栏照旧只放外貌和服装。用户说要把动作分开写进角色栏时，这几行的词（带前缀的动作、表情、视线）另起一行写进各人那一栏最后，主串就不写这几行。
+- 拆分版讲前缀的几节、多人交互的例子和核对表跟着改；反推按同一口径；极简版同步。v1.2.4、v1.2.5 里前缀只在用户说要分开写时才出现，平常的多人图里看不到，这一版补回来。
+
+两个人互动时，主串最后那几行像这样：
+
+```text
+Character 1: girl, source#hug from behind, smile, closed eyes,
+Character 2: girl, target#hug from behind, surprised, open mouth, looking back,
+```
+
+依据：维护者的要求（「只要是多人就要写source#/target#，只是写在base里还是单独的character栏里的区别」）。NovelAI 官方说明里方向前缀写在角色栏；写在主串里不保证起作用，归属仍可能出错。
+
+## 验证范围
+
+这一版没有出图，也没有做整版同题对照。改动只做了文字核对和装配检查；四种形式的装配、ZIP 结构、链接、校验值和私有内容审计通过；没有新增客户端真实导入测试。
+
+---
+
 # v1.2.5 · 交稿格式（重发）
 
-2026-10-28 重新发布，Latest 从 v1.2.4 更新为 v1.2.5。同日早些时候发布的 v1.2.5 第一版格式写得有歧义，已撤回，这一版按维护者给的格式重做。拆分版、合并版、单文件版来自 `v1.2-next-preview.27-20261028`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。按维护者给的格式重做交稿格式：栏名带冒号写在代码块上面（`Base Prompt:`、`Character 1:`、`Undesired Content:`），代码块里只放要贴进那一栏的词，每行末尾带英文逗号；两个人以上时，各人的动作、表情、视线写在主串最后的 `Character N:` 行；角色栏只放外貌和服装，分两行。来源提交与文件哈希见 `SOURCE.json`。
+2026-10-28 重新发布，Latest 从 v1.2.4 更新为 v1.2.5；2026-10-30 由 v1.2.6 接替。同日早些时候发布的 v1.2.5 第一版格式写得有歧义，已撤回，这一版按维护者给的格式重做。拆分版、合并版、单文件版来自 `v1.2-next-preview.27-20261028`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。按维护者给的格式重做交稿格式：栏名带冒号写在代码块上面（`Base Prompt:`、`Character 1:`、`Undesired Content:`），代码块里只放要贴进那一栏的词，每行末尾带英文逗号；两个人以上时，各人的动作、表情、视线写在主串最后的 `Character N:` 行；角色栏只放外貌和服装，分两行。来源提交与文件哈希见 `SOURCE.json`。
 
 ## 下载与配置
 

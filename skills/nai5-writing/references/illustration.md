@@ -13,7 +13,7 @@
 
 | 字段 | 装什么 |
 |---|---|
-| **主提示词** | 人数 · **动作 · 表情 · 镜头 · 场景 · 背景** · 光影 · 氛围色彩 · 技法；两个人以上时前两行不写动作、姿势、表情和视线词，各人的这些词写在主串里各人那行 `Character N:`，英文句子只简单写一两句（[§0](#general-writing.s02)、[§4.9](#general-writing.s06.h13)）；不写质量词（[§6](conventions.md#shared-quality)）；带标签的画师／技法块按[样式块](#general-writing.s02.h03)后置 |
+| **主提示词** | 人数 · **动作 · 表情 · 镜头 · 场景 · 背景** · 光影 · 氛围色彩 · 技法；两个人以上时前两行不写动作、姿势、表情和视线词，各人的这些词写在主串里各人那行 `Character N:`（人和人之间的动作一定带 `source#` / `target#` / `mutual#`），英文句子只简单写一两句（[§0](#general-writing.s02)、[§4.9](#general-writing.s06.h13)）；不写质量词（[§6](conventions.md#shared-quality)）；带标签的画师／技法块按[样式块](#general-writing.s02.h03)后置 |
 | **Character 1/2… Prompt**（角色栏） | **只放性别、外貌和服装**，不写动作、表情和视线；具体放多少**取决于角色是原创还是版权**——见下面那张表，在此确定后，后文沿用同一分类；用户说要把动作分开写进角色栏时，动作另起一行写在最后（[§4.9](#general-writing.s06.h13)） |
 | **Undesired Content（UC）** | 用户要 UC 才给：沿用用户自己的 UC，没有就用基础串，只删与本图冲突的项；这张图明确不要的东西写成主串画面内容最后一行的负权重，不进 UC（[§6](conventions.md#shared-quality)） |
 | 参数 | 仅在用户问起或排查时给 |
@@ -72,13 +72,13 @@ Base Prompt:
 <本次确需的技法词>,
 <本图排除项的负权重行；没有排除要求时省略>,
 
-Character 1: <两个人以上才有这几行，一个人时整行不写：girl / boy / other, 这个人的动作、姿势、表情和视线词>,
+Character 1: <两个人以上才有这几行，一个人时整行不写：girl / boy / other, 这个人的动作、姿势、表情和视线词；人和人之间的动作一定带 source# / target# / mutual#>,
 Character 2: <第二个人，依次往下>,
 ```
 
 画面内容到这里完成；两个人以上再空一行写各人那几行 `Character N:`，有样式块时按下面接在同一个代码块里，再开始角色栏。不写质量词：官网的质量词开关会自己加在主串最后；图里要画字时，交稿最后补一句让用户把开关关掉；用户要质量词或给了带质量词的原串时，按[共同质量规则](conventions.md#shared-quality)处理。
 
-**两个人以上时**，主串前两行不写动作、姿势、表情和视线词（`hug`、`holding hands`、`sitting`、`smile`、`looking at another` 这类）；这些词按人分开，写在主串最后：空一行，每人一行 `Character N:`，冒号后先写这个人的性别词，再写动作、姿势、表情和视线，比如 `Character 1: girl, sitting on roof edge, holding cigarette, slight smile, looking down,`。`Character N:` 带英文半角冒号，编号和角色栏相同，从看画的人这边看最左边的是 `Character 1`；这一行不写外貌和服装，它们留在角色栏。写人物的英文句子简单写一两句：先写从看画的人这边看谁在左、谁在右（用户没说就自己定，不用问），再写谁对谁在做什么，不铺开写每只手的接触和支撑；用户给定的接触、持物归属和分工照写，不算铺开。文字载体、光线、遮挡这些句子照常写。用户要求写细时再按[多人交互](#general-writing.s06.h13)补；用户说要把动作分开写进角色栏时，不写这几行 `Character N:`，按下面角色栏的写法。
+**两个人以上时**，主串前两行不写动作、姿势、表情和视线词（`hug`、`holding hands`、`sitting`、`smile`、`looking at another` 这类）；这些词按人分开，写在主串最后：空一行，每人一行 `Character N:`，冒号后先写这个人的性别词，再写动作、姿势、表情和视线，比如 `Character 1: girl, sitting on roof edge, holding cigarette, slight smile, looking down,`。两个人以上一定写方向前缀：一个人对另一个人做的动作，做的人写 `source#hug`、被做的人写同一个词 `target#hug`；两人互相做或一起做的都写 `mutual#`，比如 `mutual#holding hands`、对视写 `mutual#eye contact`；每张多人图至少有一组（[前缀](#general-writing.s06.h17)）。`Character N:` 带英文半角冒号，编号和角色栏相同，从看画的人这边看最左边的是 `Character 1`；这一行不写外貌和服装，它们留在角色栏。写人物的英文句子简单写一两句：先写从看画的人这边看谁在左、谁在右（用户没说就自己定，不用问），再写谁对谁在做什么，不铺开写每只手的接触和支撑；用户给定的接触、持物归属和分工照写，不算铺开。文字载体、光线、遮挡这些句子照常写。用户要求写细时再按[多人交互](#general-writing.s06.h13)补；用户说要把动作分开写进角色栏时，不写这几行 `Character N:`，按下面角色栏的写法。
 
 本次有指定的 `<style>`、`<artist>` 原串时，在排除行（两个人以上是各人那几行 `Character N:`）后空一行，仍在主串代码块里依次附上，按[样式块](#general-writing.s02.h03)保留原文；没有相应原串就省略该块。
 
@@ -600,7 +600,7 @@ tag 只能说 `running`，说不出停在哪一瞬、衣物头发怎么响应。
 当已定画面包含互动时，除人物与场合，还要表达**谁对谁做什么**。
 「三个人在野餐」只给出人数与场合；若方案还要求递杯或按住另一人的手，应继续写出对应动作。各自活动或旁观也可以是完整的多人画面。
 
-**两个人以上时默认简单写**：主串前两行不写动作和姿势词，各人的动作、姿势、视线和表情写在主串里各人那行 `Character N:`（[§0](#general-writing.s02)）；写人物的英文句子一两句，先写从看画的人这边看谁在左、谁在右，再写谁对谁在做什么，不铺开写每只手的接触和支撑；用户给定的接触、持物归属和分工照写。角色栏默认只有性别、外貌和服装。下面「围绕同一对象写清接触与支撑」「为已定动作选择词组与关系句」两节，在用户要求写细时再用；讲前缀的几节（到「第三人的动作遗漏」为止），在用户说要分开写进角色栏、要画「A cos B」，或看到成图出错要给建议时再用；其余几节照常适用。
+**两个人以上时默认简单写**：主串前两行不写动作和姿势词，各人的动作、姿势、视线和表情写在主串里各人那行 `Character N:`（[§0](#general-writing.s02)）；写人物的英文句子一两句，先写从看画的人这边看谁在左、谁在右，再写谁对谁在做什么，不铺开写每只手的接触和支撑；用户给定的接触、持物归属和分工照写。角色栏默认只有性别、外貌和服装。下面「围绕同一对象写清接触与支撑」「为已定动作选择词组与关系句」两节，在用户要求写细时再用；讲前缀的几节（到「第三人的动作遗漏」为止）照常适用：前缀默认写在主串各人那行，用户说要分开写进角色栏时跟着挪进角色栏；其余几节照常适用。
 
 <a id="general-writing.s06.h14"></a>
 
@@ -642,9 +642,9 @@ tag 只能说 `running`，说不出停在哪一瞬、衣物头发怎么响应。
 
 <a id="general-writing.s06.h17"></a>
 
-#### 在角色栏用前缀标明施受方向
+#### 用前缀标明施受方向
 
-V5 认三个方向前缀，**写在角色栏里**（不是主提示词）：
+V5 认三个方向前缀。本包默认写在主串里各人那行 `Character N:`，用户说要把动作分开写进角色栏时才跟着挪进角色栏（官方说明里前缀写在角色栏，写在主串里不保证起作用）：
 
 ```
 source#{动作}   这个角色在发起
@@ -655,9 +655,16 @@ mutual#{动作}   两人互相做同一个动作
 只有这三个，前缀表示**动作方向**，不是角色身份 ——
 `female#hug` `char1#hug` `left#hug` 都无效。
 
-**多人动作的前缀只在用户说要把动作分开写进角色栏时用**（cosplay 另见下）。这时主串不写各人那行 `Character N:`，动作另起一行写在各人那一栏最后（性别外貌、服装两行之后），表情和视线跟着写进去：一个人对另一个人做的动作，做的人写 `source#hug`、被做的人写同一个词 `target#hug`（官方例子）；两人互相做的都写 `mutual#holding hands`；不是互动的动作直接写动作词。前缀后面接现成的动作 tag；找不到现成的，不自造前缀词，这个动作留在主串英文句子里写清，交稿时说一句它没分开写。
+**两个人以上一定写前缀，默认写在主串里各人那行**（cosplay 另见下）：一个人对另一个人做的动作，做的人写 `source#hug`、被做的人写同一个词 `target#hug`（官方例子）；两人互相做或一起做的都写 `mutual#`（`mutual#holding hands`、对视 `mutual#eye contact`）；只跟自己有关的动作直接写动作词；每张多人图至少有一组前缀。前缀后面接现成的动作 tag；找不到现成的，不自造前缀词，这个动作留在主串英文句子里写清。用户说要把动作分开写进角色栏时，主串不写各人那行，这些词（带前缀的动作、表情、视线）另起一行写在各人那一栏最后（性别外貌、服装两行之后）。
 
-需要区分动作和接触部位时，**各写一条前缀**，视线可用 `looking at target`：
+需要区分动作和接触部位时，**各写一条前缀**。主串最后那几行这样写：
+
+```text
+Character 1: girl, source#teasing, source#hand on another's face, smirk, looking at another,
+Character 2: girl, target#teasing, target#hand on another's face, blush, embarrassed,
+```
+
+用户说要分开写进角色栏时，同样的词另起一行写在各人那一栏最后，视线可改用 `looking at target`：
 
 Character 1:
 
@@ -675,11 +682,11 @@ girl, <角色名或外貌>,
 target#teasing, target#hand on another's face, blush, embarrassed,
 ```
 
-（这里的 `smirk` / `blush`、`looking at target` 就是 [§0.1](#general-writing.s02.h02) 的例外：分开写时各人的表情和视线跟着进自己那一栏；没分开写时，表情写在主串里各人那行 `Character N:`，视线写 `looking at another`，不写 `looking at target`。）
+（角色栏里的 `smirk` / `blush`、`looking at target` 就是 [§0.1](#general-writing.s02.h02) 的例外：分开写时各人的表情和视线跟着进自己那一栏；没分开写时都在主串各人那行，视线写 `looking at another`，不写 `looking at target`。）
 
 **写了前缀，主串的英文句子照旧简单写**：一两句交代谁在左右、谁对谁做什么。分工见 [§2](#general-writing.s04)。官方说明这套写法不一定每次都灵。
 
-**什么时候建议用户分开写**：用户没要求时不自己加前缀，第一版也不提。看到成图里「谁对谁」做反了、动作串到别人身上，
+**什么时候建议用户分开写**：用户没要求时不自己把动作挪进角色栏，第一版也不提。看到成图里「谁对谁」做反了、动作串到别人身上，
 或用户问怎么让多人更稳时，再建议用户把动作分开写进角色栏，用户同意再写；三人以上、接触密集、
 两人动作互相对称（都伸着手，谁递谁接看不出来）时最容易出这种错。
 
@@ -687,28 +694,28 @@ target#teasing, target#hand on another's face, blush, embarrassed,
 
 #### 前缀的使用情形
 
-下面的例子只列各栏最后另起的那行动作，前面性别外貌、服装两行省略。
+下面的例子只列主串里各人那行冒号后面的动作和表情，性别词省略；分开写进角色栏时，同样的词另起一行写在各栏最后。
 
 **① `target#` 只绑方向，不绑「气势」。** 承受方可以是画面上更主动的那个：
 
-> Character 1 栏：`source#piggyback, looking down, tired, closed mouth` ← 背人的，闷头走
-> Character 2 栏：`target#piggyback, pointing, open mouth, excited` ← 被背的，指着前方在说话
+> Character 1: `source#piggyback, looking down, tired, closed mouth` ← 背人的，闷头走
+> Character 2: `target#piggyback, pointing, open mouth, excited` ← 被背的，指着前方在说话
 
 前缀表达背人与被背的方向，表情和动作词补出各自状态。
 
-**② 同一个角色栏里可以同时挂 `target#` 和 `source#`**。
+**② 同一个人那行里可以同时挂 `target#` 和 `source#`**。
 A→B→C 的链式交互就是这么写的：
 
-> Character 1 栏：`source#headpat`
-> Character 2 栏：`target#headpat, source#hug`　← 一个人两个方向
-> Character 3 栏：`target#hug`
+> Character 1: `source#headpat`
+> Character 2: `target#headpat, source#hug`　← 一个人两个方向
+> Character 3: `target#hug`
 
 **③ `mutual#` 表达双方互做同一动作**；下例尝试额头相抵与互看：
 
-> Character 1、Character 2 两栏都写 `mutual#forehead-to-forehead, mutual#eye contact`
+> Character 1、Character 2 两行都写 `mutual#forehead-to-forehead, mutual#eye contact`
 
 4.5 教程技巧（V5 待验证）：mutual 相同动作时，把 `imitate pose` 单独写进
-两个角色栏更精准。
+两个人那行更精准。
 
 <a id="general-writing.s06.h19"></a>
 
@@ -724,8 +731,8 @@ A→B→C 的链式交互就是这么写的：
 
 #### 第三人的动作遗漏时，核对其词组与前缀
 
-若第三人的已定动作遗漏，可以建议用户把几个人的动作分开写进角色栏、用对应前缀明确发起者（用户同意再写），
-再在主串补一句手伸向哪件食物。第三人本来只旁观时，保留旁观状态。
+若第三人的已定动作遗漏，先核对他那行 `Character N:` 有没有写上动作和对应前缀，
+再在主串补一句手伸向哪件食物；仍漏时可以建议用户把几个人的动作分开写进角色栏（用户同意再写）。第三人本来只旁观时，保留旁观状态。
 
 <a id="general-writing.s06.h21"></a>
 
@@ -758,7 +765,7 @@ A→B→C 的链式交互就是这么写的：
 - 用**外观**而不是编号来指认（群里反馈句子里的编号常对不上角色栏，见 [§4.1](#general-writing.s06.h01)）：写 "the girl in the beige coat hands the cup to
   the girl with headphones"，不写 "Character 1 hands it to Character 3"
   ——只复用辨认必需的简短锚点，完整外观清单仍在角色栏（[§0](#general-writing.s02)、[§4.8](#general-writing.s06.h12)）
-- 仍然错配时，可以建议用户把动作分开写进角色栏，用前缀标明谁发起、谁承受（[前缀](#general-writing.s06.h17)），用户同意再写
+- 先核对各人那行的前缀方向（[前缀](#general-writing.s06.h17)）；仍然错配时，可以建议用户把动作分开写进角色栏，用户同意再写
 - 给 UC 时，多人 UC 中的 `extra characters` 按下一节删除，不能用它区分指定人物与误增人物
 
 <a id="general-writing.s06.h23"></a>
@@ -884,7 +891,7 @@ PGR 可用于高 Guidance 时的纠偏，日常先不动；Variety+ 可作为增
 | 版权角色用规范名字，独立作品名可选；不凭印象补默认外观，用户指定服装 / 饰品 / 外观改动逐项保留 | [§0](#general-writing.s02)、[§3.7](#general-writing.s05.h07) |
 | 原创角色给定样貌锚点完整，没为压短而删改 | [§0](#general-writing.s02) 角色类型表 |
 | 人数 tag 在最前且只写一次，与对应领域的实际生成单元及人物身份一致 | [§3.1](#general-writing.s05.h01) |
-| 两个人以上时主串前两行没有动作、姿势、表情和视线词，主串最后空一行，每人有一行 `Character N:`（先写性别词）写这些（用户要分开写进角色栏的除外）；写人物的英文句子只简单写谁在左右、谁对谁做什么（用户给定的接触和持物照写），不用 `Character 1 / 2` 当主语；`Character 1` 是最左边那个；一个人时主串里没有 `Character 1:` 行 | [§0](#general-writing.s02)、[§4.1](#general-writing.s06.h01)、[§4.9](#general-writing.s06.h13) |
+| 两个人以上时主串前两行没有动作、姿势、表情和视线词，主串最后空一行，每人有一行 `Character N:`（先写性别词）写这些，人和人之间的动作带 `source#` / `target#`（同一个词）或 `mutual#`，至少一组（用户要分开写进角色栏时写在角色栏）；写人物的英文句子只简单写谁在左右、谁对谁做什么（用户给定的接触和持物照写），不用 `Character 1 / 2` 当主语；`Character 1` 是最左边那个；一个人时主串里没有 `Character 1:` 行 | [§0](#general-writing.s02)、[§4.1](#general-writing.s06.h01)、[§4.9](#general-writing.s06.h13) |
 | 角色栏只有性别外貌、服装，服装另起一行（没写服装就只有一行）；表情、视线在主串（一个人写在第二行，几个人写在各人那行 `Character N:`）；用户要分开写动作时，各人的动作、表情和视线另起一行写在自己那一栏最后 | [§0.1](#general-writing.s02.h02)、[§4.9](#general-writing.s06.h13) |
 | 服装状态词已核语义，不把一种衣服误作一种穿法 | [§3.5](#general-writing.s05.h05) |
 | 视线、距离、背景形态按同一主体 / 同一画面检查冲突 | [§3.9](#general-writing.s05.h09)；多人和分格先判归属 |
