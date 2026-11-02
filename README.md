@@ -1,4 +1,4 @@
-# NovelAI V5 构思与写法 · 单文件版 · v1.2.7
+# NovelAI V5 构思与写法 · 单文件版 · v1.2.8
 
 本分支提供一个入口与完整合订稿，包含全部通用方法。主要维护形式是 [`main` 的拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main)，本分支由相同方法源自动生成。
 
@@ -19,13 +19,13 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/single
 保留完整技能目录和资源，完成后告知配置位置和可用状态。
 ```
 
-备用方式：下载[本形式的完整包](packs/v1.2.7/nai5-single-v1.2.7.zip)，交给 agent 配置；或解压后，将完整 `nai5-prompting` 文件夹复制到[客户端技能目录](INSTALL.md#manual-paths)。配置完成后直接描述任务，如客户端提示刷新或重启，按其提示完成。
+备用方式：下载[本形式的完整包](packs/v1.2.8/nai5-single-v1.2.8.zip)，交给 agent 配置；或解压后，将完整 `nai5-prompting` 文件夹复制到[客户端技能目录](INSTALL.md#manual-paths)。配置完成后直接描述任务，如客户端提示刷新或重启，按其提示完成。
 
 `SKILL.md` 是供 agent 读取的入口文档，无需双击运行。默认拆分版的说明见[主线使用说明](https://github.com/Miint-Sunny/nai5-prompting#quick-start)，11 项职责清单见[技能职责](https://github.com/Miint-Sunny/nai5-prompting#split-skills)。
 
 ## 阅读与切换
 
-四种当前安装包和 Gemini 适配包均集中在 `packs/v1.2.7/`：[拆分版](packs/v1.2.7/nai5-split-v1.2.7.zip) · [合并版](packs/v1.2.7/nai5-merged-v1.2.7.zip) · [单文件版](packs/v1.2.7/nai5-single-v1.2.7.zip) · [极简版](packs/v1.2.7/nai5-mini-v1.2.7.zip) · [Gemini 适配版](packs/v1.2.7/nai5-art-studio-gemini-1.2.5.zip)（基于通用 v1.2.5，未包含 v1.2.7 的互动前缀修订；原样收录，未新增模型或导入实测）。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
+四种当前安装包、strict 版和 strict-safe 版均集中在 `packs/v1.2.8/`：[拆分版](packs/v1.2.8/nai5-split-v1.2.8.zip) · [合并版](packs/v1.2.8/nai5-merged-v1.2.8.zip) · [单文件版](packs/v1.2.8/nai5-single-v1.2.8.zip) · [极简版](packs/v1.2.8/nai5-mini-v1.2.8.zip) · [strict 版](packs/v1.2.8/nai5-strict-v1.2.8.zip) · [strict-safe 版](packs/v1.2.8/nai5-strict-safe-v1.2.8.zip)（什么时候用哪个见[主线说明](https://github.com/Miint-Sunny/nai5-prompting)）。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
 - [技能入口](SKILL.md)；正文：[完整构思与写法](references/NAI5_All_Prompting.md)。
 - [拆分版](https://github.com/Miint-Sunny/nai5-prompting/tree/main) · [合并版](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) · [单文件版](https://github.com/Miint-Sunny/nai5-prompting/tree/single) · [极简版](https://github.com/Miint-Sunny/nai5-prompting/tree/mini)。默认使用拆分版，其他形式按用户明确选择使用。
@@ -38,10 +38,10 @@ https://github.com/Miint-Sunny/nai5-prompting/tree/single
 
 ## 版本与维护
 
-当前为 **v1.2.7（2026-10-30）**，正式版，Latest。方法快照为 `v1.2-next-preview.29-20261030`，本次更正 v1.2.6：两个人之间有互动才写 `source#` / `target#` / `mutual#`，各做各的不写（默认写在主串里各人那行 `Character N:`，两处都会生效），极简版同步修改。四个安装包和 Gemini 适配包都在 [v1.2.7 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.7) 的附件里。
+当前为 **v1.2.8（2026-11-02）**，正式版，Latest。方法快照为 `v1.2-next-preview.30-20261102`，本次按 Gemini 交来的上游问题报告改了三处（用户只要主串时只给主串一块、两处词序说明和模板对齐、例句说明补句末逗号），极简版没改；另新增 strict 版和 strict-safe 版。四个安装包和 Gemini 适配包都在 [v1.2.8 Release](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.8) 的附件里。
 
 [发布说明](RELEASE_NOTES.md)记录修订和实际验证范围；[主线与版本](BRANCHES.md)说明分支关系；[来源](SOURCE.json)与[校验清单](SHA256SUMS.txt)用于核对本分支文件。本分支只核对了装配保真，没有单独做模型测试、生图或客户端真实导入测试；方法层的验证见发布说明。
 
 Copyright (C) 2026 [Miint-Sunny](https://github.com/Miint-Sunny)。完整 [LICENSE](LICENSE) 与 [NOTICE](NOTICE) 随包保留，项目贡献按 GNU GPL version 3（GPL-3.0-only）提供。
 
-2026-11-02 追加 Gemini 适配版 1.2.5；[原 1.2 适配包](packs/v1.2.7/nai5-art-studio-gemini-1.2.zip)保留供兼容使用。适配包版本独立于当前通用版，安装时按实际环境选择。
+旧的 Gemini 适配包（1.2、1.2.5）不再随新版提供：1.2 包在 v1.2 至 v1.2.6 的 [Release](https://github.com/Miint-Sunny/nai5-prompting/releases) 附件里，1.2.5 包在 v1.2.5 的附件里。
