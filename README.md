@@ -61,7 +61,7 @@ agent 按照仓库中的 [INSTALL.md 配置指南](INSTALL.md)获取文件、放
 | [合并版（构思／写法两卷）](packs/v1.2.7/nai5-merged-v1.2.7.zip) | 一个入口与两卷完整方法 | 明确选择时配置一个完整技能，按需读取相关卷和章节。 |
 | [单文件版](packs/v1.2.7/nai5-single-v1.2.7.zip) | 一个入口与完整合订稿 | 明确选择时配置一个完整技能，按需读取相关章节。 |
 | [极简版](packs/v1.2.7/nai5-mini-v1.2.7.zip) | 一个技能 `nai5-mini`，两份正文，全是平常话，只管普通单幅插画 | 想要短的、只写普通插画的技能时选它；独立维护，第二顺位；其他任务仍用拆分版。 |
-| [Gemini 适配版](packs/v1.2.7/nai5-art-studio-gemini-1.2.zip) | 11 个模块整合成一个技能 `nai5-art-studio` | 只在 Gemini 环境里或用户指定时用；参考正文取自 v1.2 拆分版，只改了模块导航、角色资料与角色栏编号的说法；维护者整合，没有单独做模型测试。 |
+| [Gemini 适配版](packs/v1.2.7/nai5-art-studio-gemini-1.2.5.zip) | 11 个模块整合成一个技能 `nai5-art-studio` | 只在 Gemini 环境里或用户指定时用；基于通用 v1.2.5，已有新版交稿格式与 UC 规则，尚未包含 v1.2.7 的互动前缀修订；原样收录，未新增模型或客户端导入实测。 |
 
 四种当前安装包和 Gemini 适配包均位于 `packs/v1.2.7/`，无需切换分支下载。单技能小包集中在 `packs/v1.2.7/individual/`；`skills/` 仅保留技能目录。历史版本从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 获取。
 
@@ -105,3 +105,5 @@ agent 按照仓库中的 [INSTALL.md 配置指南](INSTALL.md)获取文件、放
 `main` 维护拆分版；[merged](https://github.com/Miint-Sunny/nai5-prompting/tree/merged) 和 [single](https://github.com/Miint-Sunny/nai5-prompting/tree/single) 分别提供同源生成的合并版与单文件版；[mini](https://github.com/Miint-Sunny/nai5-prompting/tree/mini) 是独立维护的极简版。修改共同方法后统一生成各形式。
 
 Copyright (C) 2026 [Miint-Sunny](https://github.com/Miint-Sunny)。所有包装保留完整 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)，项目贡献按 GNU GPL version 3（GPL-3.0-only）提供。
+
+2026-11-02 追加 Gemini 适配版 1.2.5；[原 1.2 适配包](packs/v1.2.7/nai5-art-studio-gemini-1.2.zip)保留供兼容使用。适配包版本独立于当前通用版，安装时按实际环境选择。
