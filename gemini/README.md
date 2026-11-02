@@ -2,7 +2,7 @@
 
 本目录维护面向 **Gemini Apps（`gemini.google.com`）** 的 NovelAI Diffusion V5 提示词与画面创作技能适配版，工作分支为独立分支 `gemini`（不影响 `main`、`merged`、`single`、`mini`、`develop` 等现有版本分支，也不改动根目录通用 `skills/`）。
 
-发布时 Gemini 有两版：常规版 `nai5-gemini-v<版本>.zip` 每次发版从通用拆分版自动封装（技能名 `nai5-art-studio`，内容和通用版相同）；本目录是防拦截版 `nai5-gemini-safe-<版本>.zip`（技能名 `nai5-art-studio-safe`），两版可以同时装。
+发布时另有 strict 版 `nai5-strict-v<版本>.zip`：每次发版从通用拆分版自动封装成一个技能（技能名 `nai5-art-studio`，内容和通用版相同），Gemini 网页和其他导入要求严格的环境都能用。本目录是用同样装法的防拦截版 strict-safe（`nai5-strict-safe-v<基线版本>.zip`，技能名 `nai5-art-studio-safe`），两个可以同时装。
 
 ---
 
@@ -13,7 +13,8 @@
 | 追踪项 | 当前记录值 |
 | --- | --- |
 | **适配目标平台** | Gemini Apps（`gemini.google.com` 网页端与客户端 Skills） |
-| **依据的通用版版本** | `v1.2.7`（见根目录 [`SOURCE.json`](../SOURCE.json)） |
+| **依据的通用版版本** | `v1.2.8`（2026-11-02 跟进：v1.2.8 的三处上游修订本版已经有，正文未改；首轮改写依据 v1.2.7） |
+| **对比基线** | 标签 `v1.2.8`；下次上游更新时 `git diff v1.2.8..main -- skills/` |
 | **依据的公开仓 `main` 提交** | `8cedae6ff12ffa378f621f56bbb5d3cb7809e12d`（`chore: add Gemini 1.2.5 adaptation download`；其中 `skills/` 与 v1.2.7 标签相同） |
 | **对应的 `v1.2.7` 标签提交** | `1285cb02226a4b3c4f7637832fe32e81f3e5b57a`（`Release v1.2.7: write action prefixes only when people interact`） |
 | **上游方法仓 `source_commit`** | `eac1c293e1cf82d53766f8028f121a3a85c7ea29`（`2026-10-30T18:02:05+08:00`） |
@@ -86,8 +87,8 @@ Gemini Apps 采用「单技能包（Single `SKILL.md` + `references/`）」导�
 ## 五、在 Gemini Apps（`gemini.google.com`）中导入与使用
 
 1. 打开 [`gemini.google.com/skills`](https://gemini.google.com/skills)（或左侧菜单 **Skills** → **+** 创建/导入技能）。
-2. 从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 下载防拦截版 `nai5-gemini-safe-<版本>.zip` 上传，或者直接选择本目录的 `nai5-art-studio/` 文件夹上传。
-   - 官方要求 `SKILL.md` 放在上传内容的最外层，隐藏文件可能让上传失败（[帮助页](https://support.google.com/gemini/answer/17094296)）。发布用的 ZIP 由维护者从本目录打包：不套外层文件夹、不带隐藏文件，许可文件带 `.txt` 扩展名；技能名 `nai5-art-studio-safe`，可以和常规版 `nai5-art-studio` 同时装。
+2. 从 [Releases](https://github.com/Miint-Sunny/nai5-prompting/releases) 下载 `nai5-strict-safe-v<版本>.zip` 上传，或者直接选择本目录的 `nai5-art-studio/` 文件夹上传。
+   - 官方要求 `SKILL.md` 放在上传内容的最外层，隐藏文件可能让上传失败（[帮助页](https://support.google.com/gemini/answer/17094296)）。发布用的 ZIP 由维护者从本目录打包：不套外层文件夹、不带隐藏文件，许可文件带 `.txt` 扩展名；技能名 `nai5-art-studio-safe`，可以和 strict 版 `nai5-art-studio` 同时装。
 3. 保存并开启技能后，即可在对话中直接处理：
    - 画面点子、场景构图、OC 角色与服装设计、四格/多格漫画分镜；
    - 单人/多人插画提示词、局部动作与场景主串、服装提示词片段、整页/分组漫画提示词、照图反推与局部精确改词。
@@ -101,7 +102,7 @@ Gemini Apps 采用「单技能包（Single `SKILL.md` + `references/`）」导�
 1. 查看根目录 `SOURCE.json` 与 `RELEASE_NOTES.md`，确认新版本号与提交哈希。
 2. 运行差异对比：
    ```bash
-   git diff 8cedae6ff12ffa378f621f56bbb5d3cb7809e12d..<new_main_commit> -- skills/
+   git diff v1.2.8..<new_main_commit> -- skills/
    ```
 3. 按本文第三节的模块映射表，将上游新增或修订的规则同步到 `gemini/nai5-art-studio/` 对应的参考文件中。
 4. 运行链接与锚点校验脚本，更新 [`VERIFICATION.md`](VERIFICATION.md) 中的验证记录与本文件中的基线提交哈希，发布用的 ZIP 由维护者用方法仓的 `pack_gemini_safe.py` 从本目录打包（`SKILL.md` 在最外层）。

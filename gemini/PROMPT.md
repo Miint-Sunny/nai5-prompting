@@ -35,4 +35,4 @@
 - 仓库目录里的 `.worktrees/` 是其他分支的检出，不属于本分支；比较、统计、引用通用版只看 `skills/`，引用时照抄原文并核对行号。
 - 公开文件（README、验证记录、问题清单）不写本机路径、用户名和会话文件位置。
 - 技能名 `nai5-art-studio-safe`，许可文件 `LICENSE.txt`、`NOTICE.txt`。发布用的 ZIP 由维护者打包（`SKILL.md` 在最外层，不套文件夹）；本地打的 ZIP 不进分支。
-- 发布时 Gemini 有两版：常规版每次发版从通用拆分版自动封装；本目录是防拦截版。
+- 发布时另有 strict 版：每次发版从通用拆分版自动封装成一个技能，Gemini 也能用；本目录是用同样装法的防拦截版 strict-safe（`nai5-strict-safe-v<基线版本>.zip`）。
