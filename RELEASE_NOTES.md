@@ -1,10 +1,38 @@
+# v1.2.8 · Gemini 报告的上游修订，新增 strict 版和 strict-safe 版
+
+2026-11-02 正式发布，Latest 从 v1.2.7 更新为 v1.2.8。拆分版、合并版、单文件版来自 `v1.2-next-preview.30-20261102`，极简版（`mini` 分支，技能名 `nai5-mini`）没改。按 Gemini 交来的上游问题报告改了拆分版三处；新增 strict 版（单技能装法，Gemini 网页等导入要求严格的环境用）和 strict-safe 版（Gemini 防拦截）。来源提交与文件哈希见 `SOURCE.json`。
+
+## 下载与配置
+
+- **`nai5-split-v1.2.8.zip` — 拆分版（默认）**：11 个通用技能及各自资源。
+- **`nai5-mini-v1.2.8.zip` — 极简版**：一个技能 `nai5-mini`，两份正文，只写普通单幅插画。
+- **`nai5-merged-v1.2.8.zip` — 合并版**：一个入口与构思、写法两卷。
+- **`nai5-single-v1.2.8.zip` — 单文件版**：一个入口与完整合订稿。
+- **`nai5-strict-v1.2.8.zip` — strict 版**：11 个技能合成一个技能 `nai5-art-studio`，正文和拆分版相同；导入拆分版失败、或一次只能装一个技能时用，比如 Gemini 网页。
+- **`nai5-strict-safe-v1.2.8.zip` — strict-safe 版（Gemini 防拦截）**：一个技能 `nai5-art-studio-safe`，strict 版在 Gemini 里被安全拦截时换用。
+
+四个完整包、strict 版和 strict-safe 版集中在各分支的 `packs/v1.2.8/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
+
+## 本次修改
+
+- **只要动作和场景时只给主串**：用户只要主串（比如「只要动作和场景」，角色栏自己配）时，只给 `Base Prompt:` 一块，不写角色栏；外貌和服装不挪进主串，跟动作、神态连着的耳朵和尾巴状态（如 `drooping rabbit ears`）可以写进主串。
+- **词序说明和模板一致**：拆分版里还有两处旧的词序说明（外貌、服装写在主串，动作排在镜头之后），改成和模板一样：人数 → 物件 → 姿势、表情、视线 → 取景、机位 → 场景、时段、光线 → 关系句 → 技法 → 排除项。
+- **例句说明**：讲句子写法那一节开头补一句：例句写进主串时，句末句号照模板换成逗号。
+- **strict 版**（`nai5-strict-v1.2.8.zip`）：拆分版的 11 个技能合成一个技能 `nai5-art-studio`，正文不改；`SKILL.md` 在压缩包最外层，只有 .md 和 .txt 文件。给导入拆分版失败、或一次只能装一个技能的环境用，比如 Gemini 网页（直接上传拆分版会提示找不到 `SKILL.md`）。每次发版自动生成。
+- **strict-safe 版**（`nai5-strict-safe-v1.2.8.zip`，技能名 `nai5-art-studio-safe`）：Gemini 按通用版重写的防拦截版，装法和 strict 版相同。正常请求在 Gemini 里被安全拦截（`PROHIBITED_CONTENT`）时换用：去掉了部位焦点词清单，英文句子改用 `The character`、`she` 等作主语，读的资料更少。由 Gemini 在 [`gemini`](https://github.com/Miint-Sunny/nai5-prompting/tree/gemini) 分支维护，已跟进 v1.2.8。
+- 旧的 Gemini 适配包不再随新版提供：1.2 包在 v1.2 至 v1.2.6 的附件里，1.2.5 包挪到了 [v1.2.5](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.5) 的附件里。
+
+依据：Gemini 交来的上游问题报告，逐条拿原文核过，属实的才改；另几条原文已有说明、只跟 Gemini 平台有关或不属实，没改。strict-safe 版已在 Gemini 网页导入成功，strict 版用的是同样的装法。
+
+## 验证范围
+
+这一版没有出图，也没有做整版同题对照。拆分版的三处改动只做了文字核对和装配检查；四种形式和 strict 版的装配、ZIP 结构、链接、校验值和私有内容审计通过。strict-safe 版在 Gemini 网页导入成功，strict 版用同样的装法；两版都没有出图验证。
+
+---
+
 # v1.2.7 · 有互动才写 source# / target#（更正 v1.2.6）
 
-2026-10-30 正式发布，Latest 从 v1.2.6 更新为 v1.2.7。拆分版、合并版、单文件版来自 `v1.2-next-preview.29-20261030`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。更正 v1.2.6：两个人之间有互动才写方向前缀，各做各的不写；前缀写在主串各人那行 `Character N:` 或角色栏里都会生效，默认写在主串那几行。来源提交与文件哈希见 `SOURCE.json`。
-
-## 2026-11-02 追加：Gemini 适配包 1.2.5
-
-按维护者要求，原样收录 `nai5-art-studio-gemini-1.2.5.zip`。它基于通用 v1.2.5，已有新版交稿格式、默认不写质量词和按请求交付 UC 的修订；**尚未包含通用 v1.2.7 的互动前缀修订**。本次只追加适配包和下载说明，通用技能、原安装包与 v1.2.7 标签保持原值。已检查结构、链接、许可与哈希；未新增模型、客户端导入或成图验证。
+2026-10-30 正式发布，Latest 从 v1.2.6 更新为 v1.2.7；2026-11-02 由 v1.2.8 接替。拆分版、合并版、单文件版来自 `v1.2-next-preview.29-20261030`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。更正 v1.2.6：两个人之间有互动才写方向前缀，各做各的不写；前缀写在主串各人那行 `Character N:` 或角色栏里都会生效，默认写在主串那几行。来源提交与文件哈希见 `SOURCE.json`。
 
 ## 下载与配置
 
@@ -12,8 +40,7 @@
 - **`nai5-mini-v1.2.7.zip` — 极简版**：一个技能 `nai5-mini`，两份正文，只写普通单幅插画。
 - **`nai5-merged-v1.2.7.zip` — 合并版**：一个入口与构思、写法两卷。
 - **`nai5-single-v1.2.7.zip` — 单文件版**：一个入口与完整合订稿。
-- **`nai5-art-studio-gemini-1.2.5.zip` — Gemini 适配版 1.2.5**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.7/nai5-art-studio-gemini-1.2.5.zip)）：11 个模块整合为一个技能，适用范围及版本差异见上；原 1.2 附件继续保留。
-- **`nai5-art-studio-gemini-1.2.zip` — 原 Gemini 适配版（兼容保留）**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.7/nai5-art-studio-gemini-1.2.zip)）：与 v1.2 附件相同，11 个模块整合成一个 Gemini 技能，只在 Gemini 环境里或用户指定时用；v1.2.4 起的出词口径和格式修改都没有改进这个包。
+- **Gemini 适配包**：这一版原本附带的 1.2 包请从 [v1.2](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2) 下载；2026-11-02 追加的 1.2.5 包已挪到 [v1.2.5](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.5)。
 
 四个完整包和 Gemini 适配包集中在各分支的 `packs/v1.2.7/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
 
@@ -84,6 +111,7 @@ Character 2: girl, target#hug from behind, surprised, open mouth, looking back,
 - **`nai5-merged-v1.2.5.zip` — 合并版**：一个入口与构思、写法两卷。
 - **`nai5-single-v1.2.5.zip` — 单文件版**：一个入口与完整合订稿。
 - **`nai5-art-studio-gemini-1.2.zip` — Gemini 适配版**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.5/nai5-art-studio-gemini-1.2.zip)）：与 v1.2 附件相同，11 个模块整合成一个 Gemini 技能，只在 Gemini 环境里或用户指定时用；v1.2.4 的出词口径和这次的格式修改都没有改进这个包。
+- **`nai5-art-studio-gemini-1.2.5.zip` — Gemini 适配版 1.2.5**（2026-11-02 补挂；[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.5/nai5-art-studio-gemini-1.2.5.zip)）：维护者基于这一版手做，11 个模块整合为一个技能 `nai5-art-studio`；只在 Gemini 环境里或用户指定时用。
 
 四个完整包和 Gemini 适配包集中在各分支的 `packs/v1.2.5/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
 
