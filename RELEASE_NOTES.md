@@ -2,13 +2,18 @@
 
 2026-10-30 正式发布，Latest 从 v1.2.6 更新为 v1.2.7。拆分版、合并版、单文件版来自 `v1.2-next-preview.29-20261030`，极简版（`mini` 分支，技能名 `nai5-mini`）同步修改；Gemini 适配包原样随包，没有跟着改。更正 v1.2.6：两个人之间有互动才写方向前缀，各做各的不写；前缀写在主串各人那行 `Character N:` 或角色栏里都会生效，默认写在主串那几行。来源提交与文件哈希见 `SOURCE.json`。
 
+## 2026-11-02 追加：Gemini 适配包 1.2.5
+
+按维护者要求，原样收录 `nai5-art-studio-gemini-1.2.5.zip`。它基于通用 v1.2.5，已有新版交稿格式、默认不写质量词和按请求交付 UC 的修订；**尚未包含通用 v1.2.7 的互动前缀修订**。本次只追加适配包和下载说明，通用技能、原安装包与 v1.2.7 标签保持原值。已检查结构、链接、许可与哈希；未新增模型、客户端导入或成图验证。
+
 ## 下载与配置
 
 - **`nai5-split-v1.2.7.zip` — 拆分版（默认）**：11 个通用技能及各自资源。
 - **`nai5-mini-v1.2.7.zip` — 极简版**：一个技能 `nai5-mini`，两份正文，只写普通单幅插画。
 - **`nai5-merged-v1.2.7.zip` — 合并版**：一个入口与构思、写法两卷。
 - **`nai5-single-v1.2.7.zip` — 单文件版**：一个入口与完整合订稿。
-- **`nai5-art-studio-gemini-1.2.zip` — Gemini 适配版**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.7/nai5-art-studio-gemini-1.2.zip)）：与 v1.2 附件相同，11 个模块整合成一个 Gemini 技能，只在 Gemini 环境里或用户指定时用；v1.2.4 起的出词口径和格式修改都没有改进这个包。
+- **`nai5-art-studio-gemini-1.2.5.zip` — Gemini 适配版 1.2.5**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.7/nai5-art-studio-gemini-1.2.5.zip)）：11 个模块整合为一个技能，适用范围及版本差异见上；原 1.2 附件继续保留。
+- **`nai5-art-studio-gemini-1.2.zip` — 原 Gemini 适配版（兼容保留）**（[直接下载](https://github.com/Miint-Sunny/nai5-prompting/releases/download/v1.2.7/nai5-art-studio-gemini-1.2.zip)）：与 v1.2 附件相同，11 个模块整合成一个 Gemini 技能，只在 Gemini 环境里或用户指定时用；v1.2.4 起的出词口径和格式修改都没有改进这个包。
 
 四个完整包和 Gemini 适配包集中在各分支的 `packs/v1.2.7/`，单技能包位于 `individual/`。配置方法见 [INSTALL.md](https://github.com/Miint-Sunny/nai5-prompting/blob/main/INSTALL.md)。
 
