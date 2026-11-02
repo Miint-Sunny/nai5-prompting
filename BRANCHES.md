@@ -14,3 +14,5 @@
 未指定形式时，默认配置全部拆分技能，执行时优先从拆分技能中按需读取；极简版、合并版与单文件版仅在用户明确指定时使用；Gemini 适配版只在 Gemini 环境里或用户指定时使用。v1.2.7 的方法基线为 `v1.2-next-preview.29-20261030`，拆分版、合并版、单文件版从同一批源生成；极简版单独维护。各分支 `SOURCE.json` 记录对应形式、来源及文件哈希。当前正式版为 [v1.2.7（2026-10-30）](https://github.com/Miint-Sunny/nai5-prompting/releases/tag/v1.2.7)，Latest；标签 `v1.2.7` 固定本次 main 拆分版，Release 同时提供极简版、合并版、单文件版附件以及 Gemini 适配包。各形式的对应提交见 Release 说明。历史标签与附件保留。
 
 NovelAI Harness、Plana-App 和 Ultimate NovelAI launcher 各自维护应用适配。本仓提供通用内容技能，工作台操作依赖对应应用与工具；验证范围见 [发布说明](RELEASE_NOTES.md)。
+
+2026-11-02 追加的 Gemini 适配包 1.2.5 与原 1.2 包均随四条分支提供；当前 Gemini 下载入口指向 1.2.5。两者有独立的内容版本，均未同步通用 v1.2.7 的互动前缀修订。
