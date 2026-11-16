@@ -1,16 +1,16 @@
 {
-  "version": "v1.2.8",
+  "version": "v1.2.9",
   "role": "writing",
   "skill": "nai5-writing",
   "requires": [],
   "modules": {
     "writing-conventions": {
       "path": "方法/写法/conventions.md",
-      "sha256": "5847ec6c550b57ce3cc42a7951f909533ecde3db7418bfc6466c2aef4a20a141"
+      "sha256": "03834d43ade03a1d57d9dc15a1ead1630f3d48563e85c41240d221431023740f"
     },
     "writing-illustration": {
       "path": "方法/写法/illustration.md",
-      "sha256": "8d5dff4966032423cfa39b631991a1f27d3e47c2d87dd461fd29a692bd9144e0"
+      "sha256": "6a80e716fc5e028d80e150be298a9005d19ee40b13412046d0fd4ac540621178"
     },
     "writing-sources": {
       "path": "方法/写法/sources.md",
