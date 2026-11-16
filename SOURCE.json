@@ -1,5 +1,5 @@
 {
-  "version": "v1.2.8",
+  "version": "v1.2.9",
   "form": "merged",
   "branch": "merged",
   "primary_form": "split",
@@ -21,24 +21,24 @@
       "branch": "mini"
     }
   },
-  "source_commit": "2a7ab7f4aa0ac1b997b62f8ae7dd229869df4f5b",
+  "source_commit": "27e246440aebd113d54240140f20fe6842775982",
   "source_locks": {
-    "工具/职责拆分/职责映射.json": "cb4a36d60b0db08794205d710fac4057fff84a171a672e106c81886803ffe434",
+    "工具/职责拆分/职责映射.json": "7cb4af258d4cfb68b264dd7d1f46b2f3f07e09fad990f660e48459344accc40c",
     "工具/职责拆分/build_roles.py": "022393e08d1475118d4301a3cd0925fc00a8abf2c2162e76468566226579eaf9",
     "工具/任务拆分/build_tasks.py": "5e4e4904cb58808112ca09a9ca5a0bbb0a457ffce0f52523e3bdfd49e6aca77f",
     "极简/nai5-mini/SKILL.md": "b3474086b3bb99616f1187667f906baaf69eb7cd45f145056bb80b62cae57cc0",
     "适配/strict/SKILL.md": "acf56db90756add109231a543ddf69c924d729ef6c5a470d9bd9360c7b576d73",
     "适配/strict/封装说明.md": "5dbc4f555c0f4d7e5b48a1e1e2b55810bf6feab99f4fecf19a27995847236ad7",
-    "适配/gemini/nai5-strict-safe-v1.2.8.zip": "8f58cab7ccc85e39b1b12d9fbf14631d41f41e2122dcc48188d530fd10621f76",
-    "极简/nai5-mini/references/写法.md": "2171be06c6b360ebc6ae5a8c9aaf4c6ae851ee94d187d7d9de333324d6f52c27"
+    "适配/gemini/nai5-strict-safe-v1.2.9.zip": "f78126d1d1ed80fbc8c08f33bd992ea0e883b80313b7e9a0d9c466a63f330398",
+    "极简/nai5-mini/references/写法.md": "c902bca1946e398d75821bf1ad8942adfc4ea15e37f83dd37d1dd47055f689c3"
   },
   "release_assets": [
-    "packs/v1.2.8/nai5-split-v1.2.8.zip",
-    "packs/v1.2.8/nai5-merged-v1.2.8.zip",
-    "packs/v1.2.8/nai5-single-v1.2.8.zip",
-    "packs/v1.2.8/nai5-mini-v1.2.8.zip",
-    "packs/v1.2.8/nai5-strict-v1.2.8.zip",
-    "packs/v1.2.8/nai5-strict-safe-v1.2.8.zip"
+    "packs/v1.2.9/nai5-split-v1.2.9.zip",
+    "packs/v1.2.9/nai5-merged-v1.2.9.zip",
+    "packs/v1.2.9/nai5-single-v1.2.9.zip",
+    "packs/v1.2.9/nai5-mini-v1.2.9.zip",
+    "packs/v1.2.9/nai5-strict-v1.2.9.zip",
+    "packs/v1.2.9/nai5-strict-safe-v1.2.9.zip"
   ],
   "strict": {
     "skill": "nai5-art-studio",
@@ -58,9 +58,9 @@
     ]
   },
   "adaptations": {
-    "nai5-strict-safe-v1.2.8.zip": {
-      "path": "适配/gemini/nai5-strict-safe-v1.2.8.zip",
-      "sha256": "8f58cab7ccc85e39b1b12d9fbf14631d41f41e2122dcc48188d530fd10621f76"
+    "nai5-strict-safe-v1.2.9.zip": {
+      "path": "适配/gemini/nai5-strict-safe-v1.2.9.zip",
+      "sha256": "f78126d1d1ed80fbc8c08f33bd992ea0e883b80313b7e9a0d9c466a63f330398"
     }
   },
   "skill_order": [
@@ -175,14 +175,14 @@
     },
     "writing-conventions": {
       "role": "writing",
-      "sha256": "5847ec6c550b57ce3cc42a7951f909533ecde3db7418bfc6466c2aef4a20a141",
+      "sha256": "03834d43ade03a1d57d9dc15a1ead1630f3d48563e85c41240d221431023740f",
       "public_copies": [
         "references/通用写法.md"
       ]
     },
     "writing-illustration": {
       "role": "writing",
-      "sha256": "8d5dff4966032423cfa39b631991a1f27d3e47c2d87dd461fd29a692bd9144e0",
+      "sha256": "6a80e716fc5e028d80e150be298a9005d19ee40b13412046d0fd4ac540621178",
       "public_copies": [
         "references/通用写法.md"
       ]
@@ -210,7 +210,7 @@
     },
     "writing-reverse": {
       "role": "writing",
-      "sha256": "ec53ed036e9e9ea4c3da92786f6b67047ef4182061eecb6eaa6d95ec6200375b",
+      "sha256": "447a9dcdfd19b6c1bd2ff6f457a578b7e61791e83cfc3a0cca9b03efc1d19723",
       "public_copies": [
         "references/通用写法.md"
       ]
@@ -226,7 +226,7 @@
   "files": {
     "BRANCHES.md": {
       "bytes": 3382,
-      "sha256": "eb00a5a9591dd312f19252825f9f38f60ab64a46d2cdbc09eca0df5b787d5b9d"
+      "sha256": "18b0cf62deeddd52f350219741a7207aa1c0ace5ee2aad1f0466968c4109264f"
     },
     "INSTALL.md": {
       "bytes": 5765,
@@ -241,12 +241,12 @@
       "sha256": "bf97bdddeabd8d7a44f2e64f82e3a68d4552dc77ee67d14516513eae874e7090"
     },
     "README.md": {
-      "bytes": 4733,
-      "sha256": "c88fe3165a107afff9b336a19d3ecc7cf9ad1412b400216b1d851ef1ca24f253"
+      "bytes": 4785,
+      "sha256": "0de156b0fc52e67eb77f47212f439d316d3a18582e4dda2ed16d1e7ec4f0f7f0"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 48083,
-      "sha256": "00a26ffa237fbb07a09725beb07d1a10b49c09520f2578fc4ed8bee326e833e6"
+      "bytes": 52721,
+      "sha256": "439623cde101f2622cfef1eaa7f6e52e124606eb0c758e20fa877805b64ce053"
     },
     "SKILL.md": {
       "bytes": 1521,
@@ -254,83 +254,83 @@
     },
     "packs/README.md": {
       "bytes": 2322,
-      "sha256": "df60fce16e04439349d8adf29374cacbcb07ed65c19283d5adccff5febcb1488"
+      "sha256": "62482ca23dc64688f22cce620dd93676c2425cc223918464737e272658bf448f"
     },
-    "packs/v1.2.8/individual/nai5-art-direction-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-art-direction-v1.2.9.zip": {
       "bytes": 20747,
-      "sha256": "2444e3fdb06c1fdbd6a621d9eeef5656e8c700d824a58986d8948c0583b35fa4"
+      "sha256": "12d888f4c84edf5ca6484dc2bb6ba57985275fb3a1ced0b18ee21c83c325be0e"
     },
-    "packs/v1.2.8/individual/nai5-comic-storyboard-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-comic-storyboard-v1.2.9.zip": {
       "bytes": 46434,
-      "sha256": "bd18b0b15a3c649b058460a25602b7adb04e3a9695ad5bcbbbae56fa8b36a8f2"
+      "sha256": "efcc2ed67e4496888433db12f73be98097d7cb0f1141ad0ed97aca694c41b43d"
     },
-    "packs/v1.2.8/individual/nai5-comic-writing-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-comic-writing-v1.2.9.zip": {
       "bytes": 39748,
-      "sha256": "ca81a5a35e8e2d6a0e2c61881e9928f6834b1c43007286a0b2668d8ff9c596a2"
+      "sha256": "a6fbcf561d60aa6c24fd97acaae57ea44e9cf72cac30644b210c8cdf3fe63182"
     },
-    "packs/v1.2.8/individual/nai5-costume-writing-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-costume-writing-v1.2.9.zip": {
       "bytes": 23869,
-      "sha256": "1731694c1a9abe375619fe18aa253a96abe401f440b886fdebe8f139a11fafc7"
+      "sha256": "ff1363443e643d294399c43096e9973a4c7b160103fb2f56e1d9aa4cd76e0b2b"
     },
-    "packs/v1.2.8/individual/nai5-ideas-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-ideas-v1.2.9.zip": {
       "bytes": 20679,
-      "sha256": "ff903881805b5f7ffb34696a693011c51ac740f317ee534fd8339a7922cadc2d"
+      "sha256": "dac9f2f81f671dd0e2c5ea0421cac0e7c2cb321f3f044e3b96ff1bfe0000f66d"
     },
-    "packs/v1.2.8/individual/nai5-illustration-composition-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-illustration-composition-v1.2.9.zip": {
       "bytes": 26348,
-      "sha256": "5b034cc633ebc7ae5cfcdd1cfc66641d272cb2a290ff20f0842f7fa308266f51"
+      "sha256": "d1779193924886947ecd238113b55b209b1b0cac23f6e31f29e7a21fe80bf285"
     },
-    "packs/v1.2.8/individual/nai5-reverse-prompt-v1.2.8.zip": {
-      "bytes": 20548,
-      "sha256": "fb7ce521b6a0a6590045ab8ed5593f2f13c5841f1970c86a405bc403b57a777d"
+    "packs/v1.2.9/individual/nai5-reverse-prompt-v1.2.9.zip": {
+      "bytes": 21143,
+      "sha256": "4d65f8e43a53c3c7c5ad4a3fe00343fddc12fbae48a31277ef1d51e785438256"
     },
-    "packs/v1.2.8/individual/nai5-scene-design-v1.2.8.zip": {
+    "packs/v1.2.9/individual/nai5-scene-design-v1.2.9.zip": {
       "bytes": 21835,
-      "sha256": "46d95cb5356a365d15dca4c7de79eed5fb46139080e4b9c8e51f39d486421efa"
+      "sha256": "53a66481d395f16ffb0970714e85cf0216dc7ab079bdc71f72801bcd88fa100a"
     },
-    "packs/v1.2.8/individual/nai5-writing-v1.2.8.zip": {
-      "bytes": 69049,
-      "sha256": "d2838fe4c2def5483c54f34f11052bd2fcd98f82e224556ea903f946cfdb7805"
+    "packs/v1.2.9/individual/nai5-writing-v1.2.9.zip": {
+      "bytes": 69450,
+      "sha256": "ac3d53a2fd9db604a00b5f29521e809f70c51a6fce6b1e5bb4a3630bcb2c2857"
     },
-    "packs/v1.2.8/individual/oc-character-design-v1.2.8.zip": {
+    "packs/v1.2.9/individual/oc-character-design-v1.2.9.zip": {
       "bytes": 22485,
-      "sha256": "bd3090398ab48394a55971b11fa0572ffdb144277c0b09c5865eec27011569c9"
+      "sha256": "e9e8838178a816529b8721b5255b0e5a434615b7910f21071ed8448c008b3482"
     },
-    "packs/v1.2.8/individual/oc-costume-design-v1.2.8.zip": {
+    "packs/v1.2.9/individual/oc-costume-design-v1.2.9.zip": {
       "bytes": 31038,
-      "sha256": "f5b0c4bd6ae8f46f2b474096d570a7633af0f9a531d3fb9f93ff9ba76e1861d9"
+      "sha256": "b69ce0bd0261659140629604e589e657c3e6df28f23cbbc7e79d24ede93f8e58"
     },
-    "packs/v1.2.8/nai5-merged-v1.2.8.zip": {
-      "bytes": 139813,
-      "sha256": "874b0c60678699f488245d729297538f52771f6c993556b97c1f19a56dc7ad7a"
+    "packs/v1.2.9/nai5-merged-v1.2.9.zip": {
+      "bytes": 140670,
+      "sha256": "552c6af6a12a2765d48826a3f56bbe9fe533e0a0a0e3833a4f0d28d96abd1d00"
     },
-    "packs/v1.2.8/nai5-mini-v1.2.8.zip": {
-      "bytes": 22465,
-      "sha256": "169eb5702cfeb28d847eb35efca5536289f869bcdc6481d76bf16d182522273b"
+    "packs/v1.2.9/nai5-mini-v1.2.9.zip": {
+      "bytes": 22600,
+      "sha256": "064585db1cb240383ded2ed8b89959a613baa47f71749c8b33dc63e92a564085"
     },
-    "packs/v1.2.8/nai5-single-v1.2.8.zip": {
-      "bytes": 138454,
-      "sha256": "f32d6307fe8dcf4a3068f0b8504852da3d0c083cc5e23c3eb63d20a8ffe7f4cb"
+    "packs/v1.2.9/nai5-single-v1.2.9.zip": {
+      "bytes": 139302,
+      "sha256": "53b10fc57c8880dc31cada8a2a7d2f2e6cd2632a0a25e498fa7f2fe234fb6ddc"
     },
-    "packs/v1.2.8/nai5-split-v1.2.8.zip": {
-      "bytes": 342560,
-      "sha256": "16416a5caa400d7ec0579edce6833813b42497124e97cb1177ba360a38540d7f"
+    "packs/v1.2.9/nai5-split-v1.2.9.zip": {
+      "bytes": 343556,
+      "sha256": "245d76186f0db2cb507ba698f6309ea497c1d6819d969b0e243be8c4a670fbbf"
     },
-    "packs/v1.2.8/nai5-strict-safe-v1.2.8.zip": {
-      "bytes": 72111,
-      "sha256": "8f58cab7ccc85e39b1b12d9fbf14631d41f41e2122dcc48188d530fd10621f76"
+    "packs/v1.2.9/nai5-strict-safe-v1.2.9.zip": {
+      "bytes": 72808,
+      "sha256": "f78126d1d1ed80fbc8c08f33bd992ea0e883b80313b7e9a0d9c466a63f330398"
     },
-    "packs/v1.2.8/nai5-strict-v1.2.8.zip": {
-      "bytes": 196008,
-      "sha256": "50c2b9c0d1feaa1ee1beb36a7a53e8c23c2ffa90cba71c983b37e6981aa0102e"
+    "packs/v1.2.9/nai5-strict-v1.2.9.zip": {
+      "bytes": 197000,
+      "sha256": "55bd2011fadfe706fae81b0fb64039aa6bdfcd728461b87aacc647a00f07e6a7"
     },
     "references/通用写法.md": {
-      "bytes": 201219,
-      "sha256": "fcff9591c9ba69780431c083efd0a74ba55d1422aaa0992007040a22613a1f3e"
+      "bytes": 203711,
+      "sha256": "fc0ec520064c7b8a216f1d7ef52f8ac7052a795801fe0b2bf827959360016d6e"
     },
     "references/通用构思.md": {
       "bytes": 106139,
-      "sha256": "dbb786405401a15954e9830ec34f344d2876718f7daaf09255daf93ff66bf80a"
+      "sha256": "31af6aeb15cfdd21541f1b4c012ec61d487f59766c91cb2fa8764ecc3c85f867"
     }
   }
 }
