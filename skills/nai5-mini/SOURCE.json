@@ -1,5 +1,5 @@
 {
-  "version": "v1.2.8",
+  "version": "v1.2.9",
   "skill": "nai5-mini",
   "form": "mini",
   "maintenance": "second priority; maintained independently of the split skills",
@@ -11,7 +11,7 @@
     },
     "references/写法.md": {
       "path": "极简/nai5-mini/references/写法.md",
-      "sha256": "2171be06c6b360ebc6ae5a8c9aaf4c6ae851ee94d187d7d9de333324d6f52c27"
+      "sha256": "c902bca1946e398d75821bf1ad8942adfc4ea15e37f83dd37d1dd47055f689c3"
     }
   }
 }
