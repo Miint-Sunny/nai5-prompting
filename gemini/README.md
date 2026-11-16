@@ -13,8 +13,8 @@
 | 追踪项 | 当前记录值 |
 | --- | --- |
 | **适配目标平台** | Gemini Apps（`gemini.google.com` 网页端与客户端 Skills） |
-| **依据的通用版版本** | `v1.2.8`（2026-11-02 跟进：v1.2.8 的三处上游修订本版已经有，正文未改；首轮改写依据 v1.2.7） |
-| **对比基线** | 标签 `v1.2.8`；下次上游更新时 `git diff v1.2.8..main -- skills/` |
+| **依据的通用版版本** | `v1.2.9`（2026-11-16 跟进：照图反推不写画师串占位、点名版权角色时长相和衣服不逐项写、代码块里不写占位，正向加「常规之外的已有套装可以主动选」，本版照上游补了 7 处；2026-11-02 跟进 v1.2.8 时三处上游修订本版已有；首轮改写依据 v1.2.7） |
+| **对比基线** | 标签 `v1.2.9`；下次上游更新时 `git diff v1.2.9..main -- skills/` |
 | **依据的公开仓 `main` 提交** | `8cedae6ff12ffa378f621f56bbb5d3cb7809e12d`（`chore: add Gemini 1.2.5 adaptation download`；其中 `skills/` 与 v1.2.7 标签相同） |
 | **对应的 `v1.2.7` 标签提交** | `1285cb02226a4b3c4f7637832fe32e81f3e5b57a`（`Release v1.2.7: write action prefixes only when people interact`） |
 | **上游方法仓 `source_commit`** | `eac1c293e1cf82d53766f8028f121a3a85c7ea29`（`2026-10-30T18:02:05+08:00`） |
@@ -97,12 +97,12 @@ Gemini Apps 采用「单技能包（Single `SKILL.md` + `references/`）」导�
 
 ## 六、后续上游版本升级维护流程
 
-当仓库 `main` 分支的 `skills/` 更新到新版本（例如 `v1.2.8` 或 `v1.3.0`）时：
+当仓库 `main` 分支的 `skills/` 更新到新版本（例如 `v1.2.10` 或 `v1.3.0`）时：
 
 1. 查看根目录 `SOURCE.json` 与 `RELEASE_NOTES.md`，确认新版本号与提交哈希。
 2. 运行差异对比：
    ```bash
-   git diff v1.2.8..<new_main_commit> -- skills/
+   git diff v1.2.9..<new_main_commit> -- skills/
    ```
 3. 按本文第三节的模块映射表，将上游新增或修订的规则同步到 `gemini/nai5-art-studio/` 对应的参考文件中。
 4. 运行链接与锚点校验脚本，更新 [`VERIFICATION.md`](VERIFICATION.md) 中的验证记录与本文件中的基线提交哈希，发布用的 ZIP 由维护者用方法仓的 `pack_gemini_safe.py` 从本目录打包（`SKILL.md` 在最外层）。
